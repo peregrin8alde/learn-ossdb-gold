@@ -1,9 +1,0 @@
-= 運用管理
-
-:leveloffset: +1
-
-include::operation-management/db-setup.adoc[]
-
-include::operation-management/commands.adoc[]
-
-:leveloffset: -1
