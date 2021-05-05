@@ -1,0 +1,2 @@
+= OSS-DB Gold 学習資材
+include::{attributes-doc}[]

@@ -1,0 +1,208 @@
+// include する場合は空行が入らないようにすること（空行以降が無効になる？）
+////
+Reference
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/
+////
+////
+Intrinsic attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#intrinsic-attributes
+////
+// :backend: html5
+// :basebackend: 
+// :docdate: 
+// :docdatetime: 
+// :docdir: 
+// :docfile: 
+// :docfilesuffix: 
+// :docname: 
+// :doctime: 
+// :docyear: 
+// :embedded: 
+// :filetype: 
+// :htmlsyntax: 
+// :localdate: 
+// :localdatetime: 
+// :localtime: 
+// :localyear: 
+// :outdir: 
+// :outfile: 
+// :outfilesuffix: 
+// :safe-mode-level: 
+// :safe-mode-name: 
+// :safe-mode-unsafe: 
+// :safe-mode-safe: 
+// :safe-mode-server: 
+// :safe-mode-secure: 
+// :user-home: 
+////
+Compliance attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#compliance-attributes
+////
+// :attribute-missing: 
+// :attribute-undefined: 
+// :compat-mode: 
+// :experimental: 
+// :reproducible: 
+// :skip-front-matter: 
+////
+Localization and numbering attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#builtin-attributes-i18n
+////
+:appendix-caption: 付録
+// :appendix-number: 
+// :appendix-refsig: 
+:caution-caption: 注意
+// :chapter-number: 
+// :chapter-refsig: 
+// :chapter-signifier: 
+:example-caption: 例
+// :example-number: 
+:figure-caption: 図
+// :figure-number: 
+:important-caption: 重要
+:lang: ja
+// :last-update-label: 
+// :listing-caption: 
+// :listing-number: 
+// :manname-title: 
+// :nolang: 
+:note-caption: 注記
+// :part-refsig: 
+// :part-signifier: 
+// :preface-title: 
+// :section-refsig: 
+// :table-caption: 
+// :table-number: 
+:tip-caption: 補足
+:toc-title: 目次
+// :untitled-label: 
+// :version-label: 
+:warning-caption: 警告
+////
+Document metadata attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#document-metadata-attributes
+////
+// :app-name: 
+// :author: 
+// :authorinitials: 
+// :authors: 
+// :copyright: 
+// :doctitle: 
+// :description: 
+// :email: 
+// :firstname: 
+// :front-matter: 
+// :keywords: 
+// :lastname: 
+// :middlename: 
+// :orgname: 
+:revdate: {localdate}
+//:revremark: 新規作成
+//:revnumber: 1.0
+// :title: 
+////
+Section title and table of contents attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#section-title-and-table-of-contents-attributes
+////
+// :idprefix: 
+// :idseparator: 
+// :leveloffset: 
+// :partnums: 
+:sectanchors: 
+// :sectids: 
+// :sectlinks: 
+:sectnums: 
+:sectnumlevels: 2
+// :title-separator: 
+:toc: left
+:toclevels: 3
+// :fragment: 
+////
+General content and formatting attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#general-content-and-formatting-attributes
+////
+// :asset-uri-scheme: 
+// :cache-uri: 
+:data-uri: 
+// :docinfo: 
+// :docinfodir: 
+// :docinfosubs: 
+:doctype: book
+// :eqnums: 
+// :hardbreaks-option: 
+// :hide-uri-scheme: 
+// :media: 
+// :nofooter: 
+// :nofootnotes: 
+// :noheader: 
+// :notitle: 
+// :outfilesuffix: 
+// :pagewidth: 
+// :relfileprefix: 
+// :relfilesuffix: 
+// :show-link-uri: 
+// :showtitle: 
+// :stem: 
+// :tabsize: 
+// :webfonts: 
+// :xrefstyle: 
+////
+Image and icon attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#image-and-icon-attributes
+////
+// :iconfont-cdn: 
+// :iconfont-name: 
+// :iconfont-remote: 
+:icons: font
+// :iconsdir: 
+// :icontype: 
+// :imagesdir: 
+////
+Source highlighting and formatting attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#source-highlighting-and-formatting-attributes
+////
+// :coderay-css: 
+// :coderay-linenums-mode: 
+// :coderay-unavailable: 
+// :highlightjsdir: 
+// :highlightjs-theme: 
+// :prettifydir: 
+// :prettify-theme: 
+// :prewrap: 
+// :pygments-css: 
+// :pygments-linenums-mode: 
+// :pygments-style: 
+// :pygments-unavailable: 
+:source-highlighter: rouge
+// :source-indent: 
+// :source-language: 
+// :source-linenums-option: 
+////
+HTML styling attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#html-styling-attributes
+////
+// :copycss: 
+// :css-signature: 
+// :linkcss: 
+// :max-width: 
+// :stylesdir: 
+// :stylesheet: 
+// :toc-class: 
+////
+Manpage attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#manpage-attributes
+////
+// :mantitle: 
+// :manvolnum: 
+// :manname: 
+// :manpurpose: 
+// :man-linkstyle: 
+// :mansource: 
+// :manmanual: 
+////
+Security attributes
+https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#security-attributes
+////
+// :allow-uri-read: 
+// :max-attribute-value-size: 
+// :max-include-depth: 
