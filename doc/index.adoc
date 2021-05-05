@@ -1,2 +1,8 @@
 = OSS-DB Gold 学習資材
 include::{attributes-doc}[]
+
+:leveloffset: +1
+
+include::includes/coverage.adoc[]
+
+:leveloffset: -1
