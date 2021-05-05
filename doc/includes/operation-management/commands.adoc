@@ -1,0 +1,86 @@
+= 運用管理用コマンド全般
+
+データベースの運用管理に関する高度な知識を問う。
+
+.主要な知識範囲と参考マニュアル（運用管理用コマンド全般）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|バックアップ、PITR
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/backup.html
+a|
+
+|VACUUM、ANALYZE、REINDEX
+a|
+* ANALYZE
+* VACUUM
+* REINDEX
+a|
+* https://www.postgresql.jp/document/11/html/routine-vacuuming.html
+* https://www.postgresql.jp/document/11/html/sql-analyze.html
+* https://www.postgresql.jp/document/11/html/sql-vacuum.html
+* https://www.postgresql.jp/document/11/html/sql-reindex.html
+a|
+
+|自動バキューム
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/routine-vacuuming.html#AUTOVACUUM
+a|
+
+|チェックポイント
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/wal-configuration.html
+a|
+
+|サーバログ管理
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html
+a|
+
+|ディスク容量監視
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/diskusage.html
+a|
+
+|自動VACUUMと手動VACUUM/ANALYZEの違い
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/routine-vacuuming.html
+a|
+
+|===
+
+
+ALTER SYSTEM	https://www.postgresql.jp/document/11/html/sql-altersystem.html
+CLUSTER	https://www.postgresql.jp/document/11/html/sql-cluster.html
+CHECKPOINT	https://www.postgresql.jp/document/11/html/sql-checkpoint.html
+PITR	https://www.postgresql.jp/document/11/html/continuous-archiving.html
+WAL	https://www.postgresql.jp/document/11/html/wal-intro.html
+pg_dump	https://www.postgresql.jp/document/11/html/app-pgdump.html
+pg_dumpall	https://www.postgresql.jp/document/11/html/app-pg-dumpall.html
+pg_basebackup	https://www.postgresql.jp/document/11/html/app-pgbasebackup.html
+pg_start_backup()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
+pg_stop_backup()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
+postgresql.conf	https://www.postgresql.jp/document/11/html/config-setting.html#CONFIG-SETTING-CONFIGURATION-FILE
+recovery.conf	https://www.postgresql.jp/document/11/html/recovery-config.html
+vacuumdb	https://www.postgresql.jp/document/11/html/app-vacuumdb.html
+pgstattuple	https://www.postgresql.jp/document/11/html/pgstattuple.html
+pg_cancel_backend()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
+pg_terminate_backend()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
+pg_isready	https://www.postgresql.jp/document/11/html/app-pg-isready.html
+log_connections	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+log_disconnections	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+log_duration	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT

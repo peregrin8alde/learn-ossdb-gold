@@ -4,4 +4,6 @@
 
 include::operation-management/db-setup.adoc[]
 
+include::operation-management/commands.adoc[]
+
 :leveloffset: -1
