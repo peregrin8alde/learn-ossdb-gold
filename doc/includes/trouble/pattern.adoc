@@ -1,1 +1,63 @@
 = 起こりうる障害のパターン
+
+データベースでのSQL実行タイムアウトやサーバダウン、動作不良、データ消失、OSリソース枯渇などの故障が発生した場合について、エラーメッセージの内容から原因を特定し、適切な対応ができるかを問う。
+
+.主要な知識範囲と参考マニュアル（起こりうる障害のパターン）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|サーバダウン、動作不良、データ消失への対処
+a|
+a|
+a|
+
+|OS リソース枯渇
+a|
+a|
+a|
+
+|OSのパラメータ
+a|
+a|
+a|
+
+|サーバプロセスの状態(idle、idle in transaction、active)
+a|
+a|
+a|
+
+|シグナル(TERM/INT/HUP)によるサーバプロセスへの影響
+a|
+a|
+* https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
+a|
+
+|サーバプロセスのクラッシュ(セグメンテーションフォルトなど)と影響範囲	
+a|
+a|
+a|
+
+
+|未分類
+a|
+* statement_timeout	https://www.postgresql.jp/document/11/html/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT
+* lock_timeout	https://www.postgresql.jp/document/11/html/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT
+* idle_in_transaction_session_timeout	https://www.postgresql.jp/document/11/html/runtime-config-client.html#RUNTIME-CONFIG-CLIENT-STATEMENT
+* スタンバイでの問い合わせのコンフリクト(衝突)	
+* hot_standby_feedback	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-STANDBY
+* vacuum_defer_cleanup_age	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-MASTER
+* max_standby_archive_delay	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-STANDBY
+* max_standby_streaming_delay	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-STANDBY
+* fsync	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* synchronous_commit	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* restart_after_crash	https://www.postgresql.jp/document/11/html/runtime-config-error-handling.html
+* pg_cancel_backend()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
+* pg_terminate_backend()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
+* pg_ctl kill	https://www.postgresql.jp/document/11/html/app-pg-ctl.html
+* max_locks_per_transaction	https://www.postgresql.jp/document/11/html/runtime-config-locks.html
+* max_files_per_process	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-KERNEL
+a|
+a|
+
+|===
