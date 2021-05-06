@@ -1,0 +1,48 @@
+= テーブル / カラム統計情報
+
+プランナが利用するテーブル・カラムの統計情報についての理解を問う。
+
+.主要な知識範囲と参考マニュアル（テーブル / カラム統計情報）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|pg_class
+a|
+a|
+* https://www.postgresql.jp/document/11/html/catalog-pg-class.html
+a|
+
+|pg_stats
+a|
+a|
+* https://www.postgresql.jp/document/11/html/planner-stats.html#id-1.5.13.5.3
+a|
+
+|テーブル・インデックスの実ファイルとパス
+a|
+a|
+a|
+
+|実行計画時に利用される統計情報やパラメータ
+a|
+a|
+a|
+
+
+|未分類
+a|
+* pg_statistic	https://www.postgresql.jp/document/11/html/catalog-pg-statistic.html
+* pg_stats	https://www.postgresql.jp/document/11/html/view-pg-stats.html
+* null_frac	https://www.postgresql.jp/document/11/html/view-pg-stats.html
+* n_distinct	https://www.postgresql.jp/document/11/html/view-pg-stats.html
+* most_common_freqs	https://www.postgresql.jp/document/11/html/view-pg-stats.html
+* histogram_bounds	https://www.postgresql.jp/document/11/html/view-pg-stats.html
+* correlation	https://www.postgresql.jp/document/11/html/view-pg-stats.html
+* default_statistics_target	https://www.postgresql.jp/document/11/html/runtime-config-query.html#GUC-DEFAULT-STATISTICS-TARGET
+* effective_cache_size	https://www.postgresql.jp/document/11/html/runtime-config-query.html#RUNTIME-CONFIG-QUERY-CONSTANTS
+a|
+a|
+
+|===
+

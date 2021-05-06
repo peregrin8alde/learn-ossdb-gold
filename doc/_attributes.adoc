@@ -86,7 +86,7 @@ https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-refe
 // :author: 
 // :authorinitials: 
 // :authors: 
-// :copyright: 
+:copyright: 2021 Okada Hayato.
 // :doctitle: 
 // :description: 
 // :email: 
