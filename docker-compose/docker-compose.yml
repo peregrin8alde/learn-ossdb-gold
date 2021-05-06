@@ -1,0 +1,54 @@
+version: "3.9"
+services:
+  dbhost1:
+    image: postgres:11
+    restart: always
+    volumes:
+      - dbhost1-data:/var/lib/postgresql/data/pgdata
+      - ./conf/dbhost1/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./conf/dbhost1/pg_hba.conf:/etc/postgresql/pg_hba.conf
+    networks:
+      - backend
+    environment:
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    # command （ Dockerfile での CMD ）は docker run 実行時のプロセスのデフォルト（ ENTRYPOINT なし） または ENTRYPOINT へ渡す引数のデフォルト
+    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf'
+
+  dbhost2:
+    image: postgres:11
+    restart: always
+    volumes:
+      - dbhost2-data:/var/lib/postgresql/data/pgdata
+      - ./conf/dbhost2/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./conf/dbhost2/pg_hba.conf:/etc/postgresql/pg_hba.conf
+    networks:
+      - backend
+    environment:
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    # command （ Dockerfile での CMD ）は docker run 実行時のプロセスのデフォルト（ ENTRYPOINT なし） または ENTRYPOINT へ渡す引数のデフォルト
+    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf'
+
+  dbhost3:
+    image: postgres:11
+    restart: always
+    volumes:
+      - dbhost3-data:/var/lib/postgresql/data/pgdata
+      - ./conf/dbhost3/postgresql.conf:/etc/postgresql/postgresql.conf
+      - ./conf/dbhost3/pg_hba.conf:/etc/postgresql/pg_hba.conf
+    networks:
+      - backend
+    environment:
+      POSTGRES_PASSWORD: postgres
+      PGDATA: /var/lib/postgresql/data/pgdata
+    # command （ Dockerfile での CMD ）は docker run 実行時のプロセスのデフォルト（ ENTRYPOINT なし） または ENTRYPOINT へ渡す引数のデフォルト
+    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf'
+
+networks:
+  backend:
+
+volumes:
+  dbhost1-data:
+  dbhost2-data:
+  dbhost3-data:
