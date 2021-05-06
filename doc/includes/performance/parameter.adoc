@@ -1,1 +1,58 @@
 = 性能に関係するパラメータ
+
+データベースの設定パラメータで、特にパフォーマンスに影響を与えるもの、パフォーマンスチューニングの参考になるものに関する理解を問う。
+
+.主要な知識範囲と参考マニュアル（性能に関係するパラメータ）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|資源の消費 (RESOURCE USAGE)
+a|
+a|
+a|
+
+|ログ先行書き込み (WRITE AHEAD LOG)
+a|
+a|
+a|
+
+|問い合わせ計画 (QUERY TUNING)
+a|
+a|
+a|
+
+|実行時統計情報 (RUNTIME STATISTICS)
+a|
+a|
+a|
+
+|ロック管理 (LOCK MANAGEMENT)
+a|
+a|
+a|
+
+|軽量ロックと重量ロック
+a|
+a|
+a|
+
+
+|未分類
+a|
+* shared_buffers	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* huge_pages	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* effective_cache_size	https://www.postgresql.jp/document/11/html/runtime-config-query.html#RUNTIME-CONFIG-QUERY-CONSTANTS
+* work_mem	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* maintenance_work_mem	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* autovacuum_work_mem	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* wal_level	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* fsync	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* synchronous_commit	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* checkpoint_timeout	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-CHECKPOINTS
+* checkpoint_completion_target	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-CHECKPOINTS
+* deadlock_timeout	https://www.postgresql.jp/document/11/html/runtime-config-locks.html
+a|
+a|
+
+|===
