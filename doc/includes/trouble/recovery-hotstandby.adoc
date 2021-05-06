@@ -1,0 +1,55 @@
+= ホット・スタンバイ復旧
+
+レプリケーション構成でプライマリ側やスタンバイ側のPostgreSQLが停止・故障した場合について、適切な対応ができるかを問う。
+
+.主要な知識範囲と参考マニュアル（ホット・スタンバイ復旧）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|ストリーミングレプリケーションとロジカルレプリケーション
+a|
+a|
+a|
+
+|ログファイル内のエラーメッセージ
+a|
+a|
+a|
+
+|スタンバイへ伝搬される処理とされない処理
+a|
+a|
+a|
+
+|プライマリ側PostgreSQLの停止・故障と再開(再起動)の方法
+a|
+a|
+a|
+
+|スタンバイ側PostgreSQLの停止・故障と再開(再起動)の方法
+a|
+a|
+a|
+
+|ロジカルレプリケーションのサブスクライバ―へ伝搬される処理とされない処理
+a|
+a|
+a|
+
+|ロジカルレプリケーションのサブスクライバ―でのコンフリクト
+a|
+a|
+a|
+
+
+|未分類
+a|
+* pg_ctl promote	https://www.postgresql.jp/document/11/html/app-pg-ctl.html
+* pg_receivewal	https://www.postgresql.jp/document/11/html/app-pgreceivewal.html
+* pg_rewind	https://www.postgresql.jp/document/11/html/app-pgrewind.html
+a|
+a|
+
+|===
+

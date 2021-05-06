@@ -1,0 +1,65 @@
+= 破損クラスタ復旧
+
+データファイルやトランザクションログファイルが破損した場合について、エラーメッセージの内容から原因を特定し、適切な対応ができるかを問う。
+
+.主要な知識範囲と参考マニュアル（破損クラスタ復旧）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|トランザクションログ復旧
+a|
+a|
+a|
+
+|システムテーブルのインデックス復旧
+a|
+a|
+a|
+
+|開発者向けオプション
+a|
+a|
+a|
+
+|テーブル・インデックスの実ファイルとパス
+a|
+a|
+a|
+
+|Relfilenode と OID
+a|
+a|
+a|
+
+|インデックス破損とREINDEXによる復旧
+a|
+a|
+a|
+
+|チェックサムによる破損検知と復旧
+a|
+a|
+a|
+
+|トランザクションIDの周回エラー
+a|
+a|
+* https://www.postgresql.jp/document/11/html/routine-vacuuming.html#VACUUM-FOR-WRAPAROUND
+a|
+
+
+|未分類
+a|
+* PITR	https://www.postgresql.jp/document/11/html/continuous-archiving.html
+* pg_resetwal	https://www.postgresql.jp/document/11/html/app-pgresetwal.html
+* ignore_system_indexes	https://www.postgresql.jp/document/11/html/runtime-config-developer.html
+* ignore_checksum_failure	https://www.postgresql.jp/document/11/html/runtime-config-developer.html
+* コミットログ(pg_xact)	https://www.postgresql.jp/document/11/html/storage-file-layout.html
+* シングルユーザモード	https://www.postgresql.jp/document/11/html/app-postgres.html#id-1.9.5.14.6.5
+* VACUUM FREEZE	https://www.postgresql.jp/document/11/html/sql-vacuum.html
+a|
+a|
+
+|===
+
