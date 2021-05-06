@@ -9,9 +9,22 @@
 
 |バックアップ、PITR
 a|
-* 
+* PITR
+* pg_dump
+* pg_dumpall
+* pg_basebackup
+* pg_start_backup()
+* pg_stop_backup()
+* pg_cancel_backend()
+* pg_terminate_backend()
 a|
 * https://www.postgresql.jp/document/11/html/backup.html
+* https://www.postgresql.jp/document/11/html/continuous-archiving.html
+* https://www.postgresql.jp/document/11/html/app-pgdump.html
+* https://www.postgresql.jp/document/11/html/app-pg-dumpall.html
+* https://www.postgresql.jp/document/11/html/app-pgbasebackup.html
+* https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
+* https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
 a|
 
 |VACUUM、ANALYZE、REINDEX
@@ -19,11 +32,15 @@ a|
 * ANALYZE
 * VACUUM
 * REINDEX
+* vacuumdb
+* pgstattuple
 a|
 * https://www.postgresql.jp/document/11/html/routine-vacuuming.html
 * https://www.postgresql.jp/document/11/html/sql-analyze.html
 * https://www.postgresql.jp/document/11/html/sql-vacuum.html
 * https://www.postgresql.jp/document/11/html/sql-reindex.html
+* https://www.postgresql.jp/document/11/html/app-vacuumdb.html
+* https://www.postgresql.jp/document/11/html/pgstattuple.html
 a|
 
 |自動バキューム
@@ -35,16 +52,20 @@ a|
 
 |チェックポイント
 a|
-* 
+* CHECKPOINT
 a|
 * https://www.postgresql.jp/document/11/html/wal-configuration.html
+* https://www.postgresql.jp/document/11/html/sql-checkpoint.html
 a|
 
 |サーバログ管理
 a|
-* 
+* log_connections
+* log_disconnections
+* log_duration
 a|
 * https://www.postgresql.jp/document/11/html/runtime-config-logging.html
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
 a|
 
 |ディスク容量監視
@@ -61,26 +82,17 @@ a|
 * https://www.postgresql.jp/document/11/html/routine-vacuuming.html
 a|
 
+|未分類
+a|
+* ALTER SYSTEM	https://www.postgresql.jp/document/11/html/sql-altersystem.html
+* CLUSTER	https://www.postgresql.jp/document/11/html/sql-cluster.html
+* WAL	https://www.postgresql.jp/document/11/html/wal-intro.html
+* postgresql.conf	https://www.postgresql.jp/document/11/html/config-setting.html#CONFIG-SETTING-CONFIGURATION-FILE
+* recovery.conf	https://www.postgresql.jp/document/11/html/recovery-config.html
+* pg_isready	https://www.postgresql.jp/document/11/html/app-pg-isready.html
+a|
+a|
+
 |===
 
 
-ALTER SYSTEM	https://www.postgresql.jp/document/11/html/sql-altersystem.html
-CLUSTER	https://www.postgresql.jp/document/11/html/sql-cluster.html
-CHECKPOINT	https://www.postgresql.jp/document/11/html/sql-checkpoint.html
-PITR	https://www.postgresql.jp/document/11/html/continuous-archiving.html
-WAL	https://www.postgresql.jp/document/11/html/wal-intro.html
-pg_dump	https://www.postgresql.jp/document/11/html/app-pgdump.html
-pg_dumpall	https://www.postgresql.jp/document/11/html/app-pg-dumpall.html
-pg_basebackup	https://www.postgresql.jp/document/11/html/app-pgbasebackup.html
-pg_start_backup()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
-pg_stop_backup()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
-postgresql.conf	https://www.postgresql.jp/document/11/html/config-setting.html#CONFIG-SETTING-CONFIGURATION-FILE
-recovery.conf	https://www.postgresql.jp/document/11/html/recovery-config.html
-vacuumdb	https://www.postgresql.jp/document/11/html/app-vacuumdb.html
-pgstattuple	https://www.postgresql.jp/document/11/html/pgstattuple.html
-pg_cancel_backend()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
-pg_terminate_backend()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
-pg_isready	https://www.postgresql.jp/document/11/html/app-pg-isready.html
-log_connections	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
-log_disconnections	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
-log_duration	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
