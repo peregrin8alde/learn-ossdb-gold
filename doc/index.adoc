@@ -5,4 +5,6 @@ include::{attributes-doc}[]
 
 include::includes/coverage.adoc[]
 
+include::includes/monitoring.adoc[]
+
 :leveloffset: -1
