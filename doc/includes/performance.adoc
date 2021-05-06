@@ -1,0 +1,9 @@
+= パフォーマンスチューニング
+
+:leveloffset: +1
+
+include::performance/parameter.adoc[性能に関係するパラメータ]
+
+include::performance/tuning.adoc[チューニングの実施]
+
+:leveloffset: -1
