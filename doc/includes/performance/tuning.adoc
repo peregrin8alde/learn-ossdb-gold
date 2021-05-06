@@ -1,1 +1,55 @@
 = チューニングの実施
+
+データベース、およびSQLのチューニングに関する理解を問う。
+
+.主要な知識範囲と参考マニュアル（チューニングの実施）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|パラメータのチューニング
+a|
+a|
+a|
+
+|実行計画のチューニング
+a|
+a|
+a|
+
+|SQL のチューニング
+a|
+a|
+a|
+
+|テーブル構成のチューニング
+a|
+a|
+a|
+
+|ディスクI/Oの分散
+a|
+a|
+a|
+
+|パラメータの反映方法(パラメータ有効化のために必要なアクション)
+a|
+a|
+a|
+
+|インデックスがSQLの性能に与える影響
+a|
+a|
+a|
+
+|Index Only Scan とVisibility Map
+a|
+* Index Only Scan
+a|
+* https://www.postgresql.jp/document/11/html/indexes-index-only-scans.html
+a|
+
+|===
+
+
+
