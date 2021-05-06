@@ -7,6 +7,8 @@ include::includes/coverage.adoc[]
 
 include::includes/management.adoc[]
 
+include::includes/monitoring.adoc[]
+
 :leveloffset: -1
 
 &#169; 2021 Okada Hayato.
