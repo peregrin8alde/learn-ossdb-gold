@@ -1,0 +1,98 @@
+= 運用管理用コマンド全般
+
+データベースの運用管理に関する高度な知識を問う。
+
+.主要な知識範囲と参考マニュアル（運用管理用コマンド全般）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|バックアップ、PITR
+a|
+* PITR
+* pg_dump
+* pg_dumpall
+* pg_basebackup
+* pg_start_backup()
+* pg_stop_backup()
+* pg_cancel_backend()
+* pg_terminate_backend()
+a|
+* https://www.postgresql.jp/document/11/html/backup.html
+* https://www.postgresql.jp/document/11/html/continuous-archiving.html
+* https://www.postgresql.jp/document/11/html/app-pgdump.html
+* https://www.postgresql.jp/document/11/html/app-pg-dumpall.html
+* https://www.postgresql.jp/document/11/html/app-pgbasebackup.html
+* https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
+* https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
+a|
+
+|VACUUM、ANALYZE、REINDEX
+a|
+* ANALYZE
+* VACUUM
+* REINDEX
+* vacuumdb
+* pgstattuple
+a|
+* https://www.postgresql.jp/document/11/html/routine-vacuuming.html
+* https://www.postgresql.jp/document/11/html/sql-analyze.html
+* https://www.postgresql.jp/document/11/html/sql-vacuum.html
+* https://www.postgresql.jp/document/11/html/sql-reindex.html
+* https://www.postgresql.jp/document/11/html/app-vacuumdb.html
+* https://www.postgresql.jp/document/11/html/pgstattuple.html
+a|
+
+|自動バキューム
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/routine-vacuuming.html#AUTOVACUUM
+a|
+
+|チェックポイント
+a|
+* CHECKPOINT
+a|
+* https://www.postgresql.jp/document/11/html/wal-configuration.html
+* https://www.postgresql.jp/document/11/html/sql-checkpoint.html
+a|
+
+|サーバログ管理
+a|
+* log_connections
+* log_disconnections
+* log_duration
+a|
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+a|
+
+|ディスク容量監視
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/diskusage.html
+a|
+
+|自動VACUUMと手動VACUUM/ANALYZEの違い
+a|
+* 
+a|
+* https://www.postgresql.jp/document/11/html/routine-vacuuming.html
+a|
+
+|未分類
+a|
+* ALTER SYSTEM	https://www.postgresql.jp/document/11/html/sql-altersystem.html
+* CLUSTER	https://www.postgresql.jp/document/11/html/sql-cluster.html
+* WAL	https://www.postgresql.jp/document/11/html/wal-intro.html
+* postgresql.conf	https://www.postgresql.jp/document/11/html/config-setting.html#CONFIG-SETTING-CONFIGURATION-FILE
+* recovery.conf	https://www.postgresql.jp/document/11/html/recovery-config.html
+* pg_isready	https://www.postgresql.jp/document/11/html/app-pg-isready.html
+a|
+a|
+
+|===
+
+

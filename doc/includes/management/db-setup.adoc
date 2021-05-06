@@ -1,0 +1,80 @@
+= データベースサーバ構築
+
+サーバ構築における容量見積もり、およびデータベースセキュリティに関する知識を問う。
+
+.主要な知識範囲と参考マニュアル（データベースサーバ構築）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|テーブル・インデックス容量見積もり
+a|
+* チェックサム
+* pg_xact
+* pg_multixact
+* pg_notify
+* pg_serial
+* pg_snapshots
+* pg_stat_tmp
+* pg_subtrans
+* pg_tblspc
+* pg_twophase
+* initdb -data-checksums (-k)
+a|
+* https://www.postgresql.jp/document/11/html/storage-file-layout.html[68.1. データベースファイルのレイアウト]
+* https://www.postgresql.jp/document/11/html/storage-page-layout.html[68.6. データベースページのレイアウト]
+* https://www.postgresql.jp/document/11/html/app-initdb.html[initdb]
+a|
+
+|セキュリティ- 通信経路暗号化（SSL)
+a|
+* ssl	
+* pg_stat_ssl
+a|
+* https://www.postgresql.jp/document/11/html/ssl-tcp.html[18.9. SSLによる安全なTCP/IP接続]
+* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS[28.2.2. 統計情報の表示]
+a|
+
+|セキュリティ- データ暗号化
+a|
+* pgcrypto
+a|
+* https://www.postgresql.jp/document/11/html/pgcrypto.html[F.25. pgcrypto]
+a|
+
+|セキュリティ- クライアント認証
+a|
+a|
+* https://www.postgresql.jp/document/11/html/client-authentication.html[第20章 クライアント認証]
+a|
+
+|セキュリティ- 監査ログ
+a|
+* log_statement
+* track_functions
+* track_activities
+a|
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT[19.8.3. 何をログに]
+* https://www.postgresql.jp/document/11/html/runtime-config-statistics.html#RUNTIME-CONFIG-STATISTICS-COLLECTOR[19.9.1. 問い合わせおよびインデックスに関する統計情報コレクタ]
+a|
+
+|データ型のサイズ
+a|
+a|
+* https://www.postgresql.jp/document/11/html/datatype.html[第8章 データ型]
+a|
+
+|ユーザ・データベース単位のパラメータ設定
+a|
+* ALTER ROLE
+* ALTER DATABASE
+a|
+* https://www.postgresql.jp/document/11/html/config-setting.html[19.1. パラメータの設定]
+* https://www.postgresql.jp/document/11/html/sql-alterrole.html[ALTER ROLE]
+* https://www.postgresql.jp/document/11/html/sql-alterdatabase.html[ALTER DATABASE]
+a|
+
+|===
+
+
