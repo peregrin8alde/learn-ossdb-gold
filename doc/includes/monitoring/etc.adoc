@@ -1,1 +1,42 @@
 = その他の性能監視
+
+性能監視に関するその他の手法。
+
+.主要な知識範囲と参考マニュアル（その他の性能監視）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|スロークエリの検出
+a|
+a|
+a|
+
+|付属ツールによる解析
+a|
+a|
+a|
+
+|性能劣化要因(リソース枯渇、ロック競合)
+a|
+a|
+a|
+
+
+|未分類
+a|
+* shared_preload_libraries	https://www.postgresql.jp/document/11/html/xfunc-c.html#id-1.8.3.13.15
+* auto_explain	https://www.postgresql.jp/document/11/html/auto-explain.html
+* auto_explain.*	https://www.postgresql.jp/document/11/html/auto-explain.html
+* log_min_duration_statement	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHEN
+* pg_stat_statements	https://www.postgresql.jp/document/11/html/pgstatstatements.html
+* log_autovacuum_min_duration	https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html
+* log_lock_waits	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+* log_checkpoints	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+* log_temp_files	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+a|
+a|
+
+|===
+
+
