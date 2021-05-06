@@ -10,13 +10,5 @@ include::management/structure.adoc[データベースの構造]
 
 include::management/hotstandby.adoc[ホット・スタンバイ運用]
 
+
 :leveloffset: -1
-
-
-
-
-
-
-
-
-
