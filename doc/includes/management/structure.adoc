@@ -1,1 +1,45 @@
 = データベースの構造
+
+データベースの物理的な構造に関する知識を問う。
+
+.主要な知識範囲と参考マニュアル（データベースの構造）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+
+|データベースクラスタの構造
+a|
+a|
+* https://www.postgresql.jp/document/11/html/storage.html
+a|
+
+|プロセス構造
+a|
+a|
+a|
+
+|データの格納方法
+a|
+a|
+* https://www.postgresql.jp/document/11/html/storage-page-layout.html
+a|
+
+|未分類
+a|
+a|
+* autovacuum	https://www.postgresql.jp/document/11/html/routine-vacuuming.html#AUTOVACUUM
+* TOAST	https://www.postgresql.jp/document/11/html/storage-toast.html
+* FILLFACTOR	https://www.postgresql.jp/document/11/html/sql-createtable.html#SQL-CREATETABLE-STORAGE-PARAMETERS
+* アーカイブログ	https://www.postgresql.jp/document/11/html/continuous-archiving.html
+* ページヘッダ	https://www.postgresql.jp/document/11/html/storage-page-layout.html
+* タプルヘッダ	https://www.postgresql.jp/document/11/html/storage-page-layout.html
+* postmasterプロセス
+* postgresプロセス
+* バックグラウンドプロセス
+* SQL実行のキャンセル
+* シグナル(TERM/INT/HUP)によるサーバプロセスへの影響
+a|
+
+|===
+
