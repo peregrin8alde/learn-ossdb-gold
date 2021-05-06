@@ -9,6 +9,8 @@ include::includes/management.adoc[]
 
 include::includes/monitoring.adoc[]
 
+include::includes/performance.adoc[]
+
 :leveloffset: -1
 
 &#169; 2021 Okada Hayato.
