@@ -3,6 +3,10 @@ pages:
   image: asciidoctor/docker-asciidoctor
   script:
     - cd doc
+    - ls
+    - sh _build.sh
+    - ls
+    - ls _build
     - mv _build ../public
   artifacts:
     paths:
