@@ -1,0 +1,13 @@
+pages:
+  stage: deploy
+  image: asciidoctor/docker-asciidoctor
+  script:
+    - sh _build.sh
+    - mv _build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - develop
+
+  
