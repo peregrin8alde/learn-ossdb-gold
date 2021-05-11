@@ -7,13 +7,14 @@ services:
       - dbhost1-data:/var/lib/postgresql/data/pgdata
       - ./conf/dbhost1/postgresql.conf:/etc/postgresql/postgresql.conf
       - ./conf/dbhost1/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      - ./conf/dbhost1/pg_ident.conf:/etc/postgresql/pg_ident.conf
     networks:
       - backend
     environment:
       POSTGRES_PASSWORD: postgres
       PGDATA: /var/lib/postgresql/data/pgdata
     # command （ Dockerfile での CMD ）は docker run 実行時のプロセスのデフォルト（ ENTRYPOINT なし） または ENTRYPOINT へ渡す引数のデフォルト
-    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf'
+    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf' -c 'ident_file=/etc/postgresql/pg_ident.conf'
 
   dbhost2:
     image: postgres:11
@@ -22,13 +23,14 @@ services:
       - dbhost2-data:/var/lib/postgresql/data/pgdata
       - ./conf/dbhost2/postgresql.conf:/etc/postgresql/postgresql.conf
       - ./conf/dbhost2/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      - ./conf/dbhost2/pg_ident.conf:/etc/postgresql/pg_ident.conf
     networks:
       - backend
     environment:
       POSTGRES_PASSWORD: postgres
       PGDATA: /var/lib/postgresql/data/pgdata
     # command （ Dockerfile での CMD ）は docker run 実行時のプロセスのデフォルト（ ENTRYPOINT なし） または ENTRYPOINT へ渡す引数のデフォルト
-    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf'
+    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf' -c 'ident_file=/etc/postgresql/pg_ident.conf'
 
   dbhost3:
     image: postgres:11
@@ -37,13 +39,14 @@ services:
       - dbhost3-data:/var/lib/postgresql/data/pgdata
       - ./conf/dbhost3/postgresql.conf:/etc/postgresql/postgresql.conf
       - ./conf/dbhost3/pg_hba.conf:/etc/postgresql/pg_hba.conf
+      - ./conf/dbhost3/pg_ident.conf:/etc/postgresql/pg_ident.conf
     networks:
       - backend
     environment:
       POSTGRES_PASSWORD: postgres
       PGDATA: /var/lib/postgresql/data/pgdata
     # command （ Dockerfile での CMD ）は docker run 実行時のプロセスのデフォルト（ ENTRYPOINT なし） または ENTRYPOINT へ渡す引数のデフォルト
-    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf'
+    command: -c 'config_file=/etc/postgresql/postgresql.conf' -c 'hba_file=/etc/postgresql/pg_hba.conf' -c 'ident_file=/etc/postgresql/pg_ident.conf'
 
 networks:
   backend:
