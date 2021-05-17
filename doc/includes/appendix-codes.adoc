@@ -1,0 +1,139 @@
+= 動作確認用コード群
+
+学習に際して実際に PostgreSQL で動作確認をするためのコード群を記載する。
+
+== #【未定稿】【検証中】# テーブル容量見積もり
+
+[source, sql]
+----
+CREATE TABLE tbl_sample_filesize (
+    col01 smallint, -- 2 バイト
+    col02 integer,  -- 4 バイト
+    col03 bigint,  -- 8 バイト
+    col04 real,  -- 4 バイト
+    col05 double precision,  -- 8 バイト
+    col06 timestamp,  -- 8 バイト
+    col07 date,  -- 4 バイト
+    col08 time,  -- 8 バイト
+    col09 interval,  -- 16 バイト
+    col10 boolean  -- 1 バイト
+    -- 合計 63 バイト
+);
+----
+
+[source,shell]
+----
+rm -rf data_tbl_sample_filesize.csv
+for i in `seq 1 500000`; do
+  echo "1,1000,2000,12.345,67.890,'2021-1-1 12:10:20','2021-1-1','12:10:20','3 4:05:06',true" >> data_tbl_sample_filesize.csv
+done
+
+psql -U postgres -c "\copy tbl_sample_filesize FROM 'data_tbl_sample_filesize.csv' WITH csv"
+----
+
+[source,console]
+----
+# ls -lh data_tbl_sample_filesize.csv
+-rw-r--r-- 1 root root 41M May 16 10:46 data_tbl_sample_filesize.csv
+
+# psql -U postgres -c "SELECT * FROM tbl_sample_filesize LIMIT 1"
+ col01 | col02 | col03 | col04  | col05 |        col06        |   col07    |  col08   |      col09      | col10 
+-------+-------+-------+--------+-------+---------------------+------------+----------+-----------------+-------
+     1 |  1000 |  2000 | 12.345 | 67.89 | 2021-01-01 12:10:20 | 2021-01-01 | 12:10:20 | 3 days 04:05:06 | t
+(1 row)
+
+# psql -U postgres -c "SELECT COUNT(*) FROM tbl_sample_filesize"
+ count  
+--------
+ 500000
+(1 row)
+
+### https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-DBSIZE
+# psql -U postgres -c "SELECT pg_size_pretty((pg_stat_file(pg_relation_filepath('tbl_sample_filesize'))).size) as filesize"
+ filesize 
+----------
+ 52 MB
+(1 row)
+
+# psql -U postgres -c "SELECT pg_size_pretty(pg_relation_size('tbl_sample_filesize'))"
+ pg_size_pretty 
+----------------
+ 52 MB
+(1 row)
+
+# psql -U postgres -c "ANALYZE tbl_sample_filesize"
+
+# psql -U postgres -c "SELECT pg_relation_filepath(oid), relpages, reltuples FROM pg_class WHERE relname = 'tbl_sample_filesize'"
+ pg_relation_filepath | relpages | reltuples 
+----------------------+----------+-----------
+ base/13067/24579     |     6667 |    500000
+(1 row)
+
+echo $(( 8192 / (28+59) ))
+
+echo $(( 500000 / ( (8192-24) / (28+63) ) ))
+# echo $(( 500000 / ( (8192-24) / (28+63) ) ))
+5617
+
+echo $(( (8192-24) / (28+63) ))
+echo $(( 8192 * ( 500000 / ( (8192-24) / (28+63) ) ) / 1024 / 1024 ))
+
+echo $(( 500000 / 6667 ))
+74
+
+echo $(( (8192-24) / 74 ))
+110
+
+echo $(( 500000 / 5617 ))
+89
+
+echo $(( (8192-24) / 89 ))
+91
+----
+
+[source, sql]
+----
+DROP TABLE tbl_sample_filesize ;
+----
+
+[source,console]
+----
+
+CREATE TABLE registration (
+  id BIGINT PRIMARY KEY,
+  reg_event INTEGER NOT NULL,
+  reg_client INTEGER NOT NULL,
+  reg_date TIMESTAMP NOT NULL
+);
+
+# rm -rf data_registration.csv
+# for i in `seq 1 500000`; do
+  echo "$i,1000,2000,'2021-1-1 12:10:20'" >> data_registration.csv
+done
+
+# psql -U postgres -c "\copy registration FROM 'data_registration.csv' WITH csv"
+
+# psql -U postgres -c "SELECT pg_size_pretty(pg_relation_size('registration'))"
+ pg_size_pretty 
+----------------
+ 25 MB
+(1 row)
+
+# echo $(( 8192 * ( 500000 / ( (8192-24) / (28+24) ) ) / 1024 / 1024 ))
+24
+
+# psql -U postgres -c "SELECT pg_relation_filepath(oid), relpages, reltuples FROM pg_class WHERE relname = 'registration'"
+ pg_relation_filepath | relpages | reltuples 
+----------------------+----------+-----------
+ base/13067/24587     |     3185 |    500000
+(1 row)
+
+# psql -U postgres -c "SELECT pg_column_size(col01) FROM tbl_sample_filesize LIMIT 1"
+
+# psql -U postgres -c "EXPLAIN SELECT * FROM tbl_sample_filesize LIMIT 1"
+                                    QUERY PLAN                                     
+-----------------------------------------------------------------------------------
+ Limit  (cost=0.00..0.02 rows=1 width=63)
+   ->  Seq Scan on tbl_sample_filesize  (cost=0.00..11667.00 rows=500000 width=63)
+(2 rows)
+----

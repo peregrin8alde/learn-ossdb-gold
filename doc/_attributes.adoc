@@ -71,7 +71,7 @@ https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-refe
 // :part-signifier: 
 // :preface-title: 
 // :section-refsig: 
-// :table-caption: 
+:table-caption: 表
 // :table-number: 
 :tip-caption: 補足
 :toc-title: 目次
@@ -156,7 +156,7 @@ https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-refe
 :icons: font
 // :iconsdir: 
 // :icontype: 
-// :imagesdir: 
+:imagesdir: images
 ////
 Source highlighting and formatting attributes
 https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/#source-highlighting-and-formatting-attributes
