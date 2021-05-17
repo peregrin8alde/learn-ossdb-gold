@@ -253,6 +253,12 @@ image::management/layout-index.svg[opts=inline,align="center"]
 
 == セキュリティ
 
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
 キーワード
 
 * ssl	
@@ -323,6 +329,12 @@ image::management/security.svg[opts=inline]
 
 == データ型のサイズ
 
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
 キーワード
 
 
@@ -338,6 +350,12 @@ image::management/security.svg[opts=inline]
 
 
 == ユーザ・データベース単位のパラメータ設定
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
 
 キーワード
 
