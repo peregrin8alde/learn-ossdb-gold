@@ -1,5 +1,6 @@
 = OSS-DB Gold 学習資材
 include::_attributes.adoc[]
+:xrefstyle: full
 :leveloffset: +1
 
 include::includes/coverage.adoc[]
@@ -11,6 +12,9 @@ include::includes/monitoring.adoc[]
 include::includes/performance.adoc[]
 
 include::includes/trouble.adoc[]
+
+[appendix]
+include::includes/appendix-codes.adoc[]
 
 :leveloffset: -1
 
