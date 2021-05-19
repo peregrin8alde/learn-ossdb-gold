@@ -255,7 +255,14 @@ image::management/layout-index.svg[opts=inline,align="center"]
 
 === 覚えるべきこと
 
-=== 想定試験問題と解法
+* セキュリティ関連の設定方法とその挙動
+
+[IMPORTANT]
+====
+* SSL を有効（ `ssl = on` ）にすると１つのポートで SSL かどうかを使い分けることができる。
+** SSL を使うかどうかは基本クライアント側の選択だが、サーバ側で SSL のみ受け付けるなどの設定も可能
+* クライアント認証設定ファイル `pg_hba.conf` 内で受け付けるプロトコルと DB 、ユーザ、 IP アドレス、認証方法を設定 
+====
 
 
 
@@ -327,51 +334,70 @@ include::source/sample-pg_hba.conf[]
 .サーバ - クライアント間の通信などのやり取り内容
 image::management/security.svg[opts=inline]
 
-== データ型のサイズ
-
-=== 覚えるべきこと
 
 === 想定試験問題と解法
 
 
 
-キーワード
+== データ型のサイズ
 
+=== 覚えるべきこと
 
-参考
+* 各データ型のサイズ
+
+[IMPORTANT]
+====
+* 可変長のデータ型は型の指定だけではサイズが決まらず、データ次第でオーバーヘッドも変化する。
+====
 
 * https://www.postgresql.jp/document/11/html/datatype.html[第8章 データ型]
 
-例題
 
 
+=== 想定試験問題と解法
 
-* 主なデータ型とサイズの一覧
+
 
 
 == ユーザ・データベース単位のパラメータ設定
 
 === 覚えるべきこと
 
-=== 想定試験問題と解法
+* ユーザ単位でのパラメータ設定方法
+* データベース単位でのパラメータ設定方法
 
+[IMPORTANT]
+====
+* `ALTER ROLE` でユーザに対しパラメタを指定することが可能
++
+[source,sql]
+----
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] SET configuration_parameter { TO | = } { value | DEFAULT }
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] SET configuration_parameter FROM CURRENT
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] RESET configuration_parameter
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] RESET ALL
 
+  role_name
+| CURRENT_USER
+| SESSION_USER
+----
+* `ALTER DATABASE` でデータベースに対しパラメタを指定することが可能
++
+[source,sql]
+----
+ALTER DATABASE name SET configuration_parameter { TO | = } { value | DEFAULT }
+ALTER DATABASE name SET configuration_parameter FROM CURRENT
+ALTER DATABASE name RESET configuration_parameter
+ALTER DATABASE name RESET ALL
+----
+====
 
-キーワード
-
-* ALTER ROLE
-* ALTER DATABASE
-
-参考
 
 * https://www.postgresql.jp/document/11/html/config-setting.html[19.1. パラメータの設定]
 * https://www.postgresql.jp/document/11/html/sql-alterrole.html[ALTER ROLE]
 * https://www.postgresql.jp/document/11/html/sql-alterdatabase.html[ALTER DATABASE]
 
-例題
 
 
-
-* 各単位でのパラメータ設定方法
-* パラメータ種別
+=== 想定試験問題と解法
 

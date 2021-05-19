@@ -46,6 +46,8 @@ a|
 |===
 
 
+https://oss-db.jp/sample/gold_management_01/05_130510[1.05]
+
 == データベースクラスタの構造
 
 === 覚えるべきこと
@@ -55,6 +57,8 @@ a|
 
 
 == プロセス構造
+
+https://oss-db.jp/sample/gold_management_01/02_111130[1.02]
 
 === 覚えるべきこと
 

@@ -46,6 +46,20 @@ a|
 |===
 
 
+https://oss-db.jp/sample/gold_monitoring_01/01_111227[2.01]
+
+https://oss-db.jp/sample/gold_monitoring_01/06_140307[2.06]
+
+https://oss-db.jp/sample/gold_monitoring_01/07_140417[2.07]
+
+https://oss-db.jp/sample/gold_monitoring_01/08_140530[2.08]
+
+https://oss-db.jp/sample/gold_monitoring_01/12_170228[2.12]
+
+https://oss-db.jp/sample/gold_monitoring_01/13_190226[2.13]
+
+https://oss-db.jp/sample/gold_monitoring_01/14_190409[2.14]
+
 == pg_locks
 
 === 覚えるべきこと

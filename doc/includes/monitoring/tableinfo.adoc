@@ -49,6 +49,11 @@ a|
 |===
 
 
+https://oss-db.jp/sample/gold_monitoring_01/03_130704[2.03]
+
+
+
+
 == pg_class
 
 === 覚えるべきこと

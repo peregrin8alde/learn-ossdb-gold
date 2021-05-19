@@ -42,6 +42,11 @@ a|
 |===
 
 
+https://oss-db.jp/sample/gold_monitoring_01/05_130910[2.05]
+
+https://oss-db.jp/sample/gold_monitoring_01/15_190529[2.15]
+
+
 
 == スロークエリの検出
 

@@ -65,6 +65,10 @@ a|
 |===
 
 
+https://oss-db.jp/sample/gold_management_01/06_130619[1.06]
+
+https://oss-db.jp/sample/gold_management_01/20_190515[1.20]
+
 == ストリーミングレプリケーション機能とロジカルレプリケーション機能の概要
 
 === 覚えるべきこと

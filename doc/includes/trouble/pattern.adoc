@@ -66,6 +66,13 @@ a|
 
 
 
+https://oss-db.jp/sample/gold_trouble_01/04_140530[4.04]
+
+https://oss-db.jp/sample/gold_trouble_01/06_150904[4.06]
+
+https://oss-db.jp/sample/gold_trouble_01/08_190423[4.08]
+
+
 == サーバダウン、動作不良、データ消失への対処
 
 === 覚えるべきこと
