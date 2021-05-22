@@ -12,7 +12,7 @@ https://www.postgresql.jp/document/11/html/index.html
 
 == 参照箇所
 
-xref:resource/postgresql/html/index.html[index]
+xref:resource/postgresql/html/index.html[index] （ https://www.postgresql.jp/document/11/html/index.html[日本語訳] ）
 
 
 .参照マニュアル記事
@@ -21,203 +21,397 @@ xref:resource/postgresql/html/index.html[index]
 |===
 |参照先 |参照元 |関連するサンプル問題
 
-|preface - xref:resource/postgresql/html/preface.html[Preface]|  |  
-
-|sect1 - xref:resource/postgresql/html/intro-whatis.html[1.  What is PostgreSQL?]|  |  
-
-|sect1 - xref:resource/postgresql/html/history.html[2. A Brief History of PostgreSQL]|  |  
-
-|sect1 - xref:resource/postgresql/html/notation.html[3. Conventions]|  |  
-
-|sect1 - xref:resource/postgresql/html/resources.html[4. Further Information]|  |  
-
-|sect1 - xref:resource/postgresql/html/bug-reporting.html[5. Bug Reporting Guidelines]|  |  
-
-|part - xref:resource/postgresql/html/tutorial.html[I. Tutorial]|  |  
-
-|chapter - xref:resource/postgresql/html/tutorial-start.html[1. Getting Started]|  |  
-
-|chapter - xref:resource/postgresql/html/tutorial-sql.html[2. The SQL Language]|  |  
-
-|chapter - xref:resource/postgresql/html/tutorial-advanced.html[3. Advanced Features]|  |  
-
-|part - xref:resource/postgresql/html/sql.html[II. The SQL Language]|  |  
-
-|chapter - xref:resource/postgresql/html/sql-syntax.html[4. SQL Syntax]|  |  
-
-|chapter - xref:resource/postgresql/html/ddl.html[5. Data Definition]|  |  
-
-|chapter - xref:resource/postgresql/html/dml.html[6. Data Manipulation]|  |  
-
-|chapter - xref:resource/postgresql/html/queries.html[7. Queries]|  |  
-
-|chapter - xref:resource/postgresql/html/datatype.html[8. Data Types]|  |  
-
-|chapter - xref:resource/postgresql/html/functions.html[9. Functions and Operators]|  |  
-
-|chapter - xref:resource/postgresql/html/typeconv.html[10. Type Conversion]|  |  
-
-|chapter - xref:resource/postgresql/html/indexes.html[11. Indexes]|  |  
-
-|chapter - xref:resource/postgresql/html/textsearch.html[12. Full Text Search]|  |  
-
-|chapter - xref:resource/postgresql/html/mvcc.html[13. Concurrency Control]|  |  
-
-|chapter - xref:resource/postgresql/html/performance-tips.html[14. Performance Tips]|  |  
-
-|chapter - xref:resource/postgresql/html/parallel-query.html[15. Parallel Query]|  |  
-
-|part - xref:resource/postgresql/html/admin.html[III. Server Administration]|  |  
-
-|chapter - xref:resource/postgresql/html/installation.html[16. Installation from Source Code]|  |  
-
-|chapter - xref:resource/postgresql/html/install-windows.html[17. Installation from Source Code on Windows]|  |  
-
-|chapter - xref:resource/postgresql/html/runtime.html[18. Server Setup and Operation]|  |  
-
-|chapter - xref:resource/postgresql/html/runtime-config.html[19. Server Configuration]|  |  
-
-|chapter - xref:resource/postgresql/html/client-authentication.html[20. Client Authentication]|  |  
-
-|chapter - xref:resource/postgresql/html/user-manag.html[21. Database Roles]|  |  
-
-|chapter - xref:resource/postgresql/html/managing-databases.html[22. Managing Databases]|  |  
-
-|chapter - xref:resource/postgresql/html/charset.html[23. Localization]|  |  
-
-|chapter - xref:resource/postgresql/html/maintenance.html[24. Routine Database Maintenance Tasks]|  |  
-
-|chapter - xref:resource/postgresql/html/backup.html[25. Backup and Restore]|  |  
-
-|chapter - xref:resource/postgresql/html/high-availability.html[26. High Availability, Load Balancing, and Replication]|  |  
-
-|chapter - xref:resource/postgresql/html/recovery-config.html[27. Recovery Configuration]|  |  
-
-|chapter - xref:resource/postgresql/html/monitoring.html[28. Monitoring Database Activity]|  |  
-
-|chapter - xref:resource/postgresql/html/diskusage.html[29. Monitoring Disk Usage]|  |  
-
-|chapter - xref:resource/postgresql/html/wal.html[30. Reliability and the Write-Ahead Log]|  |  
-
-|chapter - xref:resource/postgresql/html/logical-replication.html[31. Logical Replication]|  |  
-
-|chapter - xref:resource/postgresql/html/jit.html[32. Just-in-Time Compilation (JIT)]|  |  
-
-|chapter - xref:resource/postgresql/html/regress.html[33. Regression Tests]|  |  
-
-|part - xref:resource/postgresql/html/client-interfaces.html[IV. Client Interfaces]|  |  
-
-|chapter - xref:resource/postgresql/html/libpq.html[34. libpq - C Library]|  |  
-
-|chapter - xref:resource/postgresql/html/largeobjects.html[35. Large Objects]|  |  
-
-|chapter - xref:resource/postgresql/html/ecpg.html[36. ECPG - Embedded SQL in C]|  |  
-
-|chapter - xref:resource/postgresql/html/information-schema.html[37. The Information Schema]|  |  
-
-|part - xref:resource/postgresql/html/server-programming.html[V. Server Programming]|  |  
-
-|chapter - xref:resource/postgresql/html/extend.html[38. Extending SQL]|  |  
-
-|chapter - xref:resource/postgresql/html/triggers.html[39. Triggers]|  |  
-
-|chapter - xref:resource/postgresql/html/event-triggers.html[40. Event Triggers]|  |  
-
-|chapter - xref:resource/postgresql/html/rules.html[41. The Rule System]|  |  
-
-|chapter - xref:resource/postgresql/html/xplang.html[42. Procedural Languages]|  |  
-
-|chapter - xref:resource/postgresql/html/plpgsql.html[43. PL/pgSQL - SQL Procedural Language]|  |  
-
-|chapter - xref:resource/postgresql/html/pltcl.html[44. PL/Tcl - Tcl Procedural Language]|  |  
-
-|chapter - xref:resource/postgresql/html/plperl.html[45. PL/Perl - Perl Procedural Language]|  |  
-
-|chapter - xref:resource/postgresql/html/plpython.html[46. PL/Python - Python Procedural Language]|  |  
-
-|chapter - xref:resource/postgresql/html/spi.html[47. Server Programming Interface]|  |  
-
-|chapter - xref:resource/postgresql/html/bgworker.html[48. Background Worker Processes]|  |  
-
-|chapter - xref:resource/postgresql/html/logicaldecoding.html[49. Logical Decoding]|  |  
-
-|chapter - xref:resource/postgresql/html/replication-origins.html[50. Replication Progress Tracking]|  |  
-
-|part - xref:resource/postgresql/html/reference.html[VI. Reference]|  |  
-
-|reference - xref:resource/postgresql/html/sql-commands.html[I. SQL Commands]|  |  
-
-|reference - xref:resource/postgresql/html/reference-client.html[II. PostgreSQL Client Applications]|  |  
-
-|reference - xref:resource/postgresql/html/reference-server.html[III. PostgreSQL Server Applications]|  |  
-
-|part - xref:resource/postgresql/html/internals.html[VII. Internals]|  |  
-
-|chapter - xref:resource/postgresql/html/overview.html[51. Overview of PostgreSQL Internals]|  |  
-
-|chapter - xref:resource/postgresql/html/catalogs.html[52. System Catalogs]|  |  
-
-|chapter - xref:resource/postgresql/html/protocol.html[53. Frontend/Backend Protocol]|  |  
-
-|chapter - xref:resource/postgresql/html/source.html[54. PostgreSQL Coding Conventions]|  |  
-
-|chapter - xref:resource/postgresql/html/nls.html[55. Native Language Support]|  |  
-
-|chapter - xref:resource/postgresql/html/plhandler.html[56. Writing A Procedural Language Handler]|  |  
-
-|chapter - xref:resource/postgresql/html/fdwhandler.html[57. Writing A Foreign Data Wrapper]|  |  
-
-|chapter - xref:resource/postgresql/html/tablesample-method.html[58. Writing A Table Sampling Method]|  |  
-
-|chapter - xref:resource/postgresql/html/custom-scan.html[59. Writing A Custom Scan Provider]|  |  
-
-|chapter - xref:resource/postgresql/html/geqo.html[60. Genetic Query Optimizer]|  |  
-
-|chapter - xref:resource/postgresql/html/indexam.html[61. Index Access Method Interface Definition]|  |  
-
-|chapter - xref:resource/postgresql/html/generic-wal.html[62. Generic WAL Records]|  |  
-
-|chapter - xref:resource/postgresql/html/btree.html[63. B-Tree Indexes]|  |  
-
-|chapter - xref:resource/postgresql/html/gist.html[64. GiST Indexes]|  |  
-
-|chapter - xref:resource/postgresql/html/spgist.html[65. SP-GiST Indexes]|  |  
-
-|chapter - xref:resource/postgresql/html/gin.html[66. GIN Indexes]|  |  
-
-|chapter - xref:resource/postgresql/html/brin.html[67. BRIN Indexes]|  |  
-
-|chapter - xref:resource/postgresql/html/storage.html[68. Database Physical Storage]|  |  
-
-|chapter - xref:resource/postgresql/html/bki.html[69. System Catalog Declarations and Initial Contents]|  |  
-
-|chapter - xref:resource/postgresql/html/planner-stats-details.html[70. How the Planner Uses Statistics]|  |  
-
-|part - xref:resource/postgresql/html/appendixes.html[VIII. Appendixes]|  |  
-
-|appendix - xref:resource/postgresql/html/errcodes-appendix.html[A. PostgreSQL Error Codes]|  |  
-
-|appendix - xref:resource/postgresql/html/datetime-appendix.html[B. Date/Time Support]|  |  
-
-|appendix - xref:resource/postgresql/html/sql-keywords-appendix.html[C. SQL Key Words]|  |  
-
-|appendix - xref:resource/postgresql/html/features.html[D. SQL Conformance]|  |  
-
-|appendix - xref:resource/postgresql/html/release.html[E. Release Notes]|  |  
-
-|appendix - xref:resource/postgresql/html/contrib.html[F. Additional Supplied Modules]|  |  
-
-|appendix - xref:resource/postgresql/html/contrib-prog.html[G. Additional Supplied Programs]|  |  
-
-|appendix - xref:resource/postgresql/html/external-projects.html[H. External Projects]|  |  
-
-|appendix - xref:resource/postgresql/html/sourcerepo.html[I. The Source Code Repository]|  |  
-
-|appendix - xref:resource/postgresql/html/docguide.html[J. Documentation]|  |  
-
-|appendix - xref:resource/postgresql/html/acronyms.html[K. Acronyms]|  |  
-
-|appendix - xref:resource/postgresql/html/appendix-obsolete.html[L. Obsolete or Renamed Features]|  |  
+|preface - xref:resource/postgresql/html/preface.html[Preface] （ https://www.postgresql.jp/document/11/html/preface.html[日本語訳] ）
+|  
+|  
+
+|sect1 - xref:resource/postgresql/html/intro-whatis.html[1.  What is PostgreSQL?] （ https://www.postgresql.jp/document/11/html/intro-whatis.html[日本語訳] ）
+|  
+|  
+
+|sect1 - xref:resource/postgresql/html/history.html[2. A Brief History of PostgreSQL] （ https://www.postgresql.jp/document/11/html/history.html[日本語訳] ）
+|  
+|  
+
+|sect1 - xref:resource/postgresql/html/notation.html[3. Conventions] （ https://www.postgresql.jp/document/11/html/notation.html[日本語訳] ）
+|  
+|  
+
+|sect1 - xref:resource/postgresql/html/resources.html[4. Further Information] （ https://www.postgresql.jp/document/11/html/resources.html[日本語訳] ）
+|  
+|  
+
+|sect1 - xref:resource/postgresql/html/bug-reporting.html[5. Bug Reporting Guidelines] （ https://www.postgresql.jp/document/11/html/bug-reporting.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/tutorial.html[I. Tutorial] （ https://www.postgresql.jp/document/11/html/tutorial.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/tutorial-start.html[1. Getting Started] （ https://www.postgresql.jp/document/11/html/tutorial-start.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/tutorial-sql.html[2. The SQL Language] （ https://www.postgresql.jp/document/11/html/tutorial-sql.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/tutorial-advanced.html[3. Advanced Features] （ https://www.postgresql.jp/document/11/html/tutorial-advanced.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/sql.html[II. The SQL Language] （ https://www.postgresql.jp/document/11/html/sql.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/sql-syntax.html[4. SQL Syntax] （ https://www.postgresql.jp/document/11/html/sql-syntax.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/ddl.html[5. Data Definition] （ https://www.postgresql.jp/document/11/html/ddl.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/dml.html[6. Data Manipulation] （ https://www.postgresql.jp/document/11/html/dml.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/queries.html[7. Queries] （ https://www.postgresql.jp/document/11/html/queries.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/datatype.html[8. Data Types] （ https://www.postgresql.jp/document/11/html/datatype.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/functions.html[9. Functions and Operators] （ https://www.postgresql.jp/document/11/html/functions.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/typeconv.html[10. Type Conversion] （ https://www.postgresql.jp/document/11/html/typeconv.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/indexes.html[11. Indexes] （ https://www.postgresql.jp/document/11/html/indexes.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/textsearch.html[12. Full Text Search] （ https://www.postgresql.jp/document/11/html/textsearch.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/mvcc.html[13. Concurrency Control] （ https://www.postgresql.jp/document/11/html/mvcc.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/performance-tips.html[14. Performance Tips] （ https://www.postgresql.jp/document/11/html/performance-tips.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/parallel-query.html[15. Parallel Query] （ https://www.postgresql.jp/document/11/html/parallel-query.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/admin.html[III. Server Administration] （ https://www.postgresql.jp/document/11/html/admin.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/installation.html[16. Installation from Source Code] （ https://www.postgresql.jp/document/11/html/installation.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/install-windows.html[17. Installation from Source Code on Windows] （ https://www.postgresql.jp/document/11/html/install-windows.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/runtime.html[18. Server Setup and Operation] （ https://www.postgresql.jp/document/11/html/runtime.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/runtime-config.html[19. Server Configuration] （ https://www.postgresql.jp/document/11/html/runtime-config.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/client-authentication.html[20. Client Authentication] （ https://www.postgresql.jp/document/11/html/client-authentication.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/user-manag.html[21. Database Roles] （ https://www.postgresql.jp/document/11/html/user-manag.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/managing-databases.html[22. Managing Databases] （ https://www.postgresql.jp/document/11/html/managing-databases.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/charset.html[23. Localization] （ https://www.postgresql.jp/document/11/html/charset.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/maintenance.html[24. Routine Database Maintenance Tasks] （ https://www.postgresql.jp/document/11/html/maintenance.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/backup.html[25. Backup and Restore] （ https://www.postgresql.jp/document/11/html/backup.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/high-availability.html[26. High Availability, Load Balancing, and Replication] （ https://www.postgresql.jp/document/11/html/high-availability.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/recovery-config.html[27. Recovery Configuration] （ https://www.postgresql.jp/document/11/html/recovery-config.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/monitoring.html[28. Monitoring Database Activity] （ https://www.postgresql.jp/document/11/html/monitoring.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/diskusage.html[29. Monitoring Disk Usage] （ https://www.postgresql.jp/document/11/html/diskusage.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/wal.html[30. Reliability and the Write-Ahead Log] （ https://www.postgresql.jp/document/11/html/wal.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/logical-replication.html[31. Logical Replication] （ https://www.postgresql.jp/document/11/html/logical-replication.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/jit.html[32. Just-in-Time Compilation (JIT)] （ https://www.postgresql.jp/document/11/html/jit.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/regress.html[33. Regression Tests] （ https://www.postgresql.jp/document/11/html/regress.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/client-interfaces.html[IV. Client Interfaces] （ https://www.postgresql.jp/document/11/html/client-interfaces.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/libpq.html[34. libpq - C Library] （ https://www.postgresql.jp/document/11/html/libpq.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/largeobjects.html[35. Large Objects] （ https://www.postgresql.jp/document/11/html/largeobjects.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/ecpg.html[36. ECPG - Embedded SQL in C] （ https://www.postgresql.jp/document/11/html/ecpg.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/information-schema.html[37. The Information Schema] （ https://www.postgresql.jp/document/11/html/information-schema.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/server-programming.html[V. Server Programming] （ https://www.postgresql.jp/document/11/html/server-programming.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/extend.html[38. Extending SQL] （ https://www.postgresql.jp/document/11/html/extend.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/triggers.html[39. Triggers] （ https://www.postgresql.jp/document/11/html/triggers.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/event-triggers.html[40. Event Triggers] （ https://www.postgresql.jp/document/11/html/event-triggers.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/rules.html[41. The Rule System] （ https://www.postgresql.jp/document/11/html/rules.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/xplang.html[42. Procedural Languages] （ https://www.postgresql.jp/document/11/html/xplang.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/plpgsql.html[43. PL/pgSQL - SQL Procedural Language] （ https://www.postgresql.jp/document/11/html/plpgsql.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/pltcl.html[44. PL/Tcl - Tcl Procedural Language] （ https://www.postgresql.jp/document/11/html/pltcl.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/plperl.html[45. PL/Perl - Perl Procedural Language] （ https://www.postgresql.jp/document/11/html/plperl.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/plpython.html[46. PL/Python - Python Procedural Language] （ https://www.postgresql.jp/document/11/html/plpython.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/spi.html[47. Server Programming Interface] （ https://www.postgresql.jp/document/11/html/spi.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/bgworker.html[48. Background Worker Processes] （ https://www.postgresql.jp/document/11/html/bgworker.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/logicaldecoding.html[49. Logical Decoding] （ https://www.postgresql.jp/document/11/html/logicaldecoding.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/replication-origins.html[50. Replication Progress Tracking] （ https://www.postgresql.jp/document/11/html/replication-origins.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/reference.html[VI. Reference] （ https://www.postgresql.jp/document/11/html/reference.html[日本語訳] ）
+|  
+|  
+
+|reference - xref:resource/postgresql/html/sql-commands.html[I. SQL Commands] （ https://www.postgresql.jp/document/11/html/sql-commands.html[日本語訳] ）
+|  
+|  
+
+|reference - xref:resource/postgresql/html/reference-client.html[II. PostgreSQL Client Applications] （ https://www.postgresql.jp/document/11/html/reference-client.html[日本語訳] ）
+|  
+|  
+
+|reference - xref:resource/postgresql/html/reference-server.html[III. PostgreSQL Server Applications] （ https://www.postgresql.jp/document/11/html/reference-server.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/internals.html[VII. Internals] （ https://www.postgresql.jp/document/11/html/internals.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/overview.html[51. Overview of PostgreSQL Internals] （ https://www.postgresql.jp/document/11/html/overview.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/catalogs.html[52. System Catalogs] （ https://www.postgresql.jp/document/11/html/catalogs.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/protocol.html[53. Frontend/Backend Protocol] （ https://www.postgresql.jp/document/11/html/protocol.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/source.html[54. PostgreSQL Coding Conventions] （ https://www.postgresql.jp/document/11/html/source.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/nls.html[55. Native Language Support] （ https://www.postgresql.jp/document/11/html/nls.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/plhandler.html[56. Writing A Procedural Language Handler] （ https://www.postgresql.jp/document/11/html/plhandler.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/fdwhandler.html[57. Writing A Foreign Data Wrapper] （ https://www.postgresql.jp/document/11/html/fdwhandler.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/tablesample-method.html[58. Writing A Table Sampling Method] （ https://www.postgresql.jp/document/11/html/tablesample-method.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/custom-scan.html[59. Writing A Custom Scan Provider] （ https://www.postgresql.jp/document/11/html/custom-scan.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/geqo.html[60. Genetic Query Optimizer] （ https://www.postgresql.jp/document/11/html/geqo.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/indexam.html[61. Index Access Method Interface Definition] （ https://www.postgresql.jp/document/11/html/indexam.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/generic-wal.html[62. Generic WAL Records] （ https://www.postgresql.jp/document/11/html/generic-wal.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/btree.html[63. B-Tree Indexes] （ https://www.postgresql.jp/document/11/html/btree.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/gist.html[64. GiST Indexes] （ https://www.postgresql.jp/document/11/html/gist.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/spgist.html[65. SP-GiST Indexes] （ https://www.postgresql.jp/document/11/html/spgist.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/gin.html[66. GIN Indexes] （ https://www.postgresql.jp/document/11/html/gin.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/brin.html[67. BRIN Indexes] （ https://www.postgresql.jp/document/11/html/brin.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/storage.html[68. Database Physical Storage] （ https://www.postgresql.jp/document/11/html/storage.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/bki.html[69. System Catalog Declarations and Initial Contents] （ https://www.postgresql.jp/document/11/html/bki.html[日本語訳] ）
+|  
+|  
+
+|chapter - xref:resource/postgresql/html/planner-stats-details.html[70. How the Planner Uses Statistics] （ https://www.postgresql.jp/document/11/html/planner-stats-details.html[日本語訳] ）
+|  
+|  
+
+|part - xref:resource/postgresql/html/appendixes.html[VIII. Appendixes] （ https://www.postgresql.jp/document/11/html/appendixes.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/errcodes-appendix.html[A. PostgreSQL Error Codes] （ https://www.postgresql.jp/document/11/html/errcodes-appendix.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/datetime-appendix.html[B. Date/Time Support] （ https://www.postgresql.jp/document/11/html/datetime-appendix.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/sql-keywords-appendix.html[C. SQL Key Words] （ https://www.postgresql.jp/document/11/html/sql-keywords-appendix.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/features.html[D. SQL Conformance] （ https://www.postgresql.jp/document/11/html/features.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/release.html[E. Release Notes] （ https://www.postgresql.jp/document/11/html/release.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/contrib.html[F. Additional Supplied Modules] （ https://www.postgresql.jp/document/11/html/contrib.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/contrib-prog.html[G. Additional Supplied Programs] （ https://www.postgresql.jp/document/11/html/contrib-prog.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/external-projects.html[H. External Projects] （ https://www.postgresql.jp/document/11/html/external-projects.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/sourcerepo.html[I. The Source Code Repository] （ https://www.postgresql.jp/document/11/html/sourcerepo.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/docguide.html[J. Documentation] （ https://www.postgresql.jp/document/11/html/docguide.html[日本語訳] ）
+|  
+|  
+
+|appendix - xref:resource/postgresql/html/acronyms.html[K. Acronyms] （ https://www.postgresql.jp/document/11/html/acronyms.html[日本語訳] ）
+|  
+|  
 
 |===
 
