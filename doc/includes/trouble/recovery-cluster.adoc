@@ -66,17 +66,19 @@ a|
 |===
 
 
-https://oss-db.jp/sample/gold_trouble_01/01_130510[4.01]
+* リレーションが消失することを想定した対策または復旧
 
 https://oss-db.jp/sample/gold_trouble_01/07_171031[4.07]
 
 
 == トランザクションログ復旧
 
-https://oss-db.jp/sample/gold_trouble_01/02_130620[4.02]
-
 
 === 覚えるべきこと
+
+* WALファイルが破損した場合の復旧方法
+
+https://oss-db.jp/sample/gold_trouble_01/02_130620[4.02]
 
 === 想定試験問題と解法
 
@@ -86,6 +88,12 @@ https://oss-db.jp/sample/gold_trouble_01/02_130620[4.02]
 == システムテーブルのインデックス復旧
 
 === 覚えるべきこと
+
+* システムカタログのインデックスの場所
+* システムカタログのインデックス破損時の対策
+
+https://oss-db.jp/sample/gold_trouble_01/01_130510[4.01]
+
 
 === 想定試験問題と解法
 
@@ -98,6 +106,9 @@ https://oss-db.jp/sample/gold_trouble_01/03_130910[4.03]
 
 
 === 覚えるべきこと
+
+* ヘッダ情報が破損時の対処
+* zero_damaged_pages
 
 === 想定試験問題と解法
 
