@@ -16,4 +16,6 @@ asciidoctor \
   ${OPT_STYLE} \
   "**/index.adoc"
 
+cp -r resource ${OUTPUT_DIR}/
+
 exit 0

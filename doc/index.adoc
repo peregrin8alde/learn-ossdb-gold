@@ -16,6 +16,9 @@ include::includes/trouble.adoc[]
 [appendix]
 include::includes/appendix-codes.adoc[]
 
+[appendix]
+include::includes/appendix-manual.adoc[]
+
 :leveloffset: -1
 
 &#169; 2021 Okada Hayato.
