@@ -5,6 +5,6 @@
 * PostgreSQL 公式ドキュメントの読み方
 * PostgreSQL 公式ドキュメントの文章だけでは分かりづらい内容の図解
 * PostgreSQL 公式ドキュメントと OSS-DB Gold との関連付け
-
+* 実際の PostgreSQL のコマンドや SQL 実行例の提示
 
 
