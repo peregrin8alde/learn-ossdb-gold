@@ -112,10 +112,10 @@ https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-refe
 // :sectids: 
 // :sectlinks: 
 :sectnums: 
-:sectnumlevels: 2
+:sectnumlevels: 5
 // :title-separator: 
 :toc: left
-:toclevels: 3
+:toclevels: 5
 // :fragment: 
 ////
 General content and formatting attributes

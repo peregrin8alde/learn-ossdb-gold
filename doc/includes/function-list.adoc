@@ -1,0 +1,34 @@
+= PostgreSQL 機能一覧
+
+:leveloffset: +1
+
+PostgreSQL ( ver 11.5 ) の機能一覧
+
+.PostgreSQL 機能一覧
+[options="header,autowidth",stripes=hover]
+|===
+|機能名 |種別 |概要 |詳細記事
+
+|サーバ
+|機能グループ
+|各種機能を提供するサーバ
+|
+
+|クライアント
+|機能グループ
+|各種機能を利用するクライアント
+|
+
+|
+|
+|
+|
+|===
+
+
+include::function-list/server.adoc[サーバ機能一覧]
+
+include::function-list/client.adoc[クライアント機能一覧]
+
+
+:leveloffset: -1

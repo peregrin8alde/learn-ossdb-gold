@@ -1,0 +1,11 @@
+= 機能詳細
+
+:leveloffset: +1
+
+include::function-detail/server.adoc[サーバー]
+
+include::function-detail/client.adoc[クライアント]
+
+
+
+:leveloffset: -1

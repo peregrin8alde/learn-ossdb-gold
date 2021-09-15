@@ -3,6 +3,13 @@ include::_attributes.adoc[]
 :xrefstyle: full
 :leveloffset: +1
 
+include::includes/function-list.adoc[]
+
+include::includes/function-detail.adoc[]
+
+
+
+
 include::includes/coverage.adoc[]
 
 include::includes/management.adoc[]
