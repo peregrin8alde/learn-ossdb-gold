@@ -5,35 +5,17 @@
 |===
 |機能名 |種別 |概要 |詳細記事
 
-|プライマリ
-|機能グループ
-|
-|
-
-|セカンダリ
-|機能グループ
-|
-|
-
-|
-|
-|
-|
-|===
-
-== プライマリ機能一覧
-
-.プライマリ機能一覧
-[options="header,autowidth",stripes=hover]
-|===
-|機能名 |種別 |概要 |詳細記事
-
 |サーバアプリケーション
 |機能グループ
 |
 |
 
-|サーバプロセス
+|データベースクラスタ
+|機能グループ
+|
+|
+
+|レプリケーション
 |機能グループ
 |
 |
@@ -44,35 +26,14 @@
 |
 |===
 
-=== サーバアプリケーション機能一覧
+:leveloffset: +1
 
-.サーバアプリケーション機能一覧
-[options="header,autowidth",stripes=hover]
-|===
-|機能名 |種別 |概要 |詳細記事
+include::server/application.adoc[サーバアプリケーション機能一覧]
 
-|initdb
-|ユーザ I/F （ CUI ）
-|
-|
+include::server/dbcluster.adoc[データベースクラスタ機能一覧]
 
-|
-|
-|
-|
-|===
+include::server/replication.adoc[レプリケーション機能一覧]
 
 
+:leveloffset: -1
 
-== セカンダリ機能一覧
-
-.セカンダリ機能一覧
-[options="header,autowidth",stripes=hover]
-|===
-|機能名 |種別 |概要 |詳細記事
-
-|
-|
-|
-|
-|===

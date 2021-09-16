@@ -1,0 +1,31 @@
+= データベースクラスタ機能一覧
+
+.データベースクラスタ機能一覧
+[options="header,autowidth",stripes=hover]
+|===
+|機能名 |種別 |概要 |詳細記事
+
+|サーバプロセス
+|機能グループ
+|
+|
+
+|データベース
+|機能グループ
+|
+|
+
+|
+|
+|
+|
+|===
+
+:leveloffset: +1
+
+include::dbcluster/process.adoc[サーバプロセス機能一覧]
+
+include::dbcluster/process.adoc[データベース機能一覧]
+
+:leveloffset: -1
+

@@ -1,8 +1,8 @@
 = PostgreSQL 機能一覧
 
-:leveloffset: +1
-
 PostgreSQL ( ver 11.5 ) の機能一覧
+
+（ Ver 12 以降とは非互換があるため注意）
 
 .PostgreSQL 機能一覧
 [options="header,autowidth",stripes=hover]
@@ -25,6 +25,7 @@ PostgreSQL ( ver 11.5 ) の機能一覧
 |
 |===
 
+:leveloffset: +1
 
 include::function-list/server.adoc[サーバ機能一覧]
 
