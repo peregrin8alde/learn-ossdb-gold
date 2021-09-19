@@ -44,9 +44,9 @@
 |通例 postgresql.conf
 |
 
-|WAL
+|データ保証（ ACID ）
 |
-|
+|WAL、リカバリなど
 |
 
 |テーブル空間
@@ -102,6 +102,7 @@
 |共有メモリバッファ
 |
 |
+判断理由：各プロセスから利用される。データベースやテーブルはあくまで入れ物であり、そこから出したものを扱うスペース。
 |
 
 |shared_buffers
@@ -112,11 +113,25 @@
 |huge_pages
 |設定パラメタ
 |
+判断理由：共有メモリバッファの扱いに関するもの
+|
+
+|max_stack_depth
+|設定パラメタ
+|
+判断理由：システムそのものに関連しそう
+|
+
+|dynamic_shared_memory_type
+|設定パラメタ
+|
+判断理由：システムそのものに関連しそう
 |
 
 |background writer
 |プロセス
 |「ダーティ」な共有バッファの書き込みを行う。postgres（接続単位）が書き込み待ちを行わずに済むように定期的に書き出し。
+判断理由：個別のデータベースやテーブルに閉じたものではない。共有メモリバッファの扱いに関するもの
 |
 
 |bgwriter_delay
@@ -139,47 +154,37 @@
 |
 |
 
-|checkpointer
+|effective_io_concurrency
+|設定パラメタ
 |
-|
+判断理由：プロセス全体としての同時実行制御
 |
 
-|walwriter
+|max_worker_processes
+|設定パラメタ
 |
+判断理由：プロセス全体としての同時実行制御
 |
+
+|max_parallel_workers_per_gather
+|設定パラメタ
+|
+判断理由：プロセス全体としての同時実行制御
+|
+
+|max_parallel_maintenance_workers
+|設定パラメタ
+|
+判断理由：プロセス全体としての同時実行制御
+|
+
+|max_parallel_workers
+|設定パラメタ
+|
+判断理由：プロセス全体としての同時実行制御
 |
 
 |stats collector
-|
-|
-|
-
-|autovacuum launcher
-|
-|
-|
-
-|ダーティページ
-|
-|
-|
-
-|WALバッファ
-|
-|
-|
-
-|autovacuum_work_mem
-|
-|
-|
-
-|work_mem
-|
-|
-|
-
-|maintenance_work_mem
 |
 |
 |
@@ -257,7 +262,19 @@
 
 :leveloffset: +1
 
+include::db_cluster/acid.adoc[データ保証（ ACID ）機能一覧]
+
+include::db_cluster/connection.adoc[クライアント接続ポート機能一覧]
+
 include::db_cluster/database.adoc[データベース機能一覧]
+
+include::db_cluster/host_based_auth.adoc[ホストベース認証機能一覧]
+
+include::db_cluster/maintenance.adoc[定期保守機能一覧]
+
+include::db_cluster/monitoring.adoc[監視機能一覧]
+
+include::db_cluster/sql_engine.adoc[SQL 実行機能一覧]
 
 include::db_cluster/monitoring.adoc[監視機能一覧]
 
