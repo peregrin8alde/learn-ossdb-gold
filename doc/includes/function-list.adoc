@@ -11,7 +11,7 @@ PostgreSQL ( ver 11.5 ) の機能一覧
 
 |機能グループ
 |提供する機能を一定の範囲でグルーピングしたもの。ユーザは機能名から何ができるかをある程度想像できる。
-機能グループを含む各種別の機能群から構成される。
+機能グループを含む各種別の機能群から構成される。（各コマンド、プロセス、メモリ、ファイルなどは、各機能グループの構成物として個別に書く）
 
 |設定パラメタ
 |
@@ -80,11 +80,20 @@ PostgreSQL ( ver 11.5 ) の機能一覧
 
 概要図
 
+各機能グループは以下が分かるように表現
+
+* 代表機能とその種別
+* 単数／複数
+* I/F や境界
+
+設定パラメタは必ずどこかの機能グループに所属するので、公式ドキュメントの設定パラメタの章を順次見てグループを作成していく
+
+
 :leveloffset: +1
 
-include::function-list/server.adoc[サーバ機能一覧]
+include::function-list/server.adoc[DBMS サーバ機能一覧]
 
-include::function-list/client.adoc[クライアント機能一覧]
+include::function-list/client.adoc[DBMS クライアント機能一覧]
 
 
 :leveloffset: -1
