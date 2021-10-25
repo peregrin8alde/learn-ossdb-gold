@@ -103,27 +103,42 @@ remote_apply は具体的に誰が何をしてる？
 |
 |
 
-|commit_siblings
+|checkpoint_flush_after
 |設定パラメタ
 |
 |
 
-|commit_siblings
+|checkpoint_warning
 |設定パラメタ
 |
 |
 
-|commit_siblings
+|max_wal_size
 |設定パラメタ
 |
 |
 
-|commit_siblings
+|min_wal_size
 |設定パラメタ
 |
 |
 
-|commit_siblings
+|アーカイビング
+|
+|
+|
+
+|archive_mode
+|設定パラメタ
+|
+|
+
+|archive_command
+|設定パラメタ
+|
+|
+
+|archive_timeout
 |設定パラメタ
 |
 |
