@@ -1,5 +1,31 @@
 = 機能詳細
 
+想定シナリオにおける、
+
+* 作業シーン
+* 作業実施者
+* 作業ステップ
+* 必須作業か否か
+* 作業に使う（使える） I/F
+
+を一覧化し、各シーンや I/F 毎での図で説明する。
+
+.作業一覧（シナリオ：〜）
+[options="header,autowidth",stripes=hover]
+|===
+|シーン |実施者 |ステップ |必須 |API |CUI |GUI
+
+|シーン１
+|管理者
+|〜を〜する。
+|○
+|○
+|×
+|×
+
+|===
+
+
 :leveloffset: +1
 
 include::function-detail/server.adoc[サーバー]

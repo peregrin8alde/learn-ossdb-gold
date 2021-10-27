@@ -1,0 +1,327 @@
+= ログ機能一覧
+
+.ログ機能一覧
+[options="header,autowidth",stripes=hover]
+|===
+|機能名 |種別 |概要 |詳細記事
+
+|log_destination
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+PostgreSQLは、stderr、csvlogおよびsyslogを含めて、サーバメッセージのログ取得に対し数種類の方法を提供します。
+____
+|
+
+|logging_collector
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+このパラメータはログ収集機構を有効にします。 
+____
+|
+
+|log_directory
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+logging_collectorを有効と設定した場合、このパラメータはログファイルが作成されるディレクトリを確定します。
+____
+|
+
+|log_filename
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+logging_collectorが有効な場合、このパラメータは作成されたログファイルのファイル名を設定します。
+____
+|
+
+|log_file_mode
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+Unixシステムにおいては、logging_collectorが有効になっている場合、このパラメータはログファイルのパーミッションを設定します。 
+____
+|
+
+|log_rotation_age
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+logging_collectorが有効な場合、このパラメータは個々のログファイルの最大寿命を決定します。
+____
+|
+
+|log_rotation_size
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+logging_collectorが有効な場合、このパラメータは個々のログファイルの最大容量を決定します。 
+____
+|
+
+|log_truncate_on_rotation
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+logging_collectorが有効な場合、このパラメータにより、PostgreSQLは既存の同名のファイルに追加するのではなく、そのファイルを切り詰める（上書きする）ようになります。
+____
+|
+
+|syslog_facility
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+syslogへのログ取得が有効な場合、このパラメータはsyslogの「facility」が使われるように確定します。
+____
+|
+
+|syslog_ident
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+syslogにログ取得が有効な場合、このパラメータはsyslogログ内のPostgreSQLメッセージを特定するのに使用するプログラム名を確定します。
+____
+|
+
+|syslog_sequence_numbers
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+syslogにログを出力している場合で、これがオン（デフォルト）であると、各メッセージには（[2]のような）増加する順序数が頭に追加されます。 
+____
+|
+
+|syslog_split_messages
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+syslogへのログ出力が有効な場合、このパラメータはメッセージがどのようにsyslogに送られるかを規定します。 
+____
+|
+
+|event_source
+|設定パラメタ
+a|ログの出力先
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+event logへのログ取得が有効になっていると、このパラメータはログ中のPostgreSQLメッセージを特定するのに使用されるプログラム名を決定します。
+____
+|
+
+|log_min_messages
+|設定パラメタ
+a|いつログを取得するか
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+どのメッセージレベルをサーバログに書き込むかを管理します。 
+____
+|
+
+|log_min_error_statement
+|設定パラメタ
+a|いつログを取得するか
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+エラー条件の原因となったどのSQL文をサーバログに記録するかを制御します。 
+____
+|
+
+|log_min_duration_statement
+|設定パラメタ
+a|いつログを取得するか
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+文の実行に少なくとも指定したミリ秒数かかった場合、それぞれの文の実行に要した時間をログに記録します。 
+____
+|
+
+|application_name
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+application_nameはNAMEDATALEN（標準構築では64）文字以下の任意の文字列を指定できます。
+____
+|
+
+|debug_print_parse
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+設定すると実行された問い合わせそれぞれに対し、最終的な解析ツリー、問い合わせリライタの出力、実行計画を出力します。 
+____
+|
+
+|debug_print_rewritten
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+設定すると実行された問い合わせそれぞれに対し、最終的な解析ツリー、問い合わせリライタの出力、実行計画を出力します。 
+____
+|
+
+|debug_print_plan
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+設定すると実行された問い合わせそれぞれに対し、最終的な解析ツリー、問い合わせリライタの出力、実行計画を出力します。 
+____
+|
+
+|debug_pretty_print
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+設定された場合、debug_print_parse、 debug_print_rewritten、または debug_print_planで生成されたメッセージを字下げします。
+____
+|
+
+|log_checkpoints
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+チェックポイントおよびリスタートポイントをサーバログに記録するようにします。 
+____
+|
+
+|log_connections
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+これにより、クライアント認証の成功終了などのサーバへの接続試行がログに残ります。
+____
+|
+
+|log_disconnections
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+セッションの終了をログします。 ログ出力の情報はlog_connectionsと同様で、更にセッションの経過時間が追加されます。
+____
+|
+
+|log_duration
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+すべての完了した文について、その経過時間をログするようにします。 
+____
+|
+
+|log_error_verbosity
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+ログ取得されるそれぞれのメッセージに対し、サーバログに書き込まれる詳細の量を制御します。 
+____
+|
+
+|log_hostname
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+デフォルトでは、接続ログメッセージは接続元ホストのIPアドレスのみを表示します。 このパラメータを有効にすると、ホスト名もログに残るようになります。
+____
+|
+
+|log_line_prefix
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+これは、各ログ行の先頭に出力するprintfの書式文字列です。
+____
+|
+
+|log_lock_waits
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+セッションがロックの獲得までの間にdeadlock_timeoutより長く待機する場合にログメッセージを生成するかどうかを制御します。
+____
+|
+
+|log_statement
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+どのSQL文をログに記録するかを制御します。 
+____
+|
+
+|log_replication_commands
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+サーバログにレプリケーションコマンドを記録します。 
+____
+|
+
+|log_temp_files
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+一時ファイルのファイル名とサイズのログ出力を制御します。
+____
+|
+
+|log_timezone
+|設定パラメタ
+a|何をログに
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+サーバログに書き出す際に使用される時間帯を設定します。
+____
+|
+
+|cluster_name
+|設定パラメタ
+a|プロセスの表題。どの機能グループで説明すべきか？
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+このクラスタ内のすべてのサーバプロセス表題にクラスタ名を設定します。 
+____
+|
+
+|update_process_title
+|設定パラメタ
+a|プロセスの表題。どの機能グループで説明すべきか？
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]']
+____
+サーバが新しいSQLコマンドを受け取る時に毎回、プロセスタイトルを更新できるようにします。 
+____
+|
+
+|
+|
+|
+|
+|===
