@@ -325,6 +325,42 @@ ____
 ____
 |
 
+|shared_preload_libraries
+|設定パラメタ
+a|共有ライブラリのプリロード
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+____
+サーバ起動時にプリロードされる一つ以上の共有ライブラリを指定します。 
+____
+|
+
+|jit_provider
+|設定パラメタ
+a|共有ライブラリのプリロード
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+____
+使用するJITプロバイダライブラリ(32.4.2参照)の名前です。 
+____
+|
+
+|dynamic_library_path
+|設定パラメタ
+a|その他のデフォルト
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+____
+オープンする必要がある動的ロード可能なモジュールについて、そのCREATE FUNCTIONやLOADコマンドで指定されたファイル名にディレクトリ要素がなく（つまり、名前にスラッシュが含まれずに）指定された場合、システムは必要なファイルをこのパスから検索します。
+____
+|
+
+|gin_fuzzy_search_limit
+|設定パラメタ
+a|その他のデフォルト
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+____
+GINインデックス走査により返されるセットのソフトな上限サイズです。
+____
+|
+
 |
 |
 |
