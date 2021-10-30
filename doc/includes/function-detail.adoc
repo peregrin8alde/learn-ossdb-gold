@@ -13,9 +13,10 @@
 .作業一覧（シナリオ：〜）
 [options="header,autowidth",stripes=hover]
 |===
-|シーン |実施者 |ステップ |必須 |API |CUI |GUI
+|ID |シーン |実施者 |ステップ |必須 |API |CUI |GUI
 
-|シーン１
+|A001
+|シーンA
 |管理者
 |〜を〜する。
 |○

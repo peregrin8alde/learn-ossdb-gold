@@ -57,6 +57,114 @@
 そもそも、 postgres におけるスナップショットとは？
 |
 
+|autovacuum
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+サーバがautovacuumランチャデーモンを実行すべきかどうかを管理します。 
+____
+|
+
+|log_autovacuum_min_duration
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+少なくとも指定ミリ秒実行した場合、autovacuumで実行される各活動がログに残るようになります。
+____
+|
+
+|autovacuum_max_workers
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+同時に実行することができるautovacuumプロセス（autovacuumランチャ以外）の最大数を指定します。 
+____
+|
+
+|autovacuum_naptime
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+あるデータベースについて実行されるautovacuumデーモンの最小遅延を指定します。 
+____
+|
+
+|autovacuum_vacuum_threshold
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+どのテーブルに対してもVACUUMを起動するために必要な、更新もしくは削除されたタプルの最小数を指定します。 
+____
+|
+
+|autovacuum_analyze_threshold
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+どのテーブルに対してもANALYZEを起動するのに必要な、挿入、更新、もしくは削除されたタプルの最小数を指定します。 
+____
+|
+
+|autovacuum_vacuum_scale_factor
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+VACUUMを起動するか否かを決定するときに、autovacuum_vacuum_thresholdに足し算するテーブル容量の割合を指定します。 
+____
+|
+
+|autovacuum_analyze_scale_factor
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+ANALYZEを起動するか否かを決定するときに、autovacuum_analyze_thresholdに足し算するテーブル容量の割合を指定します。 
+____
+|
+
+|autovacuum_freeze_max_age
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+トランザクションID周回を防ぐためにVACUUM操作が強制される前までにテーブルのpg_class.relfrozenxid フィールドが到達できる最大（トランザクションにおける）年代を指定します。 
+____
+|
+
+|autovacuum_multixact_freeze_max_age
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+トランザクションID周回を防ぐためにVACUUM操作が強制される前までにテーブルのpg_class.relminmxid フィールドが到達できる最大（マルチトランザクションにおける）年代を指定します。
+____
+|
+
+|autovacuum_vacuum_cost_delay
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+自動VACUUM操作に使用されるコスト遅延値を指定します。
+____
+|
+
+|autovacuum_vacuum_cost_limit
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+____
+自動VACUUM操作に使用されるコスト限界値を指定します。
+____
+|
+
 |
 |
 |
