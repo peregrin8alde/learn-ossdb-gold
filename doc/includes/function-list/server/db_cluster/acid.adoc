@@ -153,6 +153,51 @@ remote_apply は具体的に誰が何をしてる？
 |
 |
 
+|deadlock_timeout
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+デッドロック状態があるかどうかを調べる前にロックを待つ時間をミリ秒で計算したものです。 
+____
+|
+
+|max_locks_per_transaction
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+共有ロックテーブルは、max_locks_per_transaction * （max_connections + max_prepared_transactions）オブジェクト（例えばテーブル）上のロック追跡します。 
+____
+|
+
+|max_pred_locks_per_transaction
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+共有記述ロックテーブル（shared predicate lock table）は、max_pred_locks_per_transaction * (max_connections + max_prepared_transactions)オブジェクト（例えば諸テーブル）のロックを追跡します。
+____
+|
+
+|max_pred_locks_per_relation
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+リレーション全体をカバーするロックに昇格する前に、一つリレーションの中で述語ロックできるページ数あるいはタプル数を指定します。
+____
+|
+
+|max_pred_locks_per_page
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+ページ全体をカバーするロックに昇格する前に、一つページの中で述語ロックできる行数を指定します。
+____
+|
+
 |
 |
 |

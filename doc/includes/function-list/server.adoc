@@ -25,6 +25,474 @@
 |
 |
 
+|array_nulls
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+配列入力パーサが引用符のないNULLをNULL配列要素として認識するかどうかを制御します。 
+____
+|
+
+|backslash_quote
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+文字列リテラルの中で引用符が\'で表現されるかどうかを管理します。 
+____
+|
+
+|default_with_oids
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+もしWITH OIDSもしくはWITHOUT OIDSのいずれも指定されていない場合、CREATE TABLEおよびCREATE TABLE ASがオブジェクト識別子（OID）列を新規作成のテーブルに含めるか否かを管理します。
+____
+|
+
+|escape_string_warning
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+有効の場合、通常の文字列リテラル（'...'構文）にバックスラッシュ（\）があり、standard_conforming_stringsが無効な場合、警告が発せられます。
+____
+|
+
+|lo_compat_privileges
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+9.0以前のPostgreSQLリリースでは、ラージオブジェクトはアクセス権限が無く、従って全てのユーザが常に読み込み、書き込みが可能でした。 この変数をonにすると、以前のリリースとの互換性のため、新規の権限チェックが無効になります。 
+____
+|
+
+|operator_precedence_warning
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+onの場合、演算子の優先順位の変更の結果、PostgreSQL 9.4以降で意味が変わる可能性のある構文に対して、パーサは警告を出力します
+____
+|
+
+|quote_all_identifiers
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+データベースがSQLを生成する時、たとえ（現在）キーワードになっていなくても、全ての識別子を引用符で囲むことを強制します。 
+____
+|
+
+|standard_conforming_strings
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+標準SQLで規定されたように、通常の文字列リテラル（'...'）がバックスラッシュをそのまま取り扱うか否かを制御します。
+____
+|
+
+|synchronize_seqscans
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+同時実行スキャンがほぼ同じ時間に同じブロックを読み取り、I/Oへの負荷を分散できるように、互いに同期して、大規模テーブルをシーケンシャルスキャンすることができます。 
+____
+|
+
+|transform_null_equals
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+有効の場合、expr = NULL（もしくはNULL = expr）形式の式はexpr IS NULLとして取り扱われ、それは、もしexprがNULL値と評価すれば真を返し、そうでなければ偽を返します。 
+____
+|
+
+|exit_on_error
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-error-handling.html[19.14. エラー処理]']
+____
+真の場合、全てのエラーは現在のセッションを中止させます。 
+____
+|
+
+|restart_after_crash
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-error-handling.html[19.14. エラー処理]']
+____
+真の場合、これがデフォルトですが、PostgreSQLはバックエンドのクラッシュの後、自動的に再初期化を行います。
+____
+|
+
+|data_sync_retry
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-error-handling.html[19.14. エラー処理]']
+____
+デフォルトである偽に設定すると、PostgreSQLはファイルシステムに変更されたデータファイルを吐き出す際の失敗に対してPANICレベルのエラーを発生させます。 
+____
+|
+
+|block_size
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+ディスクブロックの容量を報告します。
+____
+|
+
+|data_checksums
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+このクラスタでデータチェックサムが有効になっているかどうかを報告します。
+____
+|
+
+|data_directory_mode
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+Unixシステムでは(data_directory)により定義されたデータディレクトリのパーミッションを起動時に報告します。
+____
+|
+
+|debug_assertions
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+PostgreSQLがアサーションを有効にしてビルドされているかどうかを報告します。 
+____
+|
+
+|integer_datetimes
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+PostgreSQLが64ビット整数による日付と時刻のサポート付きで構築されたかどうかを報告します。 
+____
+|
+
+|lc_collate
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+テキストデータの並び替えが行なわれるロケールを報告します。
+____
+|
+
+|lc_ctype
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+文字分類を決定するロケールを報告します。
+____
+|
+
+|max_function_args
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+関数の引数の最大数を報告します。 
+____
+|
+
+|max_identifier_length
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+最長の識別子の長さを報告します。 
+____
+|
+
+|max_index_keys
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+インデックスキーの最大数を報告します。
+____
+|
+
+|segment_size
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+あるファイルセグメントの中に格納できるブロック数（ページ数）を報告します。
+____
+|
+
+|server_encoding
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+データベース符号化方式（文字セット）を報告します。
+____
+|
+
+|server_version
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+サーバのバージョン番号を報告します。 
+____
+|
+
+|server_version_num
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+サーバのバージョン番号を整数として返します。
+____
+|
+
+|wal_block_size
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+WALディスクブロックの容量を報告します。
+____
+|
+
+|wal_segment_size
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-preset.html[19.15. 設定済みのオプション]']
+____
+ログ先行書き込みのセグメントの大きさを報告します。 
+____
+|
+
+|allow_system_table_mods
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+システムテーブルの構造変更を許可します。 
+____
+|
+
+|ignore_system_indexes
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+システムテーブルの読み込み時にシステムインデックスを無視します（しかしテーブルが更新された時はインデックスを更新します）。 
+____
+|
+
+|post_auth_delay
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+非ゼロの場合、サーバプロセスが始まり認証手続きが終わった後に、指定した秒数の遅延が発生します。
+____
+|
+
+|pre_auth_delay
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+非ゼロの場合、ここで指定した秒数分の遅延が新しくサーバプロセスがforkした後、認証手続きに入る前に発生します。
+____
+|
+
+|trace_notify
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+LISTENとNOTIFYコマンドのための大量なデバッグ出力を生成します。 
+____
+|
+
+|trace_recovery_messages
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+復旧関連のデバッグ出力のログ取得を有効にします。
+____
+|
+
+|trace_sort
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+並び替え操作の間のリソース使用についての情報を放出します。 
+____
+|
+
+|trace_locks
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+ロックの使用状況に関する情報を出力します。 
+____
+|
+
+|trace_lwlocks
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+軽量ロックの使用状況に関する情報を出力します。 
+____
+|
+
+|trace_userlocks
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+ユーザロックの使用状況に関する情報を出力します。
+____
+|
+
+|trace_lock_oidmin
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+このOID未満のテーブルに関するロックの追跡を行いません。
+____
+|
+
+|trace_lock_table
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+このテーブル（OID）に対し無条件でロックを追跡します。
+____
+|
+
+|debug_deadlocks
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+デッドロックタイムアウトが発生した時全ての進行中のロックについての情報がダンプされます。
+____
+|
+
+|log_btree_build_stats
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+各種B-tree操作に関するシステムリソース（メモリとCPU）の使用についての統計情報をログに出力します。
+____
+|
+
+|wal_consistency_checking
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+WALのREDOルーチンのバグをチェックするために使うことを意図しています。
+____
+|
+
+|wal_debug
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+WALに関連したデバッグ出力が有効になります。
+____
+|
+
+|ignore_checksum_failure
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+読み込み過程でチェックサム障害が検出されると、通常PostgreSQLはエラーを報告し、現時点のトランザクションを停止します。 ignore_checksum_failureを有効（on）に設定するとシステムはその障害を無視し（しかし警告は報告をします）、処理を継続します。
+____
+|
+
+|zero_damaged_pages
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+ページヘッダの障害がわかると、通常PostgreSQLはエラーの報告を行い、現在のトランザクションを中断させます。 zero_damaged_pagesをonに設定することにより、システムは代わりに警告を報告し、障害のあるメモリ内のページをゼロで埋め、処理を継続します。
+____
+|
+
+|jit_debugging_support
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+LLVMに要求された機能がある場合は、生成した関数をGDB用に登録します。 
+____
+|
+
+|jit_dump_bitcode
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+生成されたLLVM IRをdata_directory内のファイルシステムに出力します。 
+____
+|
+
+|jit_expressions
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+JITコンパイルが有効な時に式がJITコンパイルされるかどうかを決定します。
+____
+|
+
+|jit_profiling_support
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+LLVMに要求された機能がある場合は、JITが生成した関数をperfでプロファイルすることができるデータを出力します。
+____
+|
+
+|jit_tuple_deforming
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-developer.html[19.17. 開発者向けのオプション]']
+____
+JITコンパイルが有効な時にタプルデフォーミングがJITコンパイルされるかどうかを決定します。
+____
+|
+
 |
 |
 |
