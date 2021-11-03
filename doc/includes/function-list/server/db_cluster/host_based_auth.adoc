@@ -12,7 +12,11 @@
 
 |hba_file
 |設定パラメタ
-|ホストベース認証（HBA）用のファイルを指定します（通例pg_hba.confと呼ばれます）。 このパラメータはサーバ起動時のみ設定可能です。
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-file-locations.html[19.2. ファイルの場所]']
+____
+ホストベース認証（HBA）用のファイルを指定します（通例pg_hba.confと呼ばれます）。
+____
 |
 
 |ユーザ名マップ
@@ -21,8 +25,12 @@
 |
 
 |ident_file
-|
-|ユーザ名マッピングの設定ファイルを指定します（通例pg_ident.confと呼ばれます）。 このパラメータはサーバ起動時のみ設定可能です。
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-file-locations.html[19.2. ファイルの場所]']
+____
+ユーザ名マッピングの設定ファイルを指定します（通例pg_ident.confと呼ばれます）。
+____
 |
 
 |

@@ -107,25 +107,38 @@
 
 |shared_buffers
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+データベースサーバが共有メモリバッファのために使用するメモリ量を設定します。
+____
 |
 
 |huge_pages
 |設定パラメタ
-|
-判断理由：共有メモリバッファの扱いに関するもの
+a|判断理由：共有メモリバッファの扱いに関するもの
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+主共有メモリ領域に対してhuge pageを要求するかどうかを管理します。 
+____
 |
 
 |max_stack_depth
 |設定パラメタ
-|
-判断理由：システムそのものに関連しそう
+a|判断理由：システムそのものに関連しそう
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+サーバの実行スタックの最大安全深度を指定します。
+____
 |
 
 |dynamic_shared_memory_type
 |設定パラメタ
-|
-判断理由：システムそのものに関連しそう
+a|判断理由：システムそのものに関連しそう
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+サーバが使う動的共有メモリの実装を指定します
+____
 |
 
 |background writer
@@ -136,52 +149,83 @@
 
 |bgwriter_delay
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+バックグラウンドライタの動作周期間の遅延を指定します。
+____
 |
 
 |bgwriter_lru_maxpages
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+それぞれの周期で、この数以上のバッファはバックグラウンドライタにより書き込まれません。
+____
 |
 
 |bgwriter_lru_multiplier
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+各周期で書き出されるダーティバッファ数は、最近の周期でサーバプロセスが必要とした新しいバッファ数を基にします。 次の周期で必要となるバッファ数を推定するために、最近必要とされた平均がbgwriter_lru_multiplierと掛け合わせられます。
+____
 |
 
 |bgwriter_flush_after
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+バックグラウンドライターがbgwriter_flush_afterバイトより多く書く度に、OSが記憶装置に書き込むことを強制しようとします。
+____
 |
 
 |effective_io_concurrency
 |設定パラメタ
-|
-判断理由：プロセス全体としての同時実行制御
+a|判断理由：プロセス全体としての同時実行制御
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+PostgreSQLが同時実行可能であると想定する同時ディスクI/O操作の数を設定します。
+____
 |
 
 |max_worker_processes
 |設定パラメタ
-|
-判断理由：プロセス全体としての同時実行制御
+a|判断理由：プロセス全体としての同時実行制御
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+システムがサポートするバックグラウンドプロセスの最大数を指定します。 
+____
 |
 
 |max_parallel_workers_per_gather
 |設定パラメタ
-|
-判断理由：プロセス全体としての同時実行制御
+a|判断理由：プロセス全体としての同時実行制御
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+一つのGatherまたはGather Mergeノードに対して起動できるワーカー数の最大値を設定します。
+____
 |
 
 |max_parallel_maintenance_workers
 |設定パラメタ
-|
-判断理由：プロセス全体としての同時実行制御
+a|判断理由：プロセス全体としての同時実行制御
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+単一のユーティリティコマンドで使用されるパラレルワーカーの最大数を設定します。
+____
 |
 
 |max_parallel_workers
 |設定パラメタ
-|
-判断理由：プロセス全体としての同時実行制御
+a|判断理由：プロセス全体としての同時実行制御
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+パラレルクエリ操作用にシステムがサポートできる最大のワーカー数を設定します。 
+____
 |
 
 |stats collector
@@ -236,17 +280,29 @@
 
 |data_directory
 |設定パラメタ
-|データ格納に使用するディレクトリを指定します。 このパラメータはサーバ起動時のみ設定可能です
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-file-locations.html[19.2. ファイルの場所]']
+____
+データ格納に使用するディレクトリを指定します。
+____
 |
 
 |config_file
 |設定パラメタ
-|メインサーバ設定ファイルを指定します（通例postgresql.confと呼ばれます）。 このパラメータはpostgresコマンドライン上でのみ設定可能です。
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-file-locations.html[19.2. ファイルの場所]']
+____
+メインサーバ設定ファイルを指定します（通例postgresql.confと呼ばれます）。
+____
 |
 
 |external_pid_file
-|
-|サーバ管理プログラムで使用するためにサーバが作成する、追加のプロセス識別子（PID)ファイルの名前を指定します。 このパラメータはサーバ起動時のみ設定可能です。
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-file-locations.html[19.2. ファイルの場所]']
+____
+サーバ管理プログラムで使用するためにサーバが作成する、追加のプロセス識別子（PID)ファイルの名前を指定します。 
+____
 |
 
 |PGDATA環境変数

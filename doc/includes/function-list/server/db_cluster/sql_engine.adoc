@@ -19,27 +19,47 @@
 
 |temp_buffers
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+それぞれのデータベースセッションが使用する一時バッファの最大数を設定します。
+____
 |
 
 |work_mem
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+一時ディスクファイルに書き込む前に、内部並べ替えとハッシュテーブル操作が使用するメモリ容量を指定します。 
+____
 |
 
 |temp_file_limit
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+あるプロセスが一時ファイルとして使用できるディスクの最大容量を設定します。 
+____
 |
 
 |max_files_per_process
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+それぞれのサーバ子プロセスが同時にオープンできるファイル数の最大値をセットします。
+____
 |
 
 |backend_flush_after
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+backend_flush_afterバイトが単一のバックエンドによって書き込まれる度に、OSが記憶装置に書き込むことを強制します。 
+____
 |
 
 |SQL

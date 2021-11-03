@@ -7,7 +7,11 @@
 
 |maintenance_work_mem
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+VACUUM、CREATE INDEX、およびALTER TABLE ADD FOREIGN KEYの様な保守操作で使用されるメモリの最大容量を指定します。 
+____
 |
 
 |autovacuum launcher
@@ -17,7 +21,11 @@
 
 |autovacuum_work_mem
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+個々の自動バキュームワーカプロセスが使用する最大のメモリ量を指定します。
+____
 |
 
 |VACUUM
@@ -27,34 +35,57 @@
 
 |vacuum_cost_delay
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+コストの限度を越えた場合、プロセスがスリープするミリ秒単位の時間の長さです。 
+____
 |
 
 |vacuum_cost_page_hit
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+共有バッファキャッシュの中のバッファにvacuumを掛ける予測コストです。
+____
 |
 
 |vacuum_cost_page_miss
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+ディスクから読み込まれなければならないバッファにvacuumを掛ける予測コストです。
+____
 |
 
 |vacuum_cost_page_dirty
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+vacuumが、先だって掃除したブロックを変更する時に果たされた予測コストです。
+____
 |
 
 |vacuum_cost_limit
 |設定パラメタ
-|
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+vacuumを掛けるプロセスをスリープさせることになる累計されたコストです。
+____
 |
 
 |old_snapshot_threshold
 |設定パラメタ
-|
-判断理由：VACUUM関連
+a|判断理由：VACUUM関連
 そもそも、 postgres におけるスナップショットとは？
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+スナップショットが使用されるときに、snapshot too oldエラーを引き起こす危険性なしにスナップショットを利用できる最小時間を設定します。
+____
 |
 
 |autovacuum
