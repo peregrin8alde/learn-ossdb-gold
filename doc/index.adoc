@@ -1,6 +1,15 @@
 = OSS-DB Gold 学習資材
 include::_attributes.adoc[]
 :xrefstyle: full
+
+
+各図における凡例を <<img-base>> に示す。
+
+[#img-base]
+.凡例
+image::base.svg[opts=inline,align="center",width=100%]
+
+
 :leveloffset: +1
 
 include::includes/function-list.adoc[]
