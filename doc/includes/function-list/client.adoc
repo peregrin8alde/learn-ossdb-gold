@@ -376,7 +376,29 @@ ____
 
 |clusterdb
 |ユーザ I/F （ CUI ）
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/app-clusterdb.html[clusterdb]']
+____
+PostgreSQLデータベース内のテーブルを再クラスタ化するユーティリティです
+____
 |
+
+|createdb
+|ユーザ I/F （ CUI ）
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/app-createdb.html[createdb]']
+____
+新しいPostgreSQLデータベースを作成します
+____
+|
+
+|createuser
+|ユーザ I/F （ CUI ）
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/app-createuser.html[createuser]']
+____
+新しいPostgreSQLのユーザ（より正確にいえばロール）を作成します
+____
 |
 
 |
