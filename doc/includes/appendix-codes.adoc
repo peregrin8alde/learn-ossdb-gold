@@ -137,3 +137,199 @@ done
    ->  Seq Scan on tbl_sample_filesize  (cost=0.00..11667.00 rows=500000 width=63)
 (2 rows)
 ----
+
+== pg_stats
+
+[source, sql]
+----
+CREATE TABLE tbl_sample_stats (
+    col01 integer,
+    col02 integer,
+    col03 integer,
+    col04 char(5)
+);
+
+CREATE INDEX idx_sample_stats_1 ON tbl_sample_stats (col01 NULLS FIRST);
+CREATE INDEX idx_sample_stats_2 ON tbl_sample_stats (col02 NULLS FIRST);
+
+INSERT INTO tbl_sample_stats VALUES(1,5,2,'aaa');
+INSERT INTO tbl_sample_stats VALUES(2,4,3,'aaa');
+INSERT INTO tbl_sample_stats VALUES(3,3,3,'bbb');
+INSERT INTO tbl_sample_stats VALUES(4,2,1,'bbb');
+INSERT INTO tbl_sample_stats VALUES(5,1,5,'ccc');
+INSERT INTO tbl_sample_stats VALUES(6,NULL,NULL,'ddd');
+----
+
+[source, sql]
+----
+postgres=# SELECT ctid, * FROM tbl_sample_stats;
+ ctid  | col01 | col02 | col03 | col04 
+-------+-------+-------+-------+-------
+ (0,1) |     1 |     5 |     2 | aaa  
+ (0,2) |     2 |     4 |     3 | aaa  
+ (0,3) |     3 |     3 |     3 | bbb  
+ (0,4) |     4 |     2 |     1 | bbb  
+ (0,5) |     5 |     1 |     5 | ccc  
+ (0,6) |     6 |       |       | ddd  
+(6 rows)
+----
+
+[source, sql]
+----
+postgres=# ANALYZE tbl_sample_stats;
+ANALYZE
+----
+
+[source, sql]
+----
+postgres=# \x
+Expanded display is on.
+postgres=# SELECT * FROM pg_stats WHERE tablename = 'tbl_sample_stats';
+-[ RECORD 1 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col01
+inherited              | f
+null_frac              | 0
+avg_width              | 4
+n_distinct             | -1
+most_common_vals       | 
+most_common_freqs      | 
+histogram_bounds       | {1,2,3,4,5,6}
+correlation            | 1
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+-[ RECORD 2 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col02
+inherited              | f
+null_frac              | 0.166667
+avg_width              | 4
+n_distinct             | -0.833333
+most_common_vals       | 
+most_common_freqs      | 
+histogram_bounds       | {1,2,3,4,5}
+correlation            | -1
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+-[ RECORD 3 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col03
+inherited              | f
+null_frac              | 0.166667
+avg_width              | 4
+n_distinct             | -0.666667
+most_common_vals       | {3}
+most_common_freqs      | {0.333333}
+histogram_bounds       | {1,2,5}
+correlation            | 0.4
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+-[ RECORD 4 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col04
+inherited              | f
+null_frac              | 0
+avg_width              | 6
+n_distinct             | -0.666667
+most_common_vals       | {"aaa  ","bbb  "}
+most_common_freqs      | {0.333333,0.333333}
+histogram_bounds       | {"ccc  ","ddd  "}
+correlation            | 1
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+----
+
+[source, sql]
+----
+postgres=# CLUSTER tbl_sample_stats USING idx_sample_stats_2;
+CLUSTER
+postgres=# \x
+Expanded display is off.
+postgres=# SELECT ctid, * FROM tbl_sample_stats;
+ ctid  | col01 | col02 | col03 | col04 
+-------+-------+-------+-------+-------
+ (0,1) |     6 |       |       | ddd  
+ (0,2) |     5 |     1 |     5 | ccc  
+ (0,3) |     4 |     2 |     1 | bbb  
+ (0,4) |     3 |     3 |     3 | bbb  
+ (0,5) |     2 |     4 |     3 | aaa  
+ (0,6) |     1 |     5 |     2 | aaa  
+(6 rows)
+----
+
+[source, sql]
+----
+postgres=# ANALYZE tbl_sample_stats;
+ANALYZE
+postgres=# \x
+Expanded display is on.
+postgres=# SELECT * FROM pg_stats WHERE tablename = 'tbl_sample_stats';
+-[ RECORD 1 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col01
+inherited              | f
+null_frac              | 0
+avg_width              | 4
+n_distinct             | -1
+most_common_vals       | 
+most_common_freqs      | 
+histogram_bounds       | {1,2,3,4,5,6}
+correlation            | -1
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+-[ RECORD 2 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col02
+inherited              | f
+null_frac              | 0.166667
+avg_width              | 4
+n_distinct             | -0.833333
+most_common_vals       | 
+most_common_freqs      | 
+histogram_bounds       | {1,2,3,4,5}
+correlation            | 1
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+-[ RECORD 3 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col03
+inherited              | f
+null_frac              | 0.166667
+avg_width              | 4
+n_distinct             | -0.666667
+most_common_vals       | {3}
+most_common_freqs      | {0.333333}
+histogram_bounds       | {1,2,5}
+correlation            | -0.3
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+-[ RECORD 4 ]----------+--------------------
+schemaname             | public
+tablename              | tbl_sample_stats
+attname                | col04
+inherited              | f
+null_frac              | 0
+avg_width              | 6
+n_distinct             | -0.666667
+most_common_vals       | {"aaa  ","bbb  "}
+most_common_freqs      | {0.333333,0.333333}
+histogram_bounds       | {"ccc  ","ddd  "}
+correlation            | -0.885714
+most_common_elems      | 
+most_common_elem_freqs | 
+elem_count_histogram   | 
+----
