@@ -1,1 +1,4 @@
 _build
+public/
+_gen/
+node_modules/
