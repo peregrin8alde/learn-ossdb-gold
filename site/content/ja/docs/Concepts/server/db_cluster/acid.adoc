@@ -1,0 +1,295 @@
+---
+title: "データ保証（ ACID ）"
+---
+= データ保証（ ACID ）機能
+
+.データ保証（ ACID ）機能一覧
+[options="header,autowidth",stripes=hover]
+|===
+|機能名 |種別 |概要 |詳細記事
+
+|WAL
+|
+|
+|
+
+|wal_level
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+どれだけの情報がWALに書かれるかを決定します。 
+____
+|
+
+|fsync
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+PostgreSQLサーバはfsync()システムコールを発行するか、もしくはこれに相当する方法（wal_sync_methodを参照）で、更新が物理的にディスクに確実に書き込まれるように試みます。
+____
+|
+
+|synchronous_commit
+|設定パラメタ
+a|ストリーミングレプリケーション利用時のみ有効な指定値あり
+コミットが実行されてからの同期の話なので、WAL書き込みはディスク書き込みを想定
+remote_apply は具体的に誰が何をしてる？
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+トランザクションのコミットがクライアントに「成功」の報告を返す前に、WALレコードがディスク上に書き込まれるまで待つかどうかの指定をします。 
+____
+|
+
+|wal_sync_method
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+WALの更新をディスクへ強制するのに使用される方法です。
+____
+|
+
+|full_page_writes
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+PostgreSQLサーバは、チェックポイントの後にそのページが最初に変更された過程で、ディスクページの全ての内容をWALに書き込みます。
+____
+|
+
+|wal_log_hints
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+PostgreSQLサーバはチェックポイント後にはじめてページを変更する際に、ディスクページの全内容をWALに書き出します。 これは、あまり重要でない、ヒントビットと呼ばれるものに対する変更にさえ当てはまります。 
+____
+|
+
+|wal_compression
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+full_page_writesがonあるいはベースバックアップの際、PostgreSQLサーバはWALに書き出すフルページイメージを圧縮します。 
+____
+|
+
+|WAL用バッファ
+|メモリ
+|
+|
+
+|wal_buffers
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+未だディスクに書き込まれていないWALデータに対して使用される共有メモリ容量です。 
+____
+|
+
+|walwriter
+|プロセス
+|
+|
+
+|wal_writer_delay
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+WALライタがWALを吐き出す頻度を指定します。 WALを吐き出したとあと、非同期コミットしているトランザクションに起こされない限り、wal_writer_delayミリ秒待機します。
+____
+|
+
+|wal_writer_flush_after
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+WALライタがWALを吐き出す頻度を指定します。 最後の吐き出しが過去wal_writer_delayミリ秒以内に起こなわれ、かつそれ以降wal_writer_flush_afterバイト以内のWALが生成されている場合は、WALはオペレーティングシステムに書き込まれますが、ディスクには吐出されません。 
+____
+|
+
+|commit_delay
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+WALフラッシュを開始する前の時間遅延を追加します。
+____
+|
+
+|commit_siblings
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+commit_delayの遅延を実行するときに必要とされる同時に開いているトランザクションの最小数です。 
+____
+|
+
+|チェックポイント
+|
+|
+|
+
+|checkpointer
+|プロセス
+|
+|
+
+|checkpoint_timeout
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+自動的WALチェックポイント間の最大間隔を秒単位で指定します。
+____
+|
+
+|checkpoint_completion_target
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+チェックポイントの完了目標をチェックポイント間の総時間の割合として指定します。 
+____
+|
+
+|checkpoint_flush_after
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+チェックポイント実行中にcheckpoint_flush_afterバイトより多く書く度に、OSが記憶装置に書き込むことを強制しようとします。 
+____
+|
+
+|checkpoint_warning
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+WALセグメントファイルが溢れることが原因で起きるチェックポイントが、ここで指定した秒数よりも短い間隔で発生したとき、サーバログにメッセージを書き出します （これは、max_wal_sizeを増やす必要があることを示唆しています）。 
+____
+|
+
+|max_wal_size
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+自動WALチェックポイントの間にWALが増加する最大サイズです。 
+____
+|
+
+|min_wal_size
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+この設定以下にWALのディスク使用量が保たれる限り、古いWALファイルは、消去されることなく今後のチェックポイントで使用するために常にリサイクルされます。 
+____
+|
+
+|アーカイビング
+|
+|
+|
+
+|archive_mode
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+有効な場合、archive_commandを設定することにより、完了したWALセグメントはアーカイブ格納領域に送信されます。 
+____
+|
+
+|archive_command
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+完了したWALファイルセグメントのアーカイブを実行するローカルのシェルコマンドです。 
+____
+|
+
+|archive_timeout
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-wal.html[19.5. ログ先行書き込み（WAL）]']
+____
+データが未アーカイブのままでいられる期間を制限するために、archive_timeoutを設定して、強制的にサーバを新しいWALセグメントに定期的に切り替えるようにすることができます。
+____
+|
+
+|トランザクション
+|
+|
+|
+
+|max_prepared_transactions
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+____
+同時に「プリペアド」状態にできるトランザクションの最大数を設定します
+____
+|
+
+|deadlock_timeout
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+デッドロック状態があるかどうかを調べる前にロックを待つ時間をミリ秒で計算したものです。 
+____
+|
+
+|max_locks_per_transaction
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+共有ロックテーブルは、max_locks_per_transaction * （max_connections + max_prepared_transactions）オブジェクト（例えばテーブル）上のロック追跡します。 
+____
+|
+
+|max_pred_locks_per_transaction
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+共有記述ロックテーブル（shared predicate lock table）は、max_pred_locks_per_transaction * (max_connections + max_prepared_transactions)オブジェクト（例えば諸テーブル）のロックを追跡します。
+____
+|
+
+|max_pred_locks_per_relation
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+リレーション全体をカバーするロックに昇格する前に、一つリレーションの中で述語ロックできるページ数あるいはタプル数を指定します。
+____
+|
+
+|max_pred_locks_per_page
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-locks.html[19.12. ロック管理]']
+____
+ページ全体をカバーするロックに昇格する前に、一つページの中で述語ロックできる行数を指定します。
+____
+|
+
+|
+|
+|
+|
+|===

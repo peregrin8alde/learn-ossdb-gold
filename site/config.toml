@@ -2,6 +2,9 @@
 title = 'OSS-DB Gold 学習資材'
 relativeURLs = true
 
+# ディレクトリ指定では index.html を自動で開かない場合向け
+uglyurls = true
+
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
@@ -88,6 +91,22 @@ anchor = "smart"
     verbose = false
     workingFolderCurrent = false
     [markup.asciidocExt.attributes]
+      includedir = 'content/ja'
+      imagesdir = 'static/images'
+      appendix-caption = '付録'
+      caution-caption = '注意'
+      example-caption = '例'
+      figure-caption = '図'
+      important-caption = '重要'
+      note-caption = '注記'
+      table-caption = '表'
+      tip-caption = '補足'
+      warning-caption = '警告'
+      data-uri = true
+      doctype = 'article'
+      icons = 'font'
+      #source-highlighter = 'rouge'
+
 
 # Everything below this are Site Params
 

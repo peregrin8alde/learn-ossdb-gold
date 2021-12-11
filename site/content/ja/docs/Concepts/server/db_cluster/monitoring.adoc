@@ -1,0 +1,83 @@
+---
+title: "監視"
+---
+= 監視
+
+.監視機能一覧
+[options="header,autowidth",stripes=hover]
+|===
+|機能名 |種別 |概要 |詳細記事
+
+|統計情報
+|
+|
+|
+
+|track_activities
+|設定パラメタ
+a|問い合わせおよびインデックスに関する統計情報コレクタ
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-statistics.html[19.9. 実行時統計情報]']
+____
+各セッションで実行中のコマンドに関する情報とそのコマンドの実行開始時刻の収集を有効にします。 
+____
+|
+
+|track_activity_query_size
+|設定パラメタ
+a|問い合わせおよびインデックスに関する統計情報コレクタ
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-statistics.html[19.9. 実行時統計情報]']
+____
+pg_stat_activity.queryフィールドに対し、それぞれの活動中のセッションで現在実行されているコマンドを追跡記録するため予約されるバイト数を指定します。
+____
+|
+
+|track_counts
+|設定パラメタ
+a|問い合わせおよびインデックスに関する統計情報コレクタ
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-statistics.html[19.9. 実行時統計情報]']
+____
+データベースの活動についての統計情報の収集を有効にします。 
+____
+|
+
+|track_io_timing
+|設定パラメタ
+a|問い合わせおよびインデックスに関する統計情報コレクタ
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-statistics.html[19.9. 実行時統計情報]']
+____
+データベースによるI/O呼び出しの時間的調節を可能にします。 
+____
+|
+
+|track_functions
+|設定パラメタ
+a|問い合わせおよびインデックスに関する統計情報コレクタ
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-statistics.html[19.9. 実行時統計情報]']
+____
+関数の呼び出し数と費やされた時間の追跡を有効にします。
+____
+|
+
+|stats_temp_directory
+|設定パラメタ
+a|問い合わせおよびインデックスに関する統計情報コレクタ
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-statistics.html[19.9. 実行時統計情報]']
+____
+統計情報データを一時的に格納するディレクトリを設定します。 
+____
+|
+
+|log_statement_stats, log_parser_stats, log_planner_stats, log_executor_stats
+|設定パラメタ
+a|統計情報の監視
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-statistics.html[19.9. 実行時統計情報]']
+____
+各問い合わせに対し、対応するモジュールの性能に関する統計情報をサーバログに出力します。
+____
+|
+
+|
+|
+|
+|
+|===
