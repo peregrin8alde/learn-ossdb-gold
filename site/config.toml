@@ -144,6 +144,7 @@ anchor = "smart"
       data-uri = true
       icons = 'font'
       # hugo では Asciidoctor のスタイルは適用されないので工夫が必要
+      # Asciidoctor と合わせる必要がなければ、docsy に同梱されている prism の js を直接利用した方が早そう
       # 参照 : layouts/partials/highlightjs.html / head.html
       source-highlighter = 'highlight.js'
 
