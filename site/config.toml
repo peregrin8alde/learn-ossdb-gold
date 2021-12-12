@@ -87,6 +87,7 @@ anchor = "smart"
     backend = 'html5'
 
     # Currently, the only document type supported in Hugo is `article`.
+    # book と比べて簡素にする必要があるので構成に注意
     doctype = 'article'
 
     # Possible extensions are 
@@ -130,7 +131,6 @@ anchor = "smart"
     # See Asciidoctor’s attributes.
     #   https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/#attributes-and-substitutions
     [markup.asciidocExt.attributes]
-      includedir = 'content/ja'
       imagesdir = 'static/images'
       appendix-caption = '付録'
       caution-caption = '注意'

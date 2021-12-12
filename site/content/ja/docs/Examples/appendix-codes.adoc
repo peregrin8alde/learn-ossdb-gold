@@ -32,63 +32,63 @@ done
 psql -U postgres -c "\copy tbl_sample_filesize FROM 'data_tbl_sample_filesize.csv' WITH csv"
 ----
 
-[source,console]
+[source,shell]
 ----
-# ls -lh data_tbl_sample_filesize.csv
+$ ls -lh data_tbl_sample_filesize.csv
 -rw-r--r-- 1 root root 41M May 16 10:46 data_tbl_sample_filesize.csv
 
-# psql -U postgres -c "SELECT * FROM tbl_sample_filesize LIMIT 1"
+$ psql -U postgres -c "SELECT * FROM tbl_sample_filesize LIMIT 1"
  col01 | col02 | col03 | col04  | col05 |        col06        |   col07    |  col08   |      col09      | col10 
 -------+-------+-------+--------+-------+---------------------+------------+----------+-----------------+-------
      1 |  1000 |  2000 | 12.345 | 67.89 | 2021-01-01 12:10:20 | 2021-01-01 | 12:10:20 | 3 days 04:05:06 | t
 (1 row)
 
-# psql -U postgres -c "SELECT COUNT(*) FROM tbl_sample_filesize"
+$ psql -U postgres -c "SELECT COUNT(*) FROM tbl_sample_filesize"
  count  
 --------
  500000
 (1 row)
 
 ### https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-DBSIZE
-# psql -U postgres -c "SELECT pg_size_pretty((pg_stat_file(pg_relation_filepath('tbl_sample_filesize'))).size) as filesize"
+$ psql -U postgres -c "SELECT pg_size_pretty((pg_stat_file(pg_relation_filepath('tbl_sample_filesize'))).size) as filesize"
  filesize 
 ----------
  52 MB
 (1 row)
 
-# psql -U postgres -c "SELECT pg_size_pretty(pg_relation_size('tbl_sample_filesize'))"
+$ psql -U postgres -c "SELECT pg_size_pretty(pg_relation_size('tbl_sample_filesize'))"
  pg_size_pretty 
 ----------------
  52 MB
 (1 row)
 
-# psql -U postgres -c "ANALYZE tbl_sample_filesize"
+$ psql -U postgres -c "ANALYZE tbl_sample_filesize"
 
-# psql -U postgres -c "SELECT pg_relation_filepath(oid), relpages, reltuples FROM pg_class WHERE relname = 'tbl_sample_filesize'"
+$ psql -U postgres -c "SELECT pg_relation_filepath(oid), relpages, reltuples FROM pg_class WHERE relname = 'tbl_sample_filesize'"
  pg_relation_filepath | relpages | reltuples 
 ----------------------+----------+-----------
  base/13067/24579     |     6667 |    500000
 (1 row)
 
-echo $(( 8192 / (28+59) ))
+$ echo $(( 8192 / (28+59) ))
 
-echo $(( 500000 / ( (8192-24) / (28+63) ) ))
+$ echo $(( 500000 / ( (8192-24) / (28+63) ) ))
 # echo $(( 500000 / ( (8192-24) / (28+63) ) ))
 5617
 
-echo $(( (8192-24) / (28+63) ))
-echo $(( 8192 * ( 500000 / ( (8192-24) / (28+63) ) ) / 1024 / 1024 ))
+$ echo $(( (8192-24) / (28+63) ))
+$ echo $(( 8192 * ( 500000 / ( (8192-24) / (28+63) ) ) / 1024 / 1024 ))
 
-echo $(( 500000 / 6667 ))
+$ echo $(( 500000 / 6667 ))
 74
 
-echo $(( (8192-24) / 74 ))
+$ echo $(( (8192-24) / 74 ))
 110
 
-echo $(( 500000 / 5617 ))
+$ echo $(( 500000 / 5617 ))
 89
 
-echo $(( (8192-24) / 89 ))
+$ echo $(( (8192-24) / 89 ))
 91
 ----
 

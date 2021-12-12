@@ -4,19 +4,3 @@ weight: 3
 ---
 = データベースマネージメントシステム（ DBMS ）
 
-[source, sql]
-----
-CREATE TABLE tbl_sample_filesize (
-    col01 smallint, -- 2 バイト
-    col02 integer,  -- 4 バイト
-    col03 bigint,  -- 8 バイト
-    col04 real,  -- 4 バイト
-    col05 double precision,  -- 8 バイト
-    col06 timestamp,  -- 8 バイト
-    col07 date,  -- 4 バイト
-    col08 time,  -- 8 バイト
-    col09 interval,  -- 16 バイト
-    col10 boolean  -- 1 バイト
-    -- 合計 63 バイト
-);
-----
