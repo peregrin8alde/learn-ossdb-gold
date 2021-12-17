@@ -143,7 +143,7 @@ anchor = "smart"
       warning-caption = '警告'
       data-uri = true
       icons = 'font'
-      # hugo では Asciidoctor のスタイルは適用されないので工夫が必要
+      # hugo では Asciidoctor のスタイルは適用されない（ `--no-header-footer` ）ので工夫が必要
       # Asciidoctor と合わせる必要がなければ、docsy に同梱されている prism の js を直接利用した方が早そう
       # 参照 : layouts/partials/head.html highlight/highlightjs.html / prism.html
       # source-highlighter = 'highlight.js'

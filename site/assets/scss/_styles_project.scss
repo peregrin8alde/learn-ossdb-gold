@@ -1,0 +1,41 @@
+/*
+
+Nothing defined here. The Hugo project that uses this theme can override Bootstrap by adding a file to:
+
+assets/scss/_styles_project.scss
+
+*/
+table.tableblock.stripes-hover {
+    @extend .table-hover;
+
+    @extend .table-responsive;
+
+    @extend .table;
+
+    @extend .table-bordered;
+}
+
+table.tableblock.stripes-even {
+    @extend .table-striped;
+
+    @extend .table-responsive;
+
+    @extend .table;
+
+    @extend .table-bordered;
+}
+
+table.tableblock {
+    @extend .table-responsive;
+
+    @extend .table;
+
+    @extend .table-bordered;
+}
+
+.quoteblock > blockquote {
+    padding: 0 0 0 1rem;
+    margin-bottom: $spacer;
+    color: $gray-600;
+    border-left: 6px solid $secondary;
+}
