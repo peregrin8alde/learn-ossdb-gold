@@ -39,3 +39,9 @@ table.tableblock {
     color: $gray-600;
     border-left: 6px solid $secondary;
 }
+
+.quoteblock > div.attribution {
+    display: block;
+    font-size: 80%;
+    color: #6c757d;
+}
