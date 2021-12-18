@@ -34,5 +34,5 @@ https://oss-db.jp/outline/gold
 
 `PostgreSQLなど` とあるが、実際には PostgreSQL 以外の DB は登場しない。
 
-次は PostgreSQL へ
+次は xref:postgresql.adoc[PostgreSQL]  へ
 

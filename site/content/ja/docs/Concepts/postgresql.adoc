@@ -4,3 +4,12 @@ weight: 2
 ---
 = PostgreSQL
 
+== PostgreSQL とは
+
+PostgreSQL はオープンソースのオブジェクトリレーショナルデータベース管理システム（ ORDBMS ）です。
+
+
+次は
+
+* xref:ordbms.adoc[オブジェクトリレーショナルデータベース管理システム（ ORDBMS ）]
+
