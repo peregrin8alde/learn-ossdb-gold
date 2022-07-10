@@ -508,3 +508,15 @@ ____
 |
 |
 |===
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::server/db_cluster.adoc[データベースクラスタ機能一覧]
+
+include::server/replication.adoc[レプリケーション機能一覧]
+
+include::server/log.adoc[ログ機能一覧]
+
+:leveloffset: -1
+endif::[]

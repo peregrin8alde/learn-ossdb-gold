@@ -100,3 +100,12 @@ ____
 |
 |
 |===
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::sql_engine/planner.adoc[プランナ機能一覧]
+
+
+:leveloffset: -1
+endif::[]
