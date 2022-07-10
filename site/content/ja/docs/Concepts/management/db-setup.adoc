@@ -1,3 +1,7 @@
+---
+title: "データベースサーバ構築"
+weight: 1
+---
 = データベースサーバ構築
 
 サーバ構築における容量見積もり、およびデータベースセキュリティに関する知識を問う。
@@ -145,6 +149,7 @@ a|
 * https://www.postgresql.jp/document/12/html/runtime-config-file-locations.html[19.2. ファイルの場所]
 ====
 
+ifdef::env-asciidoctor[]
 データベースクラスタ直下には <<img-layout-pgdata>> に示すようなディレクトリ／ファイルが存在する。
 
 [#img-layout-pgdata]
@@ -157,6 +162,7 @@ image::management/layout-pgdata.svg[opts=inline,align="center"]
 [#img-layout-pgdata-base]
 .データベースごとのサブディレクトリの構造
 image::management/layout-pgdata-base.svg[opts=inline,align="center"]
+endif::[]
 
 例えば、次に示すようなデータベースを持つクラスタの場合、
 
@@ -208,11 +214,13 @@ image::management/layout-pgdata-base.svg[opts=inline,align="center"]
 テーブルとインデックスはすべて、固定サイズ（通常 8 キロバイト。サーバのコンパイル時に異なるサイズを設定可能）のページ（ブロック）の集まりとして格納されます。
 テーブルでは、すべてのページは論理上等価です。したがって、あるアイテム（行）はどのページにでも格納することができます。 
 
+ifdef::env-asciidoctor[]
 <<img-layout-table>> にテーブル内の構造を示します。
 
 [#img-layout-table]
 .テーブル構造
 image::management/layout-table.svg[opts=inline,align="center"]
+endif::[]
 
 テーブルのファイルサイズは以下で算出することができる。
 
@@ -242,11 +250,13 @@ image::management/layout-table.svg[opts=inline,align="center"]
 * インデックスはデフォルト B-tree インデックス
 * 実際にはインデックスアクセスメソッドはこのページ書式を使用する必要はありません。 既存のすべてのインデックスメソッドがこの基本書式を使用しています。 しかし、インデックスメタページに保持されるデータは通常、アイテムレイアウト規則に正確には従っていません。 
 
+ifdef::env-asciidoctor[]
 <<img-layout-index>> にテーブル内の構造を示します。
 
 [#img-layout-index]
 .インデックス構造
 image::management/layout-index.svg[opts=inline,align="center"]
+endif::[]
 
 [NOTE]
 ====
@@ -348,17 +358,20 @@ hostssl    database  user  IP-address  IP-mask  auth-method  [auth-options]
 hostnossl  database  user  IP-address  IP-mask  auth-method  [auth-options]
 ----
 
+ifdef::env-asciidoctor[]
 [source,conf]
 .pg_hba.conf例
 ----
 include::source/sample-pg_hba.conf[]
 ----
+endif::[]
 
-
-
+ifdef::env-asciidoctor[]
 [#img-security]
 .サーバ - クライアント間の通信などのやり取り内容
 image::management/security.svg[opts=inline]
+endif::[]
+
 
 
 === 想定試験問題と解法
