@@ -322,21 +322,21 @@ ____
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
-include::db_cluster/acid.adoc[データ保証（ ACID ）機能一覧]
+include::acid.adoc[データ保証（ ACID ）機能一覧]
 
-include::db_cluster/connection.adoc[クライアント接続ポート機能一覧]
+include::connection.adoc[クライアント接続ポート機能一覧]
 
-include::db_cluster/database.adoc[データベース機能一覧]
+include::database.adoc[データベース機能一覧]
 
-include::db_cluster/host_based_auth.adoc[ホストベース認証機能一覧]
+include::host_based_auth.adoc[ホストベース認証機能一覧]
 
-include::db_cluster/maintenance.adoc[定期保守機能一覧]
+include::maintenance.adoc[定期保守機能一覧]
 
-include::db_cluster/monitoring.adoc[監視機能一覧]
+include::monitoring.adoc[監視機能一覧]
 
-include::db_cluster/sql_engine.adoc[SQL 実行機能一覧]
+include::sql_engine/_index.adoc[SQL 実行機能一覧]
 
-include::db_cluster/monitoring.adoc[監視機能一覧]
+include::monitoring.adoc[監視機能一覧]
 
 :leveloffset: -1
 endif::[]

@@ -104,7 +104,8 @@ ____
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
-include::sql_engine/planner.adoc[プランナ機能一覧]
+include::planner.adoc[プランナ機能一覧]
+include::sql.adoc[SQL]
 
 
 :leveloffset: -1

@@ -111,9 +111,9 @@ image::./base.svg[opts=inline,align="center",width=100%]
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
-include::function-list/server.adoc[DBMS サーバ機能一覧]
+include::server/_index.adoc[DBMS サーバ機能一覧]
 
-include::function-list/client.adoc[DBMS クライアント機能一覧]
+include::client.adoc[DBMS クライアント機能一覧]
 
 
 :leveloffset: -1

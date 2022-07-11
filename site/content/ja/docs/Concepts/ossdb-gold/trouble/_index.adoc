@@ -7,11 +7,11 @@ weight: 9
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
-include::trouble/pattern.adoc[起こりうる障害のパターン]
+include::pattern.adoc[起こりうる障害のパターン]
 
-include::trouble/recovery-cluster.adoc[破損クラスタ復旧]
+include::recovery-cluster.adoc[破損クラスタ復旧]
 
-include::trouble/recovery-hotstandby.adoc[ホット・スタンバイ復旧]
+include::recovery-hotstandby.adoc[ホット・スタンバイ復旧]
 
 :leveloffset: -1
 endif::[]

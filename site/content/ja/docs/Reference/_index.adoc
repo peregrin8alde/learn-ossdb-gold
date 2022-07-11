@@ -9,3 +9,11 @@ description: >
 {{% pageinfo %}}
 This is a placeholder page that shows you how to use this template site.
 {{% /pageinfo %}}
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::function-list.adoc[]
+
+:leveloffset: -1
+endif::[]

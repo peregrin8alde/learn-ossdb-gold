@@ -9,9 +9,8 @@ menu:
     pre: <i class='fas fa-book'></i>
 ---
 = OSS-DB Gold 学習資材
-:imagesdir: ../../../static/images
 ifdef::env-asciidoctor[]
-include::../../../../doc/_attributes.adoc[]
+include::{attributes}[]
 :xrefstyle: full
 endif::[]
 
@@ -24,17 +23,13 @@ image::base.svg[opts=inline,align="center",width=100%]
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
-include::includes/function-list.adoc[]
-
-include::includes/function-detail.adoc[]
-
 include::Concepts/_index.adoc[]
 
 [appendix]
-include::includes/appendix-codes.adoc[]
+include::Examples/_index.adoc[]
 
 [appendix]
-include::includes/appendix-manual.adoc[]
+include::Reference/appendix-manual.adoc[]
 
 :leveloffset: -1
 
