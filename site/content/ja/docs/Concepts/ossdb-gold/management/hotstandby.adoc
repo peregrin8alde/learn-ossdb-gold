@@ -1,0 +1,109 @@
+---
+title: "ホット・スタンバイ運用"
+weight: 4
+---
+= ホット・スタンバイ運用
+
+レプリケーション構成を組むための設定や構築手順、およびレプリケーションの仕組み(プロセスやフロー)、状態の監視などに関する知識を問う。
+
+== 概要
+
+.主要な知識範囲と参考マニュアル（ホット・スタンバイ運用）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|ストリーミングレプリケーション機能とロジカルレプリケーション機能の概要
+a|
+a|
+* https://www.postgresql.jp/document/11/html/different-replication-solutions.html
+a|
+
+|同期レプリケーションと非同期レプリケーション
+a|
+a|
+* https://www.postgresql.jp/document/11/html/different-replication-solutions.html
+a|
+
+|postgresql.conf、recovery.confの設定
+a|
+a|
+* https://www.postgresql.jp/document/11/html/hot-standby.html
+a|
+
+|パブリケーションとサブスクリプションの定義
+a|
+a|
+* https://www.postgresql.jp/document/11/html/logical-replication.html
+a|
+
+
+|未分類
+a|
+* wal_level	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* max_wal_senders	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-SENDER
+* wal_sender_timeout	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-SENDER
+* wal_receiver_timeout	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-SENDER
+* synchronous_standby_names	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-SENDER
+* synchronous_commit	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* max_logical_replication_workers	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-SUBSCRIBER
+* CREATE/ALTER/DROP PUBLICATION/SUBSCRIPTION	https://www.postgresql.jp/document/11/html/logical-replication.html
+* pg_stat_replication	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* pg_stat_wal_receiver	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* recovery_min_apply_delay	https://www.postgresql.jp/document/11/html/standby-settings.html
+* スタンバイでの問い合わせのコンフリクト(衝突)	https://www.postgresql.jp/document/11/html/hot-standby.html
+* hot_standby_feedback	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-STANDBY
+* max_standby_streaming_delay	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#GUC-MAX-STANDBY-STREAMING-DELAY
+* pg_wal_replay_pause()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-RECOVERY-CONTROL
+* pg_wal_replay_resume()	https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-RECOVERY-CONTROL
+* walsenderプロセス	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-STANDBY
+* walreceiverプロセス	https://www.postgresql.jp/document/11/html/runtime-config-replication.html#RUNTIME-CONFIG-REPLICATION-STANDBY
+* pg_receivewal	https://www.postgresql.jp/document/11/html/app-pgreceivewal.html
+* トランザクションログ(WAL)	https://www.postgresql.jp/document/11/html/wal.html
+* スタンバイへ伝搬される処理とされない処理	https://www.postgresql.jp/document/11/html/hot-standby.html
+* スタンバイで実行可能な問い合わせ	https://www.postgresql.jp/document/11/html/hot-standby.html
+* ロジカルレプリケーションのサブスクライバ―へ伝搬される処理とされない処理	https://www.postgresql.jp/document/11/html/logical-replication.html
+a|
+a|
+
+|===
+
+
+https://oss-db.jp/sample/gold_management_01/06_130619[1.06]
+
+https://oss-db.jp/sample/gold_management_01/20_190515[1.20]
+
+== ストリーミングレプリケーション機能とロジカルレプリケーション機能の概要
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
+
+== 同期レプリケーションと非同期レプリケーション
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
+
+== postgresql.conf、recovery.confの設定
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
+
+== パブリケーションとサブスクリプションの定義
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+

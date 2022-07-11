@@ -1,8 +1,7 @@
-
 ---
 title: "Core Tasks"
 linkTitle: "Core Tasks"
-weight: 6
+weight: 4
 date: 2017-01-05
 description: >
   What can your user do with your project?
@@ -11,3 +10,39 @@ description: >
 {{% pageinfo %}}
 This is a placeholder page that shows you how to use this template site.
 {{% /pageinfo %}}
+
+想定シナリオにおける、
+
+* 作業シーン
+* 作業実施者
+* 作業ステップ
+* 必須作業か否か
+* 作業に使う（使える） I/F
+
+を一覧化し、各シーンや I/F 毎での図で説明する。
+
+.作業一覧（シナリオ：〜）
+[options="header,autowidth",stripes=hover]
+|===
+|ID |シーン |実施者 |ステップ |必須 |API |CUI |GUI
+
+|A001
+|シーンA
+|管理者
+|〜を〜する。
+|○
+|○
+|×
+|×
+
+|===
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::function-detail/server.adoc[サーバー]
+
+include::function-detail/client.adoc[クライアント]
+
+:leveloffset: -1
+endif::[]

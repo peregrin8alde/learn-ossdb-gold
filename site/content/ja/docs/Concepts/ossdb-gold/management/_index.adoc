@@ -1,0 +1,20 @@
+---
+title: "運用管理"
+weight: 5
+---
+= 運用管理
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::db-setup.adoc[データベースサーバ構築]
+
+include::commands.adoc[運用管理用コマンド全般]
+
+include::structure.adoc[データベースの構造]
+
+include::hotstandby.adoc[ホット・スタンバイ運用]
+
+
+:leveloffset: -1
+endif::[]

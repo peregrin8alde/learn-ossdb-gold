@@ -1,0 +1,20 @@
+---
+title: "性能監視"
+weight: 7
+---
+= 性能監視
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::accessinfo.adoc[アクセス統計情報]
+
+include::tableinfo.adoc[テーブル / カラム統計情報]
+
+include::queryplan.adoc[クエリ実行計画]
+
+include::etc.adoc[その他の性能監視]
+
+:leveloffset: -1
+endif::[]
+

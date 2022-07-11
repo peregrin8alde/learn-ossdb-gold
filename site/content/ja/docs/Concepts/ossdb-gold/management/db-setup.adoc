@@ -1,0 +1,442 @@
+---
+title: "データベースサーバ構築"
+weight: 1
+---
+= データベースサーバ構築
+
+サーバ構築における容量見積もり、およびデータベースセキュリティに関する知識を問う。
+
+== #【未定稿】【各詳細記述後に Fix】# 概要
+
+.主要な知識範囲と参考マニュアル（データベースサーバ構築）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|テーブル・インデックス容量見積もり
+a|
+* チェックサム
+* pg_xact
+* pg_multixact
+* pg_notify
+* pg_serial
+* pg_snapshots
+* pg_stat_tmp
+* pg_subtrans
+* pg_tblspc
+* pg_twophase
+* initdb -data-checksums (-k)
+a|
+* https://www.postgresql.jp/document/11/html/storage-file-layout.html[68.1. データベースファイルのレイアウト]
+* https://www.postgresql.jp/document/11/html/storage-page-layout.html[68.6. データベースページのレイアウト]
+* https://www.postgresql.jp/document/11/html/app-initdb.html[initdb]
+a|
+* https://oss-db.jp/sample/gold_management_01/01_120210[1.01]
+* https://oss-db.jp/sample/gold_management_01/04_130401[1.04]
+
+|セキュリティ- 通信経路暗号化（SSL)
+a|
+* ssl	
+* pg_stat_ssl
+a|
+* https://www.postgresql.jp/document/11/html/ssl-tcp.html[18.9. SSLによる安全なTCP/IP接続]
+* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS[28.2.2. 統計情報の表示]
+a|
+
+|セキュリティ- データ暗号化
+a|
+* pgcrypto
+a|
+* https://www.postgresql.jp/document/11/html/pgcrypto.html[F.25. pgcrypto]
+a|
+* https://oss-db.jp/sample/gold_management_01/22_190731[1.22]
+
+|セキュリティ- クライアント認証
+a|
+a|
+* https://www.postgresql.jp/document/11/html/client-authentication.html[第20章 クライアント認証]
+a|
+
+|セキュリティ- 監査ログ
+a|
+* log_statement
+* track_functions
+* track_activities
+a|
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT[19.8.3. 何をログに]
+* https://www.postgresql.jp/document/11/html/runtime-config-statistics.html#RUNTIME-CONFIG-STATISTICS-COLLECTOR[19.9.1. 問い合わせおよびインデックスに関する統計情報コレクタ]
+a|
+
+|データ型のサイズ
+a|
+a|
+* https://www.postgresql.jp/document/11/html/datatype.html[第8章 データ型]
+a|
+
+|ユーザ・データベース単位のパラメータ設定
+a|
+* ALTER ROLE
+* ALTER DATABASE
+a|
+* https://www.postgresql.jp/document/11/html/config-setting.html[19.1. パラメータの設定]
+* https://www.postgresql.jp/document/11/html/sql-alterrole.html[ALTER ROLE]
+* https://www.postgresql.jp/document/11/html/sql-alterdatabase.html[ALTER DATABASE]
+a|
+
+|===
+
+
+== テーブル・インデックス容量見積もり
+
+=== 覚えるべきこと
+
+* CREATE TABLE 文とレコード数からテーブルのファイルサイズを算出する方法
+* CREATE INDEX 文とレコード数からインデックスのファイルサイズを算出する方法
+
+[IMPORTANT]
+====
+--
+`テーブルのファイルサイズ = [ブロックサイズ] * [ブロック数]`
+
+* `ブロックサイズ = 8192 （デフォルト）`
+* `ブロック数 = [レコード数] / [1 ブロックに格納可能なレコード数]`
+** `1 ブロックに格納可能なレコード数 = ( [ブロックサイズ] * FILLFACTOR - [ブロックヘッダサイズ] ) / [レコードサイズ]` （ FILLFACTOR はデフォルト 100% ）
+*** `ブロックヘッダサイズ = 24 バイト`
+*** `レコードサイズ = [レコードヘッダサイズ] + [各カラムのデータサイズ]`
+*** `レコードヘッダサイズ = 約 28 バイト` （アイテム識別子 4 バイトも含む）
+--
+
+--
+`インデックスのファイルサイズ =  [ブロックサイズ] * [ブロック数]`
+
+* `ブロックサイズ = 8192 （デフォルト）`
+* `ブロック数 = [レコード数] / [1 ブロックに格納可能なレコード数] + α` （ α : ルートおよびインターナルページ数 ）
+** デフォルトのインデックスは B-Tree であり、リーフページが大半を占める #調査中#
+** `1 ブロックに格納可能なレコード数 = ( [ブロックサイズ] * FILLFACTOR - [ブロックヘッダサイズ] - [スペシャルデータサイズ] ) / [レコードサイズ]` （ FILLFACTOR はデフォルト 90% ）
+*** `ブロックヘッダサイズ = 24 バイト`
+*** `スペシャルデータサイズ = 16 バイト` #調査中#
+*** `レコードサイズ = [レコードヘッダサイズ] + [各カラムのデータサイズ]`
+*** `レコードヘッダサイズ = 約 12 バイト` （アイテム識別子 4 バイトも含む） #調査中#
+--
+====
+
+
+=== データベースクラスタ配下のディレクトリ／ファイル群の名称や役割
+
+データベースクラスタ::
+  1 つのサーバインスタンスで管理される、共通のファイルシステム領域（「データ領域」）に格納されているデータベースの集合
+データ領域の場所:::
+  * クラスタ作成時およびサーバインスタンス起動時に環境変数 `PGDATA` または `-D` オプション（ `initdb` / `pg_ctl` 利用時は `--pgdata` でも可）で指定
+  * 優先度は `-D` オプション > 環境変数 `PGDATA` 、どちらかを指定すればもう一方は省略可能
+  * メインサーバ設定ファイル（ デフォルト `postgresql.conf` ）またはコマンドラインオプションで `data_directory` パラメタを指定することでも上書き可能
+  ** #【未定稿】【要検証】# 設定ファイル（デフォルト `postgresql.conf` / `pg_hba.conf` / `pg_ident.conf` ）のディレクトリのデフォルトは
+     `-D` オプション または 環境変数 `PGDATA` であり、 `data_directory` パラメタの影響を受けない。
+クラスタ作成方法:::  
+  * `initdb [option...] [ --pgdata | -D ] directory`
+  * `pg_ctl init[db] [-D datadir] [-s] [-o initdb-options]` （ `initdb` を呼び出す）
+サーバインスタンス起動方法:::  
+  * `postgres [option...]` （廃止予定の名前として `postmaster` ）
+  * `pg_ctl start [-D datadir] [-l filename] [-W] [-t seconds] [-s] [-o options] [-p path] [-c]`
+
+[NOTE]
+====
+参考マニュアル
+
+* https://www.postgresql.jp/document/12/html/app-initdb.html[initdb]
+* https://www.postgresql.jp/document/12/html/app-pg-ctl.html[pg_ctl]
+* https://www.postgresql.jp/document/12/html/app-postgres.html[postgres]
+* https://www.postgresql.jp/document/12/html/runtime-config-file-locations.html[19.2. ファイルの場所]
+====
+
+ifdef::env-asciidoctor[]
+データベースクラスタ直下には <<img-layout-pgdata>> に示すようなディレクトリ／ファイルが存在する。
+
+[#img-layout-pgdata]
+.データベースクラスタ直下のディレクトリ／ファイル群
+image::management/layout-pgdata.svg[opts=inline,align="center"]
+
+`base` 配下には、各データベースに対しデータベースの `oid` を名前に含むサブディレクトリが存在し、 <<img-layout-pgdata-base>> 
+に示すような構造をしている。
+
+[#img-layout-pgdata-base]
+.データベースごとのサブディレクトリの構造
+image::management/layout-pgdata-base.svg[opts=inline,align="center"]
+endif::[]
+
+例えば、次に示すようなデータベースを持つクラスタの場合、
+
+[source,sql]
+----
+# select datname, oid from pg_database;
+  datname  |  oid  
+-----------+-------
+ postgres  | 13067
+ db1       | 16384
+ template1 |     1
+ template0 | 13066
+(4 rows)
+----
+
+以下のようなディレクトリが存在する。
+
+[source,console]
+----
+# ls /var/lib/postgresql/data/pgdata/base/
+1  13066  13067  16384
+----
+
+[NOTE]
+====
+参考マニュアル： https://www.postgresql.jp/document/11/html/storage-file-layout.html[68.1. データベースファイルのレイアウト]
+
+* `PGDATA/base` 配下のサブディレクトリはデータベースファイルのデフォルトの位置であり、特にシステムカタログがそこに格納されます。
+* `pg_database` 内のデータベース OID （行識別子）は隠し属性であり明示的に選択しなければ表示されない
+* 各テーブルおよびインデックスのファイル名はファイルノード番号（ `select relname, relfilenode from pg_class` ）
+* テーブルまたはインデックスが１ギガバイトを超えると、ギガバイト単位のセグメントに分割されます。
+** ファイル容量に制限のあるプラットフォームにおける問題を回避するため
+** 最初のセグメントのファイル名はファイルノード番号と同一であり、それ以降は、ファイルノード番号.1、ファイルノード番号.2等の名称になります。 
+* 項目が大きくなりそうな列を持ったテーブルは、連携したTOASTテーブルを保有する可能性があります。
+** テーブル行の中には大き過ぎて適切に保持できない（１行が複数ページを跨ることはできない）フィールド値を行の外部に格納するために使用
+* `pg_tblspc` ディレクトリは実際の物理的なテーブル空間ディレクトリではなく、そこに対するシンボリックリンクを持つ
+** 各テーブルおよびインデックスのファイルは物理的なテーブル空間ディレクトリ配下に存在
+** なお、 `pg_default` テーブル空間は `pg_tblspc` を通してアクセスされるのではなく、 `PGDATA/base` と連携
+** 同様に `pg_global` テーブル空間は `PGDATA/global` と連携
+* 一時ファイル（メモリ内に収まりきらないデータのソートなどの操作用）は `PGDATA/base/pgsql_tmp` 内に作成される
+** `pg_default` 以外のテーブル空間が指定されていた場合はテーブル空間ディレクトリ下の `pgsql_tmp` サブディレクトリ内
+** 一時ファイルの名前は `pgsql_tmpPPP.NNN` という形式
+*** PPPは所有するバックエンドのPIDであり、NNNで同一バックエンドで作成された別の一時ファイルと区別
+====
+
+
+=== テーブル容量見積もり
+
+テーブルとインデックスはすべて、固定サイズ（通常 8 キロバイト。サーバのコンパイル時に異なるサイズを設定可能）のページ（ブロック）の集まりとして格納されます。
+テーブルでは、すべてのページは論理上等価です。したがって、あるアイテム（行）はどのページにでも格納することができます。 
+
+ifdef::env-asciidoctor[]
+<<img-layout-table>> にテーブル内の構造を示します。
+
+[#img-layout-table]
+.テーブル構造
+image::management/layout-table.svg[opts=inline,align="center"]
+endif::[]
+
+テーブルのファイルサイズは以下で算出することができる。
+
+`テーブルのファイルサイズ = [ブロックサイズ] * [ブロック数]`
+
+* `ブロックサイズ = 8192 （デフォルト）`
+* `ブロック数 = [レコード数] / [1 ブロックに格納可能なレコード数]`
+** `1 ブロックに格納可能なレコード数 = ( [ブロックサイズ] - [ブロックヘッダサイズ] ) / [レコードサイズ]`
+*** `ブロックヘッダサイズ = 24 バイト`
+*** `レコードサイズ = [レコードヘッダサイズ] + [各カラムのデータサイズ]`
+*** `レコードヘッダサイズ = 約 28 バイト`
+
+[NOTE]
+====
+参考マニュアル： https://www.postgresql.jp/document/11/html/storage-page-layout.html[68.6. データベースページのレイアウト]
+
+* data checksums が有効な場合にI/Oシステムによる破損検知を補助するために、データページにおいてチェックサムを使用します。
+** これがないと警告もされません
+** チェックサムを有効にすると、認知できる程度の性能低下が発生する可能性があります
+** 初期化（ initdb ）の際にのみ設定することができ、後で変更することはできません
+** 設定した場合、すべてのデータベースにおいて、すべてのオブジェクトに対してチェックサムが計算されます。 
+====
+
+=== #【未定稿】【調査中】# インデックス容量見積もり
+
+* インデックスでは、初めのページは通常、制御用の情報を保持するメタページとして予約されます。 また、インデックスではインデックスアクセスメソッドに依存した様々なページ種類があります。 
+* インデックスはデフォルト B-tree インデックス
+* 実際にはインデックスアクセスメソッドはこのページ書式を使用する必要はありません。 既存のすべてのインデックスメソッドがこの基本書式を使用しています。 しかし、インデックスメタページに保持されるデータは通常、アイテムレイアウト規則に正確には従っていません。 
+
+ifdef::env-asciidoctor[]
+<<img-layout-index>> にテーブル内の構造を示します。
+
+[#img-layout-index]
+.インデックス構造
+image::management/layout-index.svg[opts=inline,align="center"]
+endif::[]
+
+[NOTE]
+====
+参考マニュアル
+
+* https://www.postgresql.jp/document/11/html/storage-page-layout.html[68.6. データベースページのレイアウト]
+* https://www.postgresql.jp/document/11/html/indexes-types.html[11.2. インデックスの種類]
+* https://www.postgresql.jp/document/11/html/indexam.html[第61章 インデックスアクセスメソッドのインタフェース定義]
+====
+
+
+=== 想定試験問題と解法
+
+
+== セキュリティ
+
+=== 覚えるべきこと
+
+* セキュリティ関連の設定方法とその挙動
+
+通信
+暗号化
+認証
+
+データ
+暗号化
+ハッシュ化
+
+パスワード
+ハッシュ化
+
+監査
+ログ出力レベル
+ログ出力内容
+アクセス統計情報
+
+[IMPORTANT]
+====
+
+====
+
+
+
+キーワード
+
+* ssl	
+* pg_stat_ssl
+* pgcrypto
+* log_statement
+* track_functions
+* track_activities
+
+参考
+
+* https://www.postgresql.jp/document/11/html/ssl-tcp.html[18.9. SSLによる安全なTCP/IP接続]
+* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS[28.2.2. 統計情報の表示]
+* https://www.postgresql.jp/document/11/html/pgcrypto.html[F.25. pgcrypto]
+* https://www.postgresql.jp/document/11/html/client-authentication.html[第20章 クライアント認証]
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]
+* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT[19.8.3. 何をログに]
+* https://www.postgresql.jp/document/11/html/runtime-config-statistics.html#RUNTIME-CONFIG-STATISTICS-COLLECTOR[19.9.1. 問い合わせおよびインデックスに関する統計情報コレクタ]
+
+例題
+
+* https://oss-db.jp/sample/gold_management_01/22_190731[1.22]
+
+
+//-
+
+* 通信、データのセキュリティについて
+** 通信経路暗号化（SSL)
+** データ暗号化
+** クライアント認証
+** 監査ログ
+
+ポイント
+
+* SSL
+** SSLサポートを有効にしてコンパイルされた場合、PostgreSQLサーバは、postgresql.confにおいてsslパラメータをonにすることで、SSLサポートを有効にして起動することができます
+** サーバは同じTCPポートで通常の接続とSSL接続の両方を待ち受け、クライアントとの接続にSSLを使用するかどうかを調停します。 デフォルトでは、これはクライアント側の選択肢です
+** 一部またはすべての接続でSSLの使用を必要とさせるためのサーバ側の設定方法に関しては pg_hba.conf を参照
+
+
+* SSL を有効（ `ssl = on` ）にすると１つのポートで SSL かどうかを使い分けることができる。
+** SSL を使うかどうかは基本クライアント側の選択だが、サーバ側で SSL のみ受け付けるなどの設定も可能
+* クライアント認証設定ファイル `pg_hba.conf` 内で受け付けるプロトコルと DB 、ユーザ、 IP アドレス、認証方法を設定 
+
+https://www.postgresql.jp/document/11/html/auth-pg-hba-conf.html[20.1. pg_hba.confファイル]
+
+.pg_hba.conf
+[source,conf]
+----
+local      database  user  auth-method  [auth-options]
+host       database  user  address  auth-method  [auth-options]
+hostssl    database  user  address  auth-method  [auth-options]
+hostnossl  database  user  address  auth-method  [auth-options]
+host       database  user  IP-address  IP-mask  auth-method  [auth-options]
+hostssl    database  user  IP-address  IP-mask  auth-method  [auth-options]
+hostnossl  database  user  IP-address  IP-mask  auth-method  [auth-options]
+----
+
+ifdef::env-asciidoctor[]
+[source,conf]
+.pg_hba.conf例
+----
+include::source/sample-pg_hba.conf[]
+----
+endif::[]
+
+ifdef::env-asciidoctor[]
+[#img-security]
+.サーバ - クライアント間の通信などのやり取り内容
+image::management/security.svg[opts=inline]
+endif::[]
+
+
+
+=== 想定試験問題と解法
+
+
+
+== データ型のサイズ
+
+=== 覚えるべきこと
+
+* 各データ型のサイズ
+
+[IMPORTANT]
+====
+* 可変長のデータ型は型の指定だけではサイズが決まらず、データ次第でオーバーヘッドも変化する。
+====
+
+* https://www.postgresql.jp/document/11/html/datatype.html[第8章 データ型]
+
+
+
+=== 想定試験問題と解法
+
+
+
+
+== ユーザ・データベース単位のパラメータ設定
+
+=== 覚えるべきこと
+
+* ユーザ単位でのパラメータ設定方法
+* データベース単位でのパラメータ設定方法
+
+[IMPORTANT]
+====
+* `ALTER ROLE` でユーザに対しパラメタを指定することが可能
++
+[source,sql]
+----
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] SET configuration_parameter { TO | = } { value | DEFAULT }
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] SET configuration_parameter FROM CURRENT
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] RESET configuration_parameter
+ALTER ROLE { role_specification | ALL } [ IN DATABASE database_name ] RESET ALL
+
+  role_name
+| CURRENT_USER
+| SESSION_USER
+----
+* `ALTER DATABASE` でデータベースに対しパラメタを指定することが可能
++
+[source,sql]
+----
+ALTER DATABASE name SET configuration_parameter { TO | = } { value | DEFAULT }
+ALTER DATABASE name SET configuration_parameter FROM CURRENT
+ALTER DATABASE name RESET configuration_parameter
+ALTER DATABASE name RESET ALL
+----
+====
+
+
+* https://www.postgresql.jp/document/11/html/config-setting.html[19.1. パラメータの設定]
+* https://www.postgresql.jp/document/11/html/sql-alterrole.html[ALTER ROLE]
+* https://www.postgresql.jp/document/11/html/sql-alterdatabase.html[ALTER DATABASE]
+
+
+
+=== 想定試験問題と解法
+

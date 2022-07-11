@@ -100,3 +100,13 @@ ____
 |
 |
 |===
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::planner.adoc[プランナ機能一覧]
+include::sql.adoc[SQL]
+
+
+:leveloffset: -1
+endif::[]

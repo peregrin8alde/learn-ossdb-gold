@@ -1,0 +1,17 @@
+---
+title: "障害対応"
+weight: 9
+---
+= 障害対応
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::pattern.adoc[起こりうる障害のパターン]
+
+include::recovery-cluster.adoc[破損クラスタ復旧]
+
+include::recovery-hotstandby.adoc[ホット・スタンバイ復旧]
+
+:leveloffset: -1
+endif::[]

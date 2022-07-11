@@ -1,0 +1,97 @@
+---
+title: "アクセス統計情報"
+weight: 1
+---
+= アクセス統計情報
+
+データベースの利用状況を示す稼働統計情報の内容や見方、収集方法に関する知識を問う。
+
+== 概要
+
+.主要な知識範囲と参考マニュアル（アクセス統計情報）
+[options="header,autowidth",stripes=hover]
+|===
+|主要な知識範囲 |重要な用語、コマンド、パラメータなど |参考マニュアル |サンプル問題
+
+|pg_locks
+a|
+a|
+* https://www.postgresql.jp/document/11/html/view-pg-locks.html
+a|
+
+|pg_stat_activity、pg_stat_database
+a|
+a|
+* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+a|
+
+|pg_stat_all_tables 等、行レベル統計情報
+a|
+a|
+* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+a|
+
+|pg_statio_all_tables 等、ブロックレベル統計情報
+a|
+a|
+* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+a|
+
+
+|未分類
+a|
+* pg_stat_archiver	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* pg_stat_bgwriter	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* 待機イベント(pg_stat_activity.wait_event)	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* pg_stat_progress_vacuum	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+a|
+a|
+
+|===
+
+
+https://oss-db.jp/sample/gold_monitoring_01/01_111227[2.01]
+
+https://oss-db.jp/sample/gold_monitoring_01/06_140307[2.06]
+
+https://oss-db.jp/sample/gold_monitoring_01/07_140417[2.07]
+
+https://oss-db.jp/sample/gold_monitoring_01/08_140530[2.08]
+
+https://oss-db.jp/sample/gold_monitoring_01/12_170228[2.12]
+
+https://oss-db.jp/sample/gold_monitoring_01/13_190226[2.13]
+
+https://oss-db.jp/sample/gold_monitoring_01/14_190409[2.14]
+
+== pg_locks
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
+== pg_stat_activity、pg_stat_database
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
+== pg_stat_all_tables 等、行レベル統計情報
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+
+
+== pg_statio_all_tables 等、ブロックレベル統計情報
+
+=== 覚えるべきこと
+
+=== 想定試験問題と解法
+
+

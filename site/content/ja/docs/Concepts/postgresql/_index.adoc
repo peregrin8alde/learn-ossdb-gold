@@ -1,0 +1,25 @@
+---
+title: "PostgreSQL"
+weight: 2
+---
+= PostgreSQL
+
+== PostgreSQL とは
+
+PostgreSQL はオープンソースのオブジェクトリレーショナルデータベース管理システム（ ORDBMS ）です。
+
+=== オブジェクトリレーショナルデータベース管理システム（ ORDBMS ）とは
+
+リレーショナルデータベース管理システム（ RDBMS ）の一種であり、オブジェクト指向を取り込んでいる。
+
+本資料では詳細には説明しない。
+
+=== リレーショナルデータベース管理システム（ RDBMS ）とは
+
+データベース管理システム（ DBMS ）の一種
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+include::dbms.adoc[]
+:leveloffset: -1
+endif::[]
