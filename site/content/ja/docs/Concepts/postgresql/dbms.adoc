@@ -1,6 +1,6 @@
 ---
 title: "データベースマネージメントシステム（ DBMS ）"
-weight: 3
+weight: 1
 ---
 = データベースマネージメントシステム（ DBMS ）
 
@@ -12,7 +12,7 @@ weight: 3
 
 [#img-dbms-abst]
 .DBMS 概要図
-image::./dbms-abst.svg[opts=inline,align="center",width=100%]
+image::dbms-abst.svg[opts=inline,align="center",width=100%]
 
 サーバとクライアントで構成される
 

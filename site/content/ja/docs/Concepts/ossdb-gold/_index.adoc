@@ -34,22 +34,16 @@ https://oss-db.jp/outline/gold
 
 `PostgreSQLなど` とあるが、実際には PostgreSQL 以外の DB は登場しない。
 
-== PostgreSQL とは
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+include::coverage.adoc[]
 
-PostgreSQL はオープンソースのオブジェクトリレーショナルデータベース管理システム（ ORDBMS ）です。
+include::./management/_index.adoc[]
 
-=== オブジェクトリレーショナルデータベース管理システム（ ORDBMS ）とは
+include::./monitoring/_index.adoc[]
 
-リレーショナルデータベース管理システム（ RDBMS ）の一種であり、オブジェクト指向を取り込んでいる。
+include::./performance/_index.adoc[]
 
-本資料では詳細には説明しない。
-
-=== リレーショナルデータベース管理システム（ RDBMS ）とは
-
-データベース管理システム（ DBMS ）の一種
-
-
-次は
-
-* xref:dbms.adoc[データベース管理システム（ DBMS ）]
-
+include::./trouble/_index.adoc[]
+:leveloffset: -1
+endif::[]

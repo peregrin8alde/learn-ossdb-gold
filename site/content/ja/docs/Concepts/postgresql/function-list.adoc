@@ -1,6 +1,6 @@
 ---
-title: "Function List"
-weight: 4
+title: "PostgreSQL 機能一覧"
+weight: 2
 ---
 = PostgreSQL 機能一覧
 
