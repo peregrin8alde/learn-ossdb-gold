@@ -14,6 +14,8 @@ OPT_STYLE="-a stylesdir="${SCRIPT_DIR}/styles" -a stylesheet=${STYLE}.css"
 ATTRIBUTES_FILE="${SCRIPT_DIR}/_attributes.adoc"
 OPT_ATTRIBUTES_FILE="-a attributes="${ATTRIBUTES_FILE}""
 
+cd "${PARENT_DIR}"
+
 rm -rf "${OUTPUT_DIR}"
 
 asciidoctor \
