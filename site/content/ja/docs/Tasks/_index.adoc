@@ -6,6 +6,7 @@ date: 2017-01-05
 description: >
   What can your user do with your project?
 ---
+= Core Tasks
 
 {{% pageinfo %}}
 This is a placeholder page that shows you how to use this template site.
@@ -38,11 +39,5 @@ This is a placeholder page that shows you how to use this template site.
 |===
 
 ifdef::env-asciidoctor[]
-:leveloffset: +1
 
-include::function-detail/server.adoc[サーバー]
-
-include::function-detail/client.adoc[クライアント]
-
-:leveloffset: -1
 endif::[]

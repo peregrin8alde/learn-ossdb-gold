@@ -13,9 +13,12 @@ This is a placeholder page that shows you how to use this template site.
 
 ifdef::env-asciidoctor[]
 :leveloffset: +1
+
 include::ossdb-gold/_index.adoc[]
 
 include::postgresql/_index.adoc[]
+
+include::_template.adoc[]
 
 :leveloffset: -1
 endif::[]

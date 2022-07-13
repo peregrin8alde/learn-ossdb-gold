@@ -20,6 +20,8 @@ PostgreSQL はオープンソースのオブジェクトリレーショナルデ
 
 ifdef::env-asciidoctor[]
 :leveloffset: +1
+
 include::dbms.adoc[]
+
 :leveloffset: -1
 endif::[]

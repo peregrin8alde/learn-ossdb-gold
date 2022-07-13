@@ -36,6 +36,7 @@ https://oss-db.jp/outline/gold
 
 ifdef::env-asciidoctor[]
 :leveloffset: +1
+
 include::coverage.adoc[]
 
 include::./management/_index.adoc[]
@@ -45,5 +46,6 @@ include::./monitoring/_index.adoc[]
 include::./performance/_index.adoc[]
 
 include::./trouble/_index.adoc[]
+
 :leveloffset: -1
 endif::[]

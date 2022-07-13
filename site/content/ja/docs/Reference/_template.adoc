@@ -1,0 +1,38 @@
+---
+title: "テンプレート"
+weight: 100
+---
+= タイトル
+
+～一覧
+
+概要説明
+
+簡単な図
+
+
+[NOTE]
+====
+NOTE
+====
+
+[TIP]
+====
+TIP
+====
+
+[IMPORTANT]
+====
+IMPORTANT
+====
+
+[CAUTION]
+====
+CAUTION
+====
+
+[WARNING]
+====
+WARNING
+====
+

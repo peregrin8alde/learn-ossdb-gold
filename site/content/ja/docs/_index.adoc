@@ -23,7 +23,17 @@ image::base.svg[opts=inline,align="center",width=100%]
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
+include::Overview/_index.adoc[]
+
+include::GettingStarted/_index.adoc[]
+
 include::Concepts/_index.adoc[]
+
+include::Tasks/_index.adoc[]
+
+include::Tutorials/_index.adoc[]
+
+include::Reference/_index.adoc[]
 
 [appendix]
 include::Examples/_index.adoc[]
