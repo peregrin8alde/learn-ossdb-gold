@@ -27,6 +27,8 @@ asciidoctor \
   -a imagesdir="${SITE_DIR}/static/images" \
   -a env-asciidoctor \
   -a skip-front-matter \
+  -a docinfo=shared \
+  -a docinfodir="${SCRIPT_DIR}" \
   "${INPUT_INDEXFILE}"
 
 
