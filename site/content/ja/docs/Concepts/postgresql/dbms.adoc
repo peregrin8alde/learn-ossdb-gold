@@ -16,8 +16,8 @@ image::dbms-abst.svg[opts=inline,align="center",width=100%]
 
 サーバとクライアントで構成される
 
-クライアントからはデータの格納や参照の依頼
-サーバからは依頼に対する各種メッセージや参照したデータ
+* クライアントからはデータの格納や参照の依頼
+* サーバからは依頼に対する各種メッセージや参照したデータ
 
 使い方、作業フロー概略
 
@@ -28,11 +28,26 @@ image::dbms-abst.svg[opts=inline,align="center",width=100%]
 
 関連するコンセプト
 
-データベースサーバ
-データベースクライアント
-データベース
+* データベースサーバ
+* データベースクライアント
+* データベース
 
 
 サーバの各機能のI/Fは基本的にはクライアントとなるため、機能の説明をする際には
 サーバとクライアントセットで行う。そのため、機能概要ではサーバとクライアントは分けないドキュメント構成とする。
 リファレンスの方ではサーバ用とクライアント用は分ける。
+
+
+[#img-server-single-abst]
+.データベースサーバ概要図
+image::server-single-abst.svg[opts=inline,align="center",width=50%]
+
+1. クライアント : ～
+2. サーバ : ～
+3. 通信ポート : ～
+
+
+
+[#img-server-replication-abst]
+.データベースサーバ（レプリケーション）概要図
+image::server-replication-abst.svg[opts=inline,align="center",width=50%]
