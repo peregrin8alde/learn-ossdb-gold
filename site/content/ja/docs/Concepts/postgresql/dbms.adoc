@@ -45,6 +45,8 @@ image::dbms-abst.svg[opts=inline,align="center",width=100%]
 
 リファレンスの方はより詳細に分割する可能性はある
 
+一旦、オブジェクト指向や UML で情報の整理をしてから分かりやすさ優先で修正した方が良いか？
+
 [#img-server-single-abst]
 .データベースサーバ概要図
 image::server-single-abst.svg[opts=inline,align="center",width=50%]
