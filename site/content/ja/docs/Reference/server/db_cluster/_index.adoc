@@ -3,6 +3,11 @@ title: "データベースクラスタ機能"
 ---
 = データベースクラスタ機能
 
+[#img-dbcluster-abst]
+.DB クラスタ概要図
+image::dbcluster-abst.svg[opts=inline,align="center",width=50%]
+
+
 .データベースクラスタ機能一覧
 [options="header,autowidth",stripes=hover]
 |===
