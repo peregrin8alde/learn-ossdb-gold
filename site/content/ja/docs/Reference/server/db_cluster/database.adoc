@@ -3,6 +3,11 @@ title: "データベース"
 ---
 = データベース
 
+[#img-db-abst]
+.DB 概要図
+image::db-abst.svg[opts=inline,align="center",width=50%]
+
+
 .データベース機能一覧
 [options="header,autowidth",stripes=hover]
 |===

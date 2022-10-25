@@ -45,7 +45,10 @@ image::dbms-abst.svg[opts=inline,align="center",width=100%]
 
 リファレンスの方はより詳細に分割する可能性はある
 
-一旦、オブジェクト指向や UML で情報の整理をしてから分かりやすさ優先で修正した方が良いか？
+一旦、オブジェクト指向や UML / sysml で情報の整理をしてから分かりやすさ優先で修正した方が良いか？
+
+SQL などの UI は OOUI で考える？
+
 
 [#img-server-single-abst]
 .データベースサーバ概要図
