@@ -7,9 +7,33 @@ description: >
 ---
 = Reference
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+++++
+<div class="mermaid">
+classDiagram
+  DBMS <|-- RDBMS
+  RDBMS <|-- ORDBMS
+  ORDBMS <|-- PostgreSQL
+
+  PostgreSQL *-- Postgres サーバー
+  PostgreSQL *-- Postgres クライアント
+
+  Postgres サーバー <.. Postgres クライアント
+</div>
+
+<div class="mermaid">
+classDiagram
+  Postgres サーバー *-- サーバーコマンド
+  Postgres サーバー *-- DB クラスター
+  Postgres サーバー *-- ログ
+  Postgres サーバー *-- レプリケーションサーバー
+
+  DB クラスター <.. Postgres クライアント
+  DB クラスター <.. レプリケーションサーバー
+
+  レプリケーションサーバー <.. Postgres クライアント
+</div>
+
+++++
 
 ifdef::env-asciidoctor[]
 :leveloffset: +1
