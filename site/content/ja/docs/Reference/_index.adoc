@@ -14,23 +14,22 @@ classDiagram
   RDBMS <|-- ORDBMS
   ORDBMS <|-- PostgreSQL
 
-  PostgreSQL *-- Postgres サーバー
-  PostgreSQL *-- Postgres クライアント
+  PostgreSQL *-- PostgreSQL サーバー
+  PostgreSQL *-- PostgreSQL クライアント
 
-  Postgres サーバー <.. Postgres クライアント
+  PostgreSQL サーバー <.. PostgreSQL クライアント
 </div>
 
 <div class="mermaid">
 classDiagram
-  Postgres サーバー *-- サーバーコマンド
-  Postgres サーバー *-- DB クラスター
-  Postgres サーバー *-- ログ
-  Postgres サーバー *-- レプリケーションサーバー
+  PostgreSQL サーバー *-- DB クラスター
+  PostgreSQL サーバー *-- ログ
+  PostgreSQL サーバー *-- レプリケーションサーバー
 
-  DB クラスター <.. Postgres クライアント
+  DB クラスター <.. PostgreSQL クライアント
   DB クラスター <.. レプリケーションサーバー
 
-  レプリケーションサーバー <.. Postgres クライアント
+  レプリケーションサーバー <.. PostgreSQL クライアント
 </div>
 
 ++++

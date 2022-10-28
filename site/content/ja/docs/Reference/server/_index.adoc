@@ -9,6 +9,18 @@ DBMS サーバ機能には <<img-server-abst>> に示すような機能が存在
 .DBMS サーバ機能概要図
 image::server-abst.svg[opts=inline,align="center"]
 
+++++
+<div class="mermaid">
+classDiagram
+  class PostgreSQL サーバー {
+    + array_nulls
+    + backslash_quote
+
+    + DB クラスタ作成()
+    + PostgreSQL サービス制御()
+  }
+</div>
+++++
 
 .DBMS サーバ機能一覧
 [options="header,autowidth",stripes=hover]
