@@ -18,6 +18,7 @@ classDiagram
 
     + DB クラスタ作成()
     + PostgreSQL サービス制御()
+    + ログ出力()
   }
 </div>
 ++++
