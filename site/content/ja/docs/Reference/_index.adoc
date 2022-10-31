@@ -20,6 +20,7 @@ classDiagram
 
   PostgreSQL *-- PostgreSQL サーバー
   PostgreSQL *-- PostgreSQL クライアント
+  PostgreSQL *-- PostgreSQL ユーザー
 
   PostgreSQL サーバー <.. PostgreSQL クライアント
 </div>
