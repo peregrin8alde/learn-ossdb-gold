@@ -15,9 +15,8 @@ DB クラスタはディスクのデータ、サーバーはそれを管理し�
 <div class="mermaid">
 classDiagram
   class PostgreSQL サーバー {
-    + array_nulls
-    + backslash_quote
-    + data_directory
+    + DB クラスタ[]
+    + PostgreSQL サービス[]
 
     + ログ出力()
     + PostgreSQL サービス制御()
@@ -25,7 +24,12 @@ classDiagram
 
   class DB クラスタ {
     + DB クラスタ作成()
+    + DB 操作
   }
+
+  PostgreSQL サーバー "1" .. "n" PostgreSQL サービス
+  PostgreSQL サーバー "1" .. "n" DB クラスタ
+  DB クラスタ "1" .. "1" PostgreSQL サービス
 
 </div>
 ++++
