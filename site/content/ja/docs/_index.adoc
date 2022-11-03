@@ -41,6 +41,10 @@ include::Examples/_index.adoc[]
 [appendix]
 include::Reference/appendix-manual.adoc[]
 
+[appendix]
+include::Reference/appendix-uml-class.adoc[]
+
+
 :leveloffset: -1
 
 &#169; 2021 Okada Hayato.
