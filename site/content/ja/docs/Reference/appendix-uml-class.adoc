@@ -47,7 +47,24 @@ title: "クラス図"
 *** postgres
 *** postmaster
 ** クライアントコマンド
+*** clusterdb
+*** createdb
+*** createuser
+*** dropdb
+*** dropuser
+*** ecpg
+*** pg_basebackup
+*** pgbench
+*** pg_config
+*** pg_dump
+*** pg_dumpall
+*** pg_isready
+*** pg_receivewal
+*** pg_recvlogical
+*** pg_restore
 *** psql
+*** reindexdb
+*** vacuumdb
 * 作成／削除
 ** DB クラスター
 ** SQL の DDL で定義される各オブジェクト
