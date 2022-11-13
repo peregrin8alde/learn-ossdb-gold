@@ -68,48 +68,6 @@ title: "クラス図"
 * 作成／削除
 ** DB クラスター
 ** SQL の DDL で定義される各オブジェクト
-*** ACCESS METHOD
-*** AGGREGATE
-*** CAST
-*** COLLATION
-*** CONVERSION
-*** DATABASE
-*** DOMAIN
-*** EVENT TRIGGER
-*** EXTENSION
-*** FOREIGN DATA WRAPPER
-*** FOREIGN TABLE
-*** FUNCTION
-*** GROUP
-*** INDEX
-*** LANGUAGE
-*** MATERIALIZED VIEW
-*** OPERATOR
-*** OPERATOR CLASS
-*** OPERATOR FAMILY
-*** POLICY
-*** PROCEDURE
-*** PUBLICATION
-*** ROLE
-*** RULE
-*** SCHEMA
-*** SEQUENCE
-*** SERVER
-*** STATISTICS
-*** SUBSCRIPTION
-*** TABLE
-*** TABLE AS
-*** TABLESPACE
-*** TEXT SEARCH CONFIGURATION
-*** TEXT SEARCH DICTIONARY
-*** TEXT SEARCH PARSER
-*** TEXT SEARCH TEMPLATE
-*** TRANSFORM
-*** TRIGGER
-*** TYPE
-*** USER
-*** USER MAPPING
-*** VIEW
 ** WAL？
 ** 各種ログ？
 
@@ -160,6 +118,54 @@ classDiagram
   バックグラウンドプロセス 自動保守系 <|-- WAL ライター
   バックグラウンドプロセス 自動保守系 <|-- チェックポインター
   バックグラウンドプロセス 自動保守系 <|-- バックグラウンドライター
+</div>
+
+
+<div class="mermaid">
+classDiagram
+  SQL の DDL で定義される各オブジェクト <|-- ACCESS METHOD
+  SQL の DDL で定義される各オブジェクト <|-- AGGREGATE
+  SQL の DDL で定義される各オブジェクト <|-- CAST
+  SQL の DDL で定義される各オブジェクト <|-- COLLATION
+  SQL の DDL で定義される各オブジェクト <|-- CONVERSION
+  SQL の DDL で定義される各オブジェクト <|-- DATABASE
+  SQL の DDL で定義される各オブジェクト <|-- DOMAIN
+  SQL の DDL で定義される各オブジェクト <|-- EVENT TRIGGER
+  SQL の DDL で定義される各オブジェクト <|-- EXTENSION
+  SQL の DDL で定義される各オブジェクト <|-- FOREIGN DATA WRAPPER
+  SQL の DDL で定義される各オブジェクト <|-- FOREIGN TABLE
+  SQL の DDL で定義される各オブジェクト <|-- FUNCTION
+  SQL の DDL で定義される各オブジェクト <|-- GROUP
+  SQL の DDL で定義される各オブジェクト <|-- INDEX
+  SQL の DDL で定義される各オブジェクト <|-- LANGUAGE
+  SQL の DDL で定義される各オブジェクト <|-- MATERIALIZED VIEW
+  SQL の DDL で定義される各オブジェクト <|-- OPERATOR
+  SQL の DDL で定義される各オブジェクト <|-- OPERATOR CLASS
+  SQL の DDL で定義される各オブジェクト <|-- OPERATOR FAMILY
+  SQL の DDL で定義される各オブジェクト <|-- POLICY
+  SQL の DDL で定義される各オブジェクト <|-- PROCEDURE
+  SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
+  SQL の DDL で定義される各オブジェクト <|-- ROLE
+  SQL の DDL で定義される各オブジェクト <|-- RULE
+  SQL の DDL で定義される各オブジェクト <|-- SCHEMA
+  SQL の DDL で定義される各オブジェクト <|-- SEQUENCE
+  SQL の DDL で定義される各オブジェクト <|-- SERVER
+  SQL の DDL で定義される各オブジェクト <|-- STATISTICS
+  SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
+  SQL の DDL で定義される各オブジェクト <|-- TABLE
+  SQL の DDL で定義される各オブジェクト <|-- TABLE AS
+  SQL の DDL で定義される各オブジェクト <|-- TABLESPACE
+  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH CONFIGURATION
+  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH DICTIONARY
+  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH PARSER
+  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH TEMPLATE
+  SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
+  SQL の DDL で定義される各オブジェクト <|-- TRIGGER
+  SQL の DDL で定義される各オブジェクト <|-- TYPE
+  SQL の DDL で定義される各オブジェクト <|-- USER
+  SQL の DDL で定義される各オブジェクト <|-- USER MAPPING
+  SQL の DDL で定義される各オブジェクト <|-- VIEW
+
 </div>
 
 ++++
