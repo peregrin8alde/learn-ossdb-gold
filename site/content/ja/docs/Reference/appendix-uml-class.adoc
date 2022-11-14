@@ -135,7 +135,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- FOREIGN DATA WRAPPER
   SQL の DDL で定義される各オブジェクト <|-- FOREIGN TABLE
   SQL の DDL で定義される各オブジェクト <|-- FUNCTION
-  SQL の DDL で定義される各オブジェクト <|-- GROUP
   SQL の DDL で定義される各オブジェクト <|-- INDEX
   SQL の DDL で定義される各オブジェクト <|-- LANGUAGE
   SQL の DDL で定義される各オブジェクト <|-- MATERIALIZED VIEW
@@ -145,15 +144,14 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- POLICY
   SQL の DDL で定義される各オブジェクト <|-- PROCEDURE
   SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
-  SQL の DDL で定義される各オブジェクト <|-- ROLE
+  SQL の DDL で定義される各オブジェクト <|-- ロール _ ROLE _ GROUP
   SQL の DDL で定義される各オブジェクト <|-- RULE
   SQL の DDL で定義される各オブジェクト <|-- SCHEMA
   SQL の DDL で定義される各オブジェクト <|-- SEQUENCE
   SQL の DDL で定義される各オブジェクト <|-- SERVER
   SQL の DDL で定義される各オブジェクト <|-- STATISTICS
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
-  SQL の DDL で定義される各オブジェクト <|-- TABLE
-  SQL の DDL で定義される各オブジェクト <|-- TABLE AS
+  SQL の DDL で定義される各オブジェクト <|-- テーブル
   SQL の DDL で定義される各オブジェクト <|-- TABLESPACE
   SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH CONFIGURATION
   SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH DICTIONARY
