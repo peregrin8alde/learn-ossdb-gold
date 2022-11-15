@@ -153,10 +153,7 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
   SQL の DDL で定義される各オブジェクト <|-- テーブル
   SQL の DDL で定義される各オブジェクト <|-- TABLESPACE
-  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH CONFIGURATION
-  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH DICTIONARY
-  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH PARSER
-  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH TEMPLATE
+  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH 系 _ CONFIGURATION _ DICTIONARY _ PARSER _ TEMPLATE
   SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
   SQL の DDL で定義される各オブジェクト <|-- TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- TYPE
