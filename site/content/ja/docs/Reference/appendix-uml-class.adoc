@@ -135,8 +135,7 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- DOMAIN
   SQL の DDL で定義される各オブジェクト <|-- EVENT TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- EXTENSION
-  SQL の DDL で定義される各オブジェクト <|-- FOREIGN DATA WRAPPER
-  SQL の DDL で定義される各オブジェクト <|-- FOREIGN TABLE
+  SQL の DDL で定義される各オブジェクト <|-- 外部データ系
   SQL の DDL で定義される各オブジェクト <|-- FUNCTION
   SQL の DDL で定義される各オブジェクト <|-- INDEX
   SQL の DDL で定義される各オブジェクト <|-- LANGUAGE
@@ -173,6 +172,10 @@ classDiagram
   TEXT SEARCH 系 <|-- TEXT SEARCH DICTIONARY
   TEXT SEARCH 系 <|-- TEXT SEARCH PARSER
   TEXT SEARCH 系 <|-- TEXT SEARCH TEMPLATE
+
+  外部データ系 <|-- FOREIGN DATA WRAPPER
+  外部データ系 <|-- FOREIGN TABLE
+
 </div>
 
 ++++
