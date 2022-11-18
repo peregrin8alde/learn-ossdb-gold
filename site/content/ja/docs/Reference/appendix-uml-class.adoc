@@ -140,9 +140,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- INDEX
   SQL の DDL で定義される各オブジェクト <|-- LANGUAGE
   SQL の DDL で定義される各オブジェクト <|-- MATERIALIZED VIEW
-  SQL の DDL で定義される各オブジェクト <|-- OPERATOR
-  SQL の DDL で定義される各オブジェクト <|-- OPERATOR CLASS
-  SQL の DDL で定義される各オブジェクト <|-- OPERATOR FAMILY
   SQL の DDL で定義される各オブジェクト <|-- POLICY
   SQL の DDL で定義される各オブジェクト <|-- PROCEDURE
   SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
@@ -161,11 +158,15 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- VIEW
 
   データの利用者 <|-- USER
-  データの利用者 <|-- ROLE=GROUP
+  データの利用者 <|-- ROLE _ GROUP
 
   データの入れ物 <|-- DATABASE
   データの入れ物 <|-- TABLE
   データの入れ物 <|-- TABLESPACE
+
+  データの操作手段 <|-- OPERATOR
+  データの操作手段 <|-- OPERATOR CLASS
+  データの操作手段 <|-- OPERATOR FAMILY
 
 
   TEXT SEARCH 系 <|-- TEXT SEARCH CONFIGURATION
