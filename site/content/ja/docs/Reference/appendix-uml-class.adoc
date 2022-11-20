@@ -153,7 +153,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- TYPE
   SQL の DDL で定義される各オブジェクト <|-- USER MAPPING
-  SQL の DDL で定義される各オブジェクト <|-- VIEW
 
   データの利用者 <|-- USER
   データの利用者 <|-- ROLE _ GROUP
@@ -166,6 +165,9 @@ classDiagram
   データの操作手段 <|-- OPERATOR CLASS
   データの操作手段 <|-- OPERATOR FAMILY
   データの操作手段 <|-- PROCEDURE
+
+  データの参照手段 <|-- VIEW
+
 
 
   TEXT SEARCH 系 <|-- TEXT SEARCH CONFIGURATION
