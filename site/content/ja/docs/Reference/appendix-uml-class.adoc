@@ -79,6 +79,7 @@ SQL や設定ファイルなど、インターフェースとなるものも一�
 
 公式ドキュメントに出てくる名詞／形容詞／動詞とその関係性は意識しておくこと
 
+OSI 参照モデルやクリーンアーキテクチャのような階層を意識した分類もしたい
 
 ++++
 <div class="mermaid">
@@ -127,6 +128,7 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- データの入れ物
   SQL の DDL で定義される各オブジェクト <|-- データの操作手段
   SQL の DDL で定義される各オブジェクト <|-- データの参照手段
+  SQL の DDL で定義される各オブジェクト <|-- データの管理用情報
   SQL の DDL で定義される各オブジェクト <|-- ACCESS METHOD
   SQL の DDL で定義される各オブジェクト <|-- AGGREGATE
   SQL の DDL で定義される各オブジェクト <|-- CAST
@@ -137,7 +139,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- EXTENSION
   SQL の DDL で定義される各オブジェクト <|-- 外部データ系
   SQL の DDL で定義される各オブジェクト <|-- FUNCTION
-  SQL の DDL で定義される各オブジェクト <|-- INDEX
   SQL の DDL で定義される各オブジェクト <|-- LANGUAGE
   SQL の DDL で定義される各オブジェクト <|-- MATERIALIZED VIEW
   SQL の DDL で定義される各オブジェクト <|-- POLICY
@@ -148,7 +149,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- SERVER
   SQL の DDL で定義される各オブジェクト <|-- STATISTICS
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
-  SQL の DDL で定義される各オブジェクト <|-- TEXT SEARCH 系
   SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
   SQL の DDL で定義される各オブジェクト <|-- TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- TYPE
@@ -167,6 +167,9 @@ classDiagram
   データの操作手段 <|-- PROCEDURE
 
   データの参照手段 <|-- VIEW
+
+  データの管理用情報 <|-- INDEX
+  データの管理用情報 <|-- TEXT SEARCH 系
 
 
 
