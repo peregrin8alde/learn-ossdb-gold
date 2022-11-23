@@ -81,7 +81,15 @@ SQL や設定ファイルなど、インターフェースとなるものも一�
 
 OSI 参照モデルやクリーンアーキテクチャのような階層を意識した分類もしたい。
 OSI 参照モデルは通信に関する話なので、データの流れや障害回りの整理に使える？
-階層アーキテクチャはオニオンアーキテクチャから試してみる。
+階層アーキテクチャは https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/[オニオンアーキテクチャ] から試してみる。
+
+オニオンアーキテクチャ
+
+. User Interface / Infrastructure / Tests
+. Application Core
+.. Application Services
+.. Domain Services
+.. Domain Model
 
 ++++
 <div class="mermaid">
