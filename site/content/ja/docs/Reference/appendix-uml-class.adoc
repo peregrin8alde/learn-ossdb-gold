@@ -168,7 +168,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
   SQL の DDL で定義される各オブジェクト <|-- RULE
   SQL の DDL で定義される各オブジェクト <|-- SCHEMA
-  SQL の DDL で定義される各オブジェクト <|-- SEQUENCE
   SQL の DDL で定義される各オブジェクト <|-- SERVER
   SQL の DDL で定義される各オブジェクト <|-- STATISTICS
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
@@ -195,6 +194,7 @@ classDiagram
 
   データの管理用情報 <|-- INDEX
   データの管理用情報 <|-- TEXT SEARCH 系
+  データの管理用情報 <|-- SEQUENCE
 
 
 
