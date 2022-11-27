@@ -167,7 +167,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- POLICY
   SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
   SQL の DDL で定義される各オブジェクト <|-- RULE
-  SQL の DDL で定義される各オブジェクト <|-- SCHEMA
   SQL の DDL で定義される各オブジェクト <|-- SERVER
   SQL の DDL で定義される各オブジェクト <|-- STATISTICS
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
@@ -180,6 +179,7 @@ classDiagram
   データの利用者 <|-- ROLE _ GROUP
 
   データの入れ物 <|-- DATABASE
+  データの入れ物 <|-- SCHEMA
   データの入れ物 <|-- TABLE
   データの入れ物 <|-- TABLESPACE
 
