@@ -163,8 +163,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- EVENT TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- EXTENSION
   SQL の DDL で定義される各オブジェクト <|-- 外部データ系
-  SQL の DDL で定義される各オブジェクト <|-- MATERIALIZED VIEW
-  SQL の DDL で定義される各オブジェクト <|-- POLICY
   SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
   SQL の DDL で定義される各オブジェクト <|-- RULE
   SQL の DDL で定義される各オブジェクト <|-- SERVER
@@ -191,10 +189,12 @@ classDiagram
   データの操作手段 <|-- LANGUAGE
 
   データの参照手段 <|-- VIEW
+  データの参照手段 <|-- MATERIALIZED VIEW
 
   データの管理用情報 <|-- INDEX
   データの管理用情報 <|-- TEXT SEARCH 系
   データの管理用情報 <|-- SEQUENCE
+  データの管理用情報 <|-- POLICY
 
 
 
