@@ -165,7 +165,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- データの参照手段
   SQL の DDL で定義される各オブジェクト <|-- データの管理用情報
   SQL の DDL で定義される各オブジェクト <|-- ACCESS METHOD
-  SQL の DDL で定義される各オブジェクト <|-- AGGREGATE
   SQL の DDL で定義される各オブジェクト <|-- CAST
   SQL の DDL で定義される各オブジェクト <|-- COLLATION
   SQL の DDL で定義される各オブジェクト <|-- CONVERSION
@@ -197,6 +196,7 @@ classDiagram
   データの操作手段 <|-- PROCEDURE
   データの操作手段 <|-- FUNCTION
   データの操作手段 <|-- LANGUAGE
+  データの操作手段 <|-- AGGREGATE
 
   データの参照手段 <|-- VIEW
   データの参照手段 <|-- MATERIALIZED VIEW
