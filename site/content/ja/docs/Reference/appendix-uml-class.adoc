@@ -175,7 +175,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
   SQL の DDL で定義される各オブジェクト <|-- RULE
   SQL の DDL で定義される各オブジェクト <|-- SERVER
-  SQL の DDL で定義される各オブジェクト <|-- STATISTICS
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
   SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
   SQL の DDL で定義される各オブジェクト <|-- TRIGGER
@@ -205,6 +204,7 @@ classDiagram
   データの管理用情報 <|-- TEXT SEARCH 系
   データの管理用情報 <|-- SEQUENCE
   データの管理用情報 <|-- POLICY
+  データの管理用情報 <|-- STATISTICS
 
 
 
