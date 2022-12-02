@@ -178,7 +178,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
   SQL の DDL で定義される各オブジェクト <|-- TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- TYPE
-  SQL の DDL で定義される各オブジェクト <|-- USER MAPPING
 
   データの利用者 <|-- USER
   データの利用者 <|-- ROLE _ GROUP
@@ -215,6 +214,7 @@ classDiagram
   外部データ系 <|-- FOREIGN DATA WRAPPER
   外部データ系 <|-- FOREIGN TABLE
   外部データ系 <|-- SERVER
+  外部データ系 <|-- USER MAPPING
 
 </div>
 
