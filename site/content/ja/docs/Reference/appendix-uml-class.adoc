@@ -174,7 +174,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- 外部データ系
   SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
   SQL の DDL で定義される各オブジェクト <|-- RULE
-  SQL の DDL で定義される各オブジェクト <|-- SERVER
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
   SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
   SQL の DDL で定義される各オブジェクト <|-- TRIGGER
@@ -215,6 +214,7 @@ classDiagram
 
   外部データ系 <|-- FOREIGN DATA WRAPPER
   外部データ系 <|-- FOREIGN TABLE
+  外部データ系 <|-- SERVER
 
 </div>
 
