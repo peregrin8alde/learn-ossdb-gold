@@ -172,7 +172,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- EVENT TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- EXTENSION
   SQL の DDL で定義される各オブジェクト <|-- 外部データ系
-  SQL の DDL で定義される各オブジェクト <|-- PUBLICATION
   SQL の DDL で定義される各オブジェクト <|-- RULE
   SQL の DDL で定義される各オブジェクト <|-- SUBSCRIPTION
   SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
@@ -203,6 +202,7 @@ classDiagram
   データの管理用情報 <|-- SEQUENCE
   データの管理用情報 <|-- POLICY
   データの管理用情報 <|-- STATISTICS
+  データの管理用情報 <|-- PUBLICATION
 
 
 
