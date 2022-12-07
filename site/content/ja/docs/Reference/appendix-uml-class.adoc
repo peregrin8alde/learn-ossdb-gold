@@ -167,7 +167,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- ACCESS METHOD
   SQL の DDL で定義される各オブジェクト <|-- CAST
   SQL の DDL で定義される各オブジェクト <|-- CONVERSION
-  SQL の DDL で定義される各オブジェクト <|-- DOMAIN
   SQL の DDL で定義される各オブジェクト <|-- EVENT TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- EXTENSION
   SQL の DDL で定義される各オブジェクト <|-- 外部データ系
@@ -202,6 +201,7 @@ classDiagram
   データの管理用情報 <|-- POLICY
   データの管理用情報 <|-- STATISTICS
   データの管理用情報 <|-- COLLATION
+  データの管理用情報 <|-- DOMAIN
 
   レプリケーション系 <|-- PUBLICATION
   レプリケーション系 <|-- SUBSCRIPTION
