@@ -165,7 +165,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- データの参照手段
   SQL の DDL で定義される各オブジェクト <|-- データの管理用情報
   SQL の DDL で定義される各オブジェクト <|-- ACCESS METHOD
-  SQL の DDL で定義される各オブジェクト <|-- CAST
   SQL の DDL で定義される各オブジェクト <|-- CONVERSION
   SQL の DDL で定義される各オブジェクト <|-- EVENT TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- EXTENSION
@@ -191,6 +190,7 @@ classDiagram
   データの操作手段 <|-- FUNCTION
   データの操作手段 <|-- LANGUAGE
   データの操作手段 <|-- AGGREGATE
+  データの操作手段 <|-- CAST
 
   データの参照手段 <|-- VIEW
   データの参照手段 <|-- MATERIALIZED VIEW
