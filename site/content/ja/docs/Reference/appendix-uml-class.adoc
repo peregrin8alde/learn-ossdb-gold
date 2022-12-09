@@ -172,7 +172,6 @@ classDiagram
   SQL の DDL で定義される各オブジェクト <|-- RULE
   SQL の DDL で定義される各オブジェクト <|-- レプリケーション系
   SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
-  SQL の DDL で定義される各オブジェクト <|-- TRIGGER
   SQL の DDL で定義される各オブジェクト <|-- TYPE
 
   データの利用者 <|-- USER
@@ -191,6 +190,7 @@ classDiagram
   データの操作手段 <|-- LANGUAGE
   データの操作手段 <|-- AGGREGATE
   データの操作手段 <|-- CAST
+  データの操作手段 <|-- TRIGGER
 
   データの参照手段 <|-- VIEW
   データの参照手段 <|-- MATERIALIZED VIEW
