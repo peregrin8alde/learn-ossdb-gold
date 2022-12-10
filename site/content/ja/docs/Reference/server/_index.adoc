@@ -59,24 +59,6 @@ classDiagram
 |
 |
 
-|array_nulls
-|設定パラメタ
-a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
-____
-配列入力パーサが引用符のないNULLをNULL配列要素として認識するかどうかを制御します。 
-____
-|
-
-|backslash_quote
-|設定パラメタ
-a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
-____
-文字列リテラルの中で引用符が\'で表現されるかどうかを管理します。 
-____
-|
-
 |default_with_oids
 |設定パラメタ
 a|

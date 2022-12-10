@@ -1,0 +1,42 @@
+---
+title: "パーサ"
+---
+= パーサ
+
+.パーサ機能一覧
+[options="header,autowidth",stripes=hover]
+|===
+|機能名 |種別 |概要 |詳細記事
+
+|enable_bitmapscan
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+____
+問い合わせプランナがビットマップスキャン計画型を選択することを有効もしくは無効にします。
+____
+|
+
+|array_nulls
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+配列入力パーサが引用符のないNULLをNULL配列要素として認識するかどうかを制御します。 
+____
+|
+
+|backslash_quote
+|設定パラメタ
+a|
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+____
+文字列リテラルの中で引用符が\'で表現されるかどうかを管理します。 
+____
+|
+
+|
+|
+|
+|
+|===
