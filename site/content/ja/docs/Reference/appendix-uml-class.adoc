@@ -154,6 +154,11 @@ classDiagram
   バックグラウンドプロセス 自動保守系 <|-- WAL ライター
   バックグラウンドプロセス 自動保守系 <|-- チェックポインター
   バックグラウンドプロセス 自動保守系 <|-- バックグラウンドライター
+</div>
+
+<div class="mermaid">
+classDiagram
+  PostgreSQL サービス "n" .. "1" 共用メモリ
 
   class PostgreSQL サービス {
     + 共用メモリ
