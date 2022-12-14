@@ -34,6 +34,18 @@ classDiagram
 </div>
 ++++
 
+++++
+<div class="mermaid">
+classDiagram
+  class PostgreSQL サーバー {
+    + default_with_oids
+    + escape_string_warning
+
+    + 設定取得()
+  }
+</div>
+++++
+
 .DBMS サーバ機能一覧
 [options="header,autowidth",stripes=hover]
 |===
