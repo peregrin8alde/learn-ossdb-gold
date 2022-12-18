@@ -47,6 +47,10 @@ classDiagram
     + synchronize_seqscans
     + transform_null_equals
     + exit_on_error
+    + restart_after_crash
+    + data_sync_retry
+    + block_size
+    + data_checksums
 
     + 設定取得()
   }
