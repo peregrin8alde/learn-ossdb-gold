@@ -51,6 +51,7 @@ classDiagram
     + data_sync_retry
     + block_size
     + data_checksums
+    + data_directory_mode
 
     + 設定取得()
   }
