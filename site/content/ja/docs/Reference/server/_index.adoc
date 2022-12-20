@@ -52,6 +52,7 @@ classDiagram
     + block_size
     + data_checksums
     + data_directory_mode
+    + debug_assertions
 
     + 設定取得()
   }
