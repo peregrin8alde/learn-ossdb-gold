@@ -53,6 +53,7 @@ classDiagram
     + data_checksums
     + data_directory_mode
     + debug_assertions
+    + integer_datetimes
 
     + 設定取得()
   }
