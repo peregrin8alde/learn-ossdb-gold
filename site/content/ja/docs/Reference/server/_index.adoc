@@ -54,6 +54,7 @@ classDiagram
     + data_directory_mode
     + debug_assertions
     + integer_datetimes
+    + lc_collate
 
     + 設定取得()
   }
