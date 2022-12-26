@@ -57,6 +57,7 @@ classDiagram
     + lc_collate
     + lc_ctype
     + max_function_args
+    + max_identifier_length
 
     + 設定取得()
   }
