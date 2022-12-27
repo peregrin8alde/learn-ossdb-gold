@@ -58,6 +58,7 @@ classDiagram
     + lc_ctype
     + max_function_args
     + max_identifier_length
+    + max_index_keys
 
     + 設定取得()
   }
