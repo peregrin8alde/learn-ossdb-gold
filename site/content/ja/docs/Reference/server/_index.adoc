@@ -59,6 +59,7 @@ classDiagram
     + max_function_args
     + max_identifier_length
     + max_index_keys
+    + segment_size
 
     + 設定取得()
   }
