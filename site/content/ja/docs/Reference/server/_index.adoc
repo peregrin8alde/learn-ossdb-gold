@@ -60,6 +60,7 @@ classDiagram
     + max_identifier_length
     + max_index_keys
     + segment_size
+    + server_encoding
 
     + 設定取得()
   }
