@@ -61,6 +61,7 @@ classDiagram
     + max_index_keys
     + segment_size
     + server_encoding
+    + server_version
 
     + 設定取得()
   }
