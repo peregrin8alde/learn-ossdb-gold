@@ -62,6 +62,7 @@ classDiagram
     + segment_size
     + server_encoding
     + server_version
+    + server_version_num
 
     + 設定取得()
   }
