@@ -63,6 +63,7 @@ classDiagram
     + server_encoding
     + server_version
     + server_version_num
+    + wal_block_size
 
     + 設定取得()
   }
