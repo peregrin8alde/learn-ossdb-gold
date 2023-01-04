@@ -64,6 +64,7 @@ classDiagram
     + server_version
     + server_version_num
     + wal_block_size
+    + wal_segment_size
 
     + 設定取得()
   }
