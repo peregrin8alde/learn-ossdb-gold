@@ -65,6 +65,7 @@ classDiagram
     + server_version_num
     + wal_block_size
     + wal_segment_size
+    + allow_system_table_mods
 
     + 設定取得()
   }
