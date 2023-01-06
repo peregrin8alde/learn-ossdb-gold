@@ -66,6 +66,7 @@ classDiagram
     + wal_block_size
     + wal_segment_size
     + allow_system_table_mods
+    + ignore_system_indexes
 
     + 設定取得()
   }
