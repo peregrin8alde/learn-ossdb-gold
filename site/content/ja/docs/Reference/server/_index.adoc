@@ -67,6 +67,7 @@ classDiagram
     + wal_segment_size
     + allow_system_table_mods
     + ignore_system_indexes
+    + post_auth_delay
 
     + 設定取得()
   }
