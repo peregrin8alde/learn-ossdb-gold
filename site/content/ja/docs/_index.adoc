@@ -44,6 +44,8 @@ include::Reference/appendix-manual.adoc[]
 [appendix]
 include::Reference/appendix-uml-class.adoc[]
 
+[appendix]
+include::Reference/appendix-uml-usecase.adoc[]
 
 :leveloffset: -1
 

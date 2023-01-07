@@ -192,6 +192,7 @@ classDiagram
   データの入れ物 <|-- SCHEMA
   データの入れ物 <|-- TABLE
   データの入れ物 <|-- TABLESPACE
+  データの入れ物 <|-- レコード
 
   データの操作手段 <|-- OPERATOR
   データの操作手段 <|-- OPERATOR CLASS
