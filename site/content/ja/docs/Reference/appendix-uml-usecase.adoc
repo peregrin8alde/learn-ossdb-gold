@@ -3,6 +3,7 @@ title: "ユースケース図"
 ---
 = ユースケース図
 
+////
 大まかなユースケースを網羅することで登場するオブジェクトを洗い出す
 
 ユースケースではユーザの操作のみ起点とし、サービス側の動きはシーケンス図の方で記載する？
@@ -16,6 +17,38 @@ title: "ユースケース図"
 目的ベース（サーバに接続するために設定など）で記述し、細かい話（接続設定の中のポート番号など）は別で説明
 
 5W2H で説明する？
+
+////
+
+
+
+////
+svg にしておけば図内の文章をコピペ可能
+ただし、生成された html 内では base64 変換された状態のため、図だけ別に開くなどが必要？
+////
+[plantuml, target=diagram-usecases, format=svg]
+....
+left to right direction
+
+actor "サーバ管理者" as admin
+actor "サービス利用者" as user
+
+rectangle "導入" {
+  usecase "インストール" as UC1
+  usecase "アンインストール" as UC2
+}
+admin --> (UC1) : コマンドラインで\n実施
+admin --> (UC2) : コマンドラインで\n実施
+
+rectangle "運用" {
+  usecase "起動" as UC3
+  usecase "データ格納" as UC4
+  usecase "停止" as UC5
+}
+admin --> (UC3) : コマンドラインで\n実施
+user --> (UC4) : SQLで\n実施
+admin --> (UC5) : コマンドラインで\n実施
+....
 
 .ユースケース一覧
 [options="header,autowidth",stripes=hover]
@@ -164,6 +197,9 @@ PostgreSQL の利用を決定する
 
 設計
 見積
+
+システム構成
+
 
 設定
 起動

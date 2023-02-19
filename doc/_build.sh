@@ -31,5 +31,10 @@ asciidoctor \
   -a docinfodir="${SCRIPT_DIR}" \
   "${INPUT_INDEXFILE}"
 
+# plantuml を使うと謎のディレクトリが作成されるため、削除
+if [ -d ./\? ]; then
+  rm -rf ./\?/
+fi
+
 
 exit 0

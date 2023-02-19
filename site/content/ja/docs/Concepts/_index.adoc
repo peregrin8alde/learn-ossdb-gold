@@ -7,9 +7,11 @@ description: >
 ---
 = Concepts
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+////
+背景となる知識や技術など
+代表的なユースケースとそこに出てくる用語やアーキテクチャの説明
+////
+
 
 ifdef::env-asciidoctor[]
 :leveloffset: +1

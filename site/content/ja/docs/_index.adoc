@@ -20,6 +20,32 @@ endif::[]
 .凡例
 image::base.svg[opts=inline,align="center",width=100%]
 
+////
+Overview
+ドキュメント（サイト）の目的や構成説明など
+ドキュメントで説明しようとしているソフトウェアの簡単な説明や利点など
+
+GettingStarted
+Overview で紹介したソフトウェアをお試しするまでの手順
+デフォルトやサンプル設定をベースとし、環境依存などの最低限の設定変更で
+インストールおよび起動、サンプルの実行
+
+Concepts
+背景となる知識や技術など
+代表的なユースケースとそこに出てくる用語やアーキテクチャの説明
+
+Tasks
+詳細な手順
+導入前準備から廃止まで
+
+Tutorials
+テーマ別での Tasks の実例
+
+Reference
+API やコマンド、設定パラメタを網羅した一覧と説明
+////
+
+
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 

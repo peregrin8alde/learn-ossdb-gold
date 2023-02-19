@@ -5,10 +5,12 @@ weight: 1
 description: >
   Here's where your user finds out if your project is for them.
 ---
+= Overview
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+////
+ドキュメント（サイト）の目的や構成説明など
+////
+
 
 
 本ドキュメントの目的は以下
@@ -19,7 +21,7 @@ This is a placeholder page that shows you how to use this template site.
 * 実際の PostgreSQL のコマンドや SQL 実行例の提示
 
 
-
+////
 issue
 
 OSS-DB の分類をメインにするのではなく、PostgreSQL のドキュメント説明メインで。
@@ -30,3 +32,4 @@ OSS-DB の分類をメインにするのではなく、PostgreSQL のドキュ�
    - それぞれに異常が発生した場合の対処
 
 各章で OSS-DB の分類のどれかをタイトルなどでラベル付けし、対応付け一覧は付録で。覚えるべきポイントは各章で指示。
+////
