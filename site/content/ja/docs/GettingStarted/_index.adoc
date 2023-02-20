@@ -9,6 +9,11 @@ description: >
 ---
 = Getting Started
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::centos/_index.adoc[]
+include::docker/_index.adoc[]
+
+:leveloffset: -1

@@ -1,0 +1,43 @@
+---
+title: "Getting Started in Docker"
+linkTitle: "Getting Started in Docker"
+weight: 2
+description: >
+  Getting Started in Docker
+---
+= Getting Started in Docker
+
+システム構成
+
+サーバ
+クライアント
+
+ネットワーク
+
+ディスク
+
+PostgreSQL バージョン : 14 （ OSSDB-Gold Ver.3.0 向け）
+
+インストール
+
+初期化
+
+起動
+
+状態確認
+
+クライアントからの接続
+
+DB 作成
+テーブル作成
+データ挿入
+データ参照
+データ更新
+データ削除
+テーブル削除
+DB 削除
+
+停止
+
+
+廃止
