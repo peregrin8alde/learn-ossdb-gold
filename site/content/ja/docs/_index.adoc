@@ -24,6 +24,7 @@ image::base.svg[opts=inline,align="center",width=100%]
 Overview
 ドキュメント（サイト）の目的や構成説明など
 ドキュメントで説明しようとしているソフトウェアの簡単な説明や利点など
+Concepts の要約
 
 GettingStarted
 Overview で紹介したソフトウェアをお試しするまでの手順
