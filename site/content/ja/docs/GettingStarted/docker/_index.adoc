@@ -41,3 +41,43 @@ DB 削除
 
 
 廃止
+
+.実行コマンド
+[source,shell]
+----
+rm -rf data_tbl_sample_filesize.csv
+for i in `seq 1 500000`; do
+  echo "1,1000,2000,12.345,67.890,'2021-1-1 12:10:20','2021-1-1','12:10:20','3 4:05:06',true" >> data_tbl_sample_filesize.csv
+done
+
+psql -U postgres -c "\copy tbl_sample_filesize FROM 'data_tbl_sample_filesize.csv' WITH csv"
+----
+
+.result
+[%collapsible]
+====
+This is the answer.
+====
+
+[source, sql]
+----
+CREATE TABLE tbl_sample_filesize (
+    col01 smallint, -- 2 バイト
+    col02 integer,  -- 4 バイト
+    col03 bigint,  -- 8 バイト
+    col04 real,  -- 4 バイト
+    col05 double precision,  -- 8 バイト
+    col06 timestamp,  -- 8 バイト
+    col07 date,  -- 4 バイト
+    col08 time,  -- 8 バイト
+    col09 interval,  -- 16 バイト
+    col10 boolean  -- 1 バイト
+    -- 合計 63 バイト
+);
+----
+
+.result
+[%collapsible]
+====
+This is the answer.
+====
