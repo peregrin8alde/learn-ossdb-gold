@@ -7,77 +7,111 @@ description: >
 ---
 = Getting Started in Docker
 
-システム構成
+参考 : https://hub.docker.com/_/postgres[PostgreSQL の Docker イメージ]
+
+== システム構成
 
 サーバ
 クライアント
 
-ネットワーク
+== ネットワーク
 
-ディスク
+.実行コマンド
+[source,shell]
+----
+docker network create postgres_getstarted_nw
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+02369c82c2c732449d2eaa8cbbdeaf48daf12cb687be8560abe72fc1d5d8a5d7
+------
+====
+
+.実行コマンド
+[source,shell]
+----
+docker network ls | grep postgres_getstarted_nw
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+02369c82c2c7   postgres_getstarted_nw    bridge    local
+------
+====
+
+
+== ディスク
+
+.実行コマンド
+[source,shell]
+----
+docker volume create postgres_getstarted_vl
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+
+------
+====
+
+
+
+== インストール
 
 PostgreSQL バージョン : 14 （ OSSDB-Gold Ver.3.0 向け）
 
-インストール
 
-初期化
+== 初期化
 
-起動
+== 起動
 
-状態確認
+== 状態確認
 
-クライアントからの接続
+== クライアントからの接続
+
+== サンプル SQL 実行
 
 DB 作成
+
+.実行 SQL
+[source, sql]
+----
+CREATE DATABASE getstarted_db;
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+
+------
+====
+
 テーブル作成
 データ挿入
 データ参照
 データ更新
 データ削除
+
+== 廃止
+
 テーブル削除
 DB 削除
 
 停止
 
+資源削除
 
-廃止
 
-.実行コマンド
-[source,shell]
-----
-rm -rf data_tbl_sample_filesize.csv
-for i in `seq 1 500000`; do
-  echo "1,1000,2000,12.345,67.890,'2021-1-1 12:10:20','2021-1-1','12:10:20','3 4:05:06',true" >> data_tbl_sample_filesize.csv
-done
 
-psql -U postgres -c "\copy tbl_sample_filesize FROM 'data_tbl_sample_filesize.csv' WITH csv"
-----
-
-.result
-[%collapsible]
-====
-This is the answer.
-====
-
-[source, sql]
-----
-CREATE TABLE tbl_sample_filesize (
-    col01 smallint, -- 2 バイト
-    col02 integer,  -- 4 バイト
-    col03 bigint,  -- 8 バイト
-    col04 real,  -- 4 バイト
-    col05 double precision,  -- 8 バイト
-    col06 timestamp,  -- 8 バイト
-    col07 date,  -- 4 バイト
-    col08 time,  -- 8 バイト
-    col09 interval,  -- 16 バイト
-    col10 boolean  -- 1 バイト
-    -- 合計 63 バイト
-);
-----
-
-.result
-[%collapsible]
-====
-This is the answer.
-====
