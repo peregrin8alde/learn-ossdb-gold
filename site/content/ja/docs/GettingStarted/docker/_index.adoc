@@ -60,10 +60,25 @@ docker volume create postgres_getstarted_vl
 ====
 [source,shell]
 ------
-
+docker volume create postgres_getstarted_vl
 ------
 ====
 
+
+.実行コマンド
+[source,shell]
+----
+docker volume ls | grep postgres_getstarted_vl
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+docker volume ls | grep postgres_getstarted_vl
+------
+====
 
 
 == インストール
@@ -71,9 +86,36 @@ docker volume create postgres_getstarted_vl
 PostgreSQL バージョン : 14 （ OSSDB-Gold Ver.3.0 向け）
 
 
-== 初期化
+== 初期化 / 起動
 
-== 起動
+起動時に初期化シェルが実行される。
+
+.実行コマンド
+[source,shell]
+----
+docker run \
+  -d \
+  --name postgres_getstarted_sv \
+  -v postgres_getstarted_vl:/var/lib/postgresql/data/pgdata \
+  --network postgres_getstarted_nw \
+  -e PGDATA=/var/lib/postgresql/data/pgdata \
+  -e POSTGRES_PASSWORD=mysecretpassword \
+  postgres:14
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+Unable to find image 'postgres:14' locally
+～略～
+Digest: sha256:c2a30d08a6f9e6c365595fd086c9e0436064c52425f15f72379ecf0807bac518
+Status: Downloaded newer image for postgres:14
+9ec84903021d4c45fe751d7e8db0628c86169e8123588c149cf2106d7a35c7f7
+------
+====
+
 
 == 状態確認
 
