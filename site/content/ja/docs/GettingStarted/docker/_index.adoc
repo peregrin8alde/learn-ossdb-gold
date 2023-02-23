@@ -60,7 +60,7 @@ docker volume create postgres_getstarted_vl
 ====
 [source,shell]
 ------
-docker volume create postgres_getstarted_vl
+postgres_getstarted_vl
 ------
 ====
 
@@ -76,7 +76,7 @@ docker volume ls | grep postgres_getstarted_vl
 ====
 [source,shell]
 ------
-docker volume ls | grep postgres_getstarted_vl
+local     postgres_getstarted_vl
 ------
 ====
 
@@ -85,6 +85,23 @@ docker volume ls | grep postgres_getstarted_vl
 
 PostgreSQL バージョン : 14 （ OSSDB-Gold Ver.3.0 向け）
 
+.実行コマンド
+[source,shell]
+----
+docker pull postgres:14
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+14: Pulling from library/postgres
+～略～
+Status: Downloaded newer image for postgres:14
+docker.io/library/postgres:14
+------
+====
 
 == 初期化 / 起動
 
@@ -108,11 +125,7 @@ docker run \
 ====
 [source,shell]
 ------
-Unable to find image 'postgres:14' locally
-～略～
-Digest: sha256:c2a30d08a6f9e6c365595fd086c9e0436064c52425f15f72379ecf0807bac518
-Status: Downloaded newer image for postgres:14
-9ec84903021d4c45fe751d7e8db0628c86169e8123588c149cf2106d7a35c7f7
+2712e204c3f0e5b6f74f6dfd1ec76f70960c81ace260796c39403f95b88f6e66
 ------
 ====
 
