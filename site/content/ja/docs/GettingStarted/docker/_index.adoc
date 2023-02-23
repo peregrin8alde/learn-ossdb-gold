@@ -134,14 +134,99 @@ docker run \
 
 == クライアントからの接続
 
+.実行コマンド
+[source,shell]
+----
+docker run \
+  -it \
+  --rm \
+  --name postgres_getstarted_cl \
+  --network postgres_getstarted_nw \
+  postgres:14 \
+    psql -h postgres_getstarted_sv -U postgres
+----
+
+* サーバ起動時に `-e POSTGRES_PASSWORD=` で指定した値 `mysecretpassword` をパスワードとして利用
+* 終了時は入力待ち表示  ```postgres=# ``` に対して `\q`
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+Password for user postgres: 
+psql (14.7 (Debian 14.7-1.pgdg110+1))
+Type "help" for help.
+
+postgres=# 
+------
+====
+
 == サンプル SQL 実行
 
 DB 作成
 
+.実行コマンド
+[source,shell]
+----
+docker run \
+  -it \
+  --rm \
+  --name postgres_getstarted_cl \
+  --network postgres_getstarted_nw \
+  postgres:14 \
+    createdb -h postgres_getstarted_sv -U postgres getstarted_db
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+Password: 
+------
+====
+
+
+DB 接続
+
+.実行コマンド
+[source,shell]
+----
+docker run \
+  -it \
+  --rm \
+  --name postgres_getstarted_cl \
+  --network postgres_getstarted_nw \
+  postgres:14 \
+    psql -h postgres_getstarted_sv -U postgres -d getstarted_db
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+Password for user postgres: 
+psql (14.7 (Debian 14.7-1.pgdg110+1))
+Type "help" for help.
+
+getstarted_db=# 
+------
+====
+
+テーブル作成
+
 .実行 SQL
 [source, sql]
 ----
-CREATE DATABASE getstarted_db;
+CREATE TABLE weather (
+    city            varchar(80),
+    temp_lo         int,           -- low temperature
+    temp_hi         int,           -- high temperature
+    prcp            real,          -- precipitation
+    date            date
+);
 ----
 
 .実行結果
@@ -149,11 +234,11 @@ CREATE DATABASE getstarted_db;
 ====
 [source, sql]
 ------
-
+CREATE TABLE
 ------
 ====
 
-テーブル作成
+
 データ挿入
 データ参照
 データ更新
