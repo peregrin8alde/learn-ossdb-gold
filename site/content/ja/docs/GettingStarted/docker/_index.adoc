@@ -85,6 +85,8 @@ local     postgres_getstarted_vl
 
 PostgreSQL バージョン : 14 （ OSSDB-Gold Ver.3.0 向け）
 
+Docker イメージの取得
+
 .実行コマンド
 [source,shell]
 ----
@@ -103,15 +105,15 @@ docker.io/library/postgres:14
 ------
 ====
 
-== 初期化 / 起動
+Docker コンテナの作成
 
-起動時に初期化シェルが実行される。
+* `docker create` を使うことで、停止状態で作成
+* 作成と同時に起動する場合は、 `docker create` の部分を `docker run -d` に置き換え
 
 .実行コマンド
 [source,shell]
 ----
-docker run \
-  -d \
+docker create \
   --name postgres_getstarted_sv \
   -v postgres_getstarted_vl:/var/lib/postgresql/data/pgdata \
   --network postgres_getstarted_nw \
@@ -125,7 +127,61 @@ docker run \
 ====
 [source,shell]
 ------
-2712e204c3f0e5b6f74f6dfd1ec76f70960c81ace260796c39403f95b88f6e66
+e688076c888490366bb0158e11482e4bf2698f05274c96cc815b3aae158ea9ba
+------
+====
+
+.実行コマンド
+[source,shell]
+----
+docker ps -a -f name=postgres_getstarted_sv
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+CONTAINER ID   IMAGE         COMMAND                  CREATED          STATUS    PORTS     NAMES
+e688076c8884   postgres:14   "docker-entrypoint.s…"   48 seconds ago   Created             postgres_getstarted_sv
+------
+====
+
+
+
+== 初期化 / 起動
+
+起動時に初期化シェルが実行される。
+
+.実行コマンド
+[source,shell]
+----
+docker start postgres_getstarted_sv
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+postgres_getstarted_sv
+------
+====
+
+
+.実行コマンド
+[source,shell]
+----
+docker ps -a -f name=postgres_getstarted_sv
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+CONTAINER ID   IMAGE         COMMAND                  CREATED              STATUS          PORTS      NAMES
+e688076c8884   postgres:14   "docker-entrypoint.s…"   About a minute ago   Up 16 seconds   5432/tcp   postgres_getstarted_sv
 ------
 ====
 
