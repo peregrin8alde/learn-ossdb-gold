@@ -296,6 +296,23 @@ CREATE TABLE
 
 
 データ挿入
+
+.実行 SQL
+[source, sql]
+----
+INSERT INTO weather VALUES ('San Francisco', 46, 50, 0.25, '1994-11-27');
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+INSERT 0 1
+------
+====
+
+
 データ参照
 データ更新
 データ削除
