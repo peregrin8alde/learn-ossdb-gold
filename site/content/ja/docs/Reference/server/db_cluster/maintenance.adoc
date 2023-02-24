@@ -11,7 +11,7 @@ title: "定期保守"
 |maintenance_work_mem
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 VACUUM、CREATE INDEX、およびALTER TABLE ADD FOREIGN KEYの様な保守操作で使用されるメモリの最大容量を指定します。 
 ____
@@ -25,7 +25,7 @@ ____
 |autovacuum_work_mem
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 個々の自動バキュームワーカプロセスが使用する最大のメモリ量を指定します。
 ____
@@ -39,7 +39,7 @@ ____
 |vacuum_cost_delay
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 コストの限度を越えた場合、プロセスがスリープするミリ秒単位の時間の長さです。 
 ____
@@ -48,7 +48,7 @@ ____
 |vacuum_cost_page_hit
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 共有バッファキャッシュの中のバッファにvacuumを掛ける予測コストです。
 ____
@@ -57,7 +57,7 @@ ____
 |vacuum_cost_page_miss
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 ディスクから読み込まれなければならないバッファにvacuumを掛ける予測コストです。
 ____
@@ -66,7 +66,7 @@ ____
 |vacuum_cost_page_dirty
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 vacuumが、先だって掃除したブロックを変更する時に果たされた予測コストです。
 ____
@@ -75,7 +75,7 @@ ____
 |vacuum_cost_limit
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 vacuumを掛けるプロセスをスリープさせることになる累計されたコストです。
 ____
@@ -85,7 +85,7 @@ ____
 |設定パラメタ
 a|判断理由：VACUUM関連
 そもそも、 postgres におけるスナップショットとは？
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-resource.html[19.4. 資源の消費]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-resource.html[19.4. 資源の消費]']
 ____
 スナップショットが使用されるときに、snapshot too oldエラーを引き起こす危険性なしにスナップショットを利用できる最小時間を設定します。
 ____
@@ -94,7 +94,7 @@ ____
 |autovacuum
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 サーバがautovacuumランチャデーモンを実行すべきかどうかを管理します。 
 ____
@@ -103,7 +103,7 @@ ____
 |log_autovacuum_min_duration
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 少なくとも指定ミリ秒実行した場合、autovacuumで実行される各活動がログに残るようになります。
 ____
@@ -112,7 +112,7 @@ ____
 |autovacuum_max_workers
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 同時に実行することができるautovacuumプロセス（autovacuumランチャ以外）の最大数を指定します。 
 ____
@@ -121,7 +121,7 @@ ____
 |autovacuum_naptime
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 あるデータベースについて実行されるautovacuumデーモンの最小遅延を指定します。 
 ____
@@ -130,7 +130,7 @@ ____
 |autovacuum_vacuum_threshold
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 どのテーブルに対してもVACUUMを起動するために必要な、更新もしくは削除されたタプルの最小数を指定します。 
 ____
@@ -139,7 +139,7 @@ ____
 |autovacuum_analyze_threshold
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 どのテーブルに対してもANALYZEを起動するのに必要な、挿入、更新、もしくは削除されたタプルの最小数を指定します。 
 ____
@@ -148,7 +148,7 @@ ____
 |autovacuum_vacuum_scale_factor
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 VACUUMを起動するか否かを決定するときに、autovacuum_vacuum_thresholdに足し算するテーブル容量の割合を指定します。 
 ____
@@ -157,7 +157,7 @@ ____
 |autovacuum_analyze_scale_factor
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 ANALYZEを起動するか否かを決定するときに、autovacuum_analyze_thresholdに足し算するテーブル容量の割合を指定します。 
 ____
@@ -166,7 +166,7 @@ ____
 |autovacuum_freeze_max_age
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 トランザクションID周回を防ぐためにVACUUM操作が強制される前までにテーブルのpg_class.relfrozenxid フィールドが到達できる最大（トランザクションにおける）年代を指定します。 
 ____
@@ -175,7 +175,7 @@ ____
 |autovacuum_multixact_freeze_max_age
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 トランザクションID周回を防ぐためにVACUUM操作が強制される前までにテーブルのpg_class.relminmxid フィールドが到達できる最大（マルチトランザクションにおける）年代を指定します。
 ____
@@ -184,7 +184,7 @@ ____
 |autovacuum_vacuum_cost_delay
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 自動VACUUM操作に使用されるコスト遅延値を指定します。
 ____
@@ -193,7 +193,7 @@ ____
 |autovacuum_vacuum_cost_limit
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html[19.10. 自動Vacuum作業]']
 ____
 自動VACUUM操作に使用されるコスト限界値を指定します。
 ____

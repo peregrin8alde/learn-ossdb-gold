@@ -17,7 +17,7 @@ EXPLAINが出力する実行計画を読み取り、チューニングを行う�
 a|
 * EXPLAIN / EXPLAIN ANALYZE
 a|
-* https://www.postgresql.jp/document/11/html/using-explain.html
+* https://www.postgresql.jp/document/14/html/using-explain.html
 a|
 
 |計画型
@@ -33,7 +33,7 @@ a|
 |結合の種類(Nested Loop、Hash、Merge)と性能特性
 a|
 a|
-* https://www.postgresql.jp/document/11/html/planner-optimizer.html#id-1.10.3.8.5
+* https://www.postgresql.jp/document/14/html/planner-optimizer.html#id-1.10.3.8.5
 a|
 
 |SQL構文(JOIN/GROUP BY/ORDER BY/LIMIT)に対応する実行計画

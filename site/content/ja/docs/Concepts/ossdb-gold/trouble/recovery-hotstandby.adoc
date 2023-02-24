@@ -51,9 +51,9 @@ a|
 
 |未分類
 a|
-* pg_ctl promote	https://www.postgresql.jp/document/11/html/app-pg-ctl.html
-* pg_receivewal	https://www.postgresql.jp/document/11/html/app-pgreceivewal.html
-* pg_rewind	https://www.postgresql.jp/document/11/html/app-pgrewind.html
+* pg_ctl promote	https://www.postgresql.jp/document/14/html/app-pg-ctl.html
+* pg_receivewal	https://www.postgresql.jp/document/14/html/app-pgreceivewal.html
+* pg_rewind	https://www.postgresql.jp/document/14/html/app-pgrewind.html
 a|
 a|
 

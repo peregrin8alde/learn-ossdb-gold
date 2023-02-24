@@ -31,15 +31,15 @@ a|
 
 |未分類
 a|
-* shared_preload_libraries	https://www.postgresql.jp/document/11/html/xfunc-c.html#id-1.8.3.13.15
-* auto_explain	https://www.postgresql.jp/document/11/html/auto-explain.html
-* auto_explain.*	https://www.postgresql.jp/document/11/html/auto-explain.html
-* log_min_duration_statement	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHEN
-* pg_stat_statements	https://www.postgresql.jp/document/11/html/pgstatstatements.html
-* log_autovacuum_min_duration	https://www.postgresql.jp/document/11/html/runtime-config-autovacuum.html
-* log_lock_waits	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
-* log_checkpoints	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
-* log_temp_files	https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+* shared_preload_libraries	https://www.postgresql.jp/document/14/html/xfunc-c.html#id-1.8.3.13.15
+* auto_explain	https://www.postgresql.jp/document/14/html/auto-explain.html
+* auto_explain.*	https://www.postgresql.jp/document/14/html/auto-explain.html
+* log_min_duration_statement	https://www.postgresql.jp/document/14/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHEN
+* pg_stat_statements	https://www.postgresql.jp/document/14/html/pgstatstatements.html
+* log_autovacuum_min_duration	https://www.postgresql.jp/document/14/html/runtime-config-autovacuum.html
+* log_lock_waits	https://www.postgresql.jp/document/14/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+* log_checkpoints	https://www.postgresql.jp/document/14/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+* log_temp_files	https://www.postgresql.jp/document/14/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
 a|
 a|
 

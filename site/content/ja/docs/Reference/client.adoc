@@ -16,7 +16,7 @@ title: "DBMS クライアント機能一覧"
 |client_min_messages
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 どのメッセージレベルをクライアントに送るかを管理します。
 ____
@@ -25,7 +25,7 @@ ____
 |search_path
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 オブジェクト（テーブル、データ型、関数など）がスキーマを指定されていない単純な名前で参照されている場合に、スキーマを検索する順番を指定します。 
 ____
@@ -34,7 +34,7 @@ ____
 |row_security
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 行セキュリティポリシーの適用によってエラーを生じさせるかどうかを制御します。
 ____
@@ -43,7 +43,7 @@ ____
 |default_tablespace
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 CREATEコマンドで明示的にテーブル空間を指定していない場合にオブジェクトの作成先となるデフォルトのテーブル空間を指定します。 
 ____
@@ -52,7 +52,7 @@ ____
 |temp_tablespaces
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 CREATEコマンドで明示的にテーブル空間が指定されない場合に、生成する一時オブジェクト（一時テーブルと一時テーブル上のインデックス）を格納するテーブル空間（複数可）を指定します。 
 ____
@@ -61,7 +61,7 @@ ____
 |check_function_bodies
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 offに設定すると、CREATE FUNCTIONの間で関数本体文字列の妥当性検証を無効にします。
 ____
@@ -70,7 +70,7 @@ ____
 |default_transaction_isolation
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 各新規トランザクションのデフォルトの隔離レベルを制御します。
 ____
@@ -79,7 +79,7 @@ ____
 |default_transaction_read_only
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 各新規トランザクションのデフォルトの読み取りのみ状況を制御します。
 ____
@@ -88,7 +88,7 @@ ____
 |default_transaction_deferrable
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 それぞれの新規トランザクションのデフォルトでの繰り延べ状態を制御します。 
 ____
@@ -97,7 +97,7 @@ ____
 |session_replication_role
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 現在のセッションでのレプリケーションに関連したトリガおよびルールの発行を制御します。 
 ____
@@ -106,7 +106,7 @@ ____
 |statement_timeout
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 コマンドがクライアントからサーバに届いた時から数えて、実行時間が指定されたミリ秒を越えた文を停止します。 
 ____
@@ -115,7 +115,7 @@ ____
 |lock_timeout
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 テーブル、インデックス、行、またはその他のデータベースオブジェクトに対してロック獲得を試みている最中、指定されたミリ秒数を超えて待機するいかなる命令も停止されます。 
 ____
@@ -124,7 +124,7 @@ ____
 |idle_in_transaction_session_timeout
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 開いたトランザクションが、指定された時間（単位はミリ秒）を超えてアイドルだった場合に、セッションを終了します。
 ____
@@ -133,7 +133,7 @@ ____
 |vacuum_freeze_table_age
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 テーブルのpg_class.relfrozenxidフィールドがこの設定で指定した時期に達すると、VACUUMは積極的なテーブル走査を行います。 
 ____
@@ -142,7 +142,7 @@ ____
 |vacuum_freeze_min_age
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 VACUUMがテーブルスキャン時に行バージョンをフリーズするかどうかを決定する際に使用する、カットオフ（トランザクション）年代を指定します。 
 ____
@@ -151,7 +151,7 @@ ____
 |vacuum_multixact_freeze_table_age
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 pg_class.relminmxidフィールドがこの設定値で指定した年代に達するとVACUUMはテーブルの積極的なスキャンを行います。
 ____
@@ -160,7 +160,7 @@ ____
 |vacuum_multixact_freeze_min_age
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 VACUUMがテーブルをスキャンする際に、マルチトランザクションIDをより新しいトランザクションIDまたはマルチトランザクションIDに置き換えるかどうかを決める下限値をマルチトランザクション単位で指定します。 
 ____
@@ -169,7 +169,7 @@ ____
 |vacuum_cleanup_index_scale_factor
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 VACUUMクリーンアップステージで、前回の収集統計情報中でカウントされ、インデックススキャンせずに統計情報を挿入できる合計ヒープタプル数の割合を指定します。 
 ____
@@ -178,7 +178,7 @@ ____
 |bytea_output
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 bytea型の値の出力形式を設定します。
 ____
@@ -187,7 +187,7 @@ ____
 |xmlbinary
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 バイナリデータをXMLに符号化する方法を設定します。
 ____
@@ -196,7 +196,7 @@ ____
 |xmloption
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 XMLと文字列値との変換時にDOCUMENTとするかCONTENTとするかを設定します。
 ____
@@ -205,7 +205,7 @@ ____
 |gin_pending_list_limit
 |設定パラメタ
 a|文の動作
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 fastupdateが有効なときに使用されるGINペンディングリストの最大サイズを設定します。 
 ____
@@ -214,7 +214,7 @@ ____
 |DateStyle
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 日付時刻値の表示書式を設定し、曖昧な日付入力の解釈規則を設定します。 
 ____
@@ -223,7 +223,7 @@ ____
 |IntervalStyle
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 間隔の値の表示形式を設定します。
 ____
@@ -232,7 +232,7 @@ ____
 |TimeZone
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 表示用およびタイムスタンプ解釈用の時間帯を設定します。 
 ____
@@ -241,7 +241,7 @@ ____
 |timezone_abbreviations
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 サーバで日付時刻の入力として受付け可能となる時間帯省略形の集合を設定します。
 ____
@@ -250,7 +250,7 @@ ____
 |extra_float_digits
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 このパラメータは、float4、float8、幾何データ型などの浮動小数点値の表示桁数を調整します。 
 ____
@@ -259,7 +259,7 @@ ____
 |client_encoding
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 クライアント側符号化方式（文字セット）を設定します。
 ____
@@ -268,7 +268,7 @@ ____
 |lc_messages
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 メッセージが表示される言語を設定します。
 ____
@@ -277,7 +277,7 @@ ____
 |lc_monetary
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 通貨書式で使用するロケールを設定します。
 ____
@@ -286,7 +286,7 @@ ____
 |lc_numeric
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 数字の書式で使用するロケールを設定します。 
 ____
@@ -295,7 +295,7 @@ ____
 |lc_time
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 例えばto_char系関数における、日付と時間の書式で使用するロケールを設定します。 
 ____
@@ -304,7 +304,7 @@ ____
 |default_text_search_config
 |設定パラメタ
 a|ロケールと書式設定
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 明示的な設定指定引数を持たないテキスト検索関数の亜種で使用される、テキスト検索設定を選択します。 
 ____
@@ -313,7 +313,7 @@ ____
 |local_preload_libraries
 |設定パラメタ
 a|共有ライブラリのプリロード
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 接続時に事前読み込みされる、1つまたは複数の共有ライブラリを指定します。 
 ____
@@ -322,7 +322,7 @@ ____
 |session_preload_libraries
 |設定パラメタ
 a|共有ライブラリのプリロード
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 接続開始時にプリロードされる一つ以上の共有ライブラリを指定します。 
 ____
@@ -331,7 +331,7 @@ ____
 |shared_preload_libraries
 |設定パラメタ
 a|共有ライブラリのプリロード
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 サーバ起動時にプリロードされる一つ以上の共有ライブラリを指定します。 
 ____
@@ -340,7 +340,7 @@ ____
 |jit_provider
 |設定パラメタ
 a|共有ライブラリのプリロード
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 使用するJITプロバイダライブラリ(32.4.2参照)の名前です。 
 ____
@@ -349,7 +349,7 @@ ____
 |dynamic_library_path
 |設定パラメタ
 a|その他のデフォルト
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 オープンする必要がある動的ロード可能なモジュールについて、そのCREATE FUNCTIONやLOADコマンドで指定されたファイル名にディレクトリ要素がなく（つまり、名前にスラッシュが含まれずに）指定された場合、システムは必要なファイルをこのパスから検索します。
 ____
@@ -358,7 +358,7 @@ ____
 |gin_fuzzy_search_limit
 |設定パラメタ
 a|その他のデフォルト
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-client.html[19.11. クライアント接続デフォルト]']
 ____
 GINインデックス走査により返されるセットのソフトな上限サイズです。
 ____
@@ -380,7 +380,7 @@ ____
 |clusterdb
 |ユーザ I/F （ CUI ）
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/app-clusterdb.html[clusterdb]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/app-clusterdb.html[clusterdb]']
 ____
 PostgreSQLデータベース内のテーブルを再クラスタ化するユーティリティです
 ____
@@ -389,7 +389,7 @@ ____
 |createdb
 |ユーザ I/F （ CUI ）
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/app-createdb.html[createdb]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/app-createdb.html[createdb]']
 ____
 新しいPostgreSQLデータベースを作成します
 ____
@@ -398,7 +398,7 @@ ____
 |createuser
 |ユーザ I/F （ CUI ）
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/app-createuser.html[createuser]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/app-createuser.html[createuser]']
 ____
 新しいPostgreSQLのユーザ（より正確にいえばロール）を作成します
 ____

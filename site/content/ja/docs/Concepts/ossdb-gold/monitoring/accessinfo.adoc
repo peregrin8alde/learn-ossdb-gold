@@ -16,34 +16,34 @@ weight: 1
 |pg_locks
 a|
 a|
-* https://www.postgresql.jp/document/11/html/view-pg-locks.html
+* https://www.postgresql.jp/document/14/html/view-pg-locks.html
 a|
 
 |pg_stat_activity、pg_stat_database
 a|
 a|
-* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS
 a|
 
 |pg_stat_all_tables 等、行レベル統計情報
 a|
 a|
-* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS
 a|
 
 |pg_statio_all_tables 等、ブロックレベル統計情報
 a|
 a|
-* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS
 a|
 
 
 |未分類
 a|
-* pg_stat_archiver	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
-* pg_stat_bgwriter	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
-* 待機イベント(pg_stat_activity.wait_event)	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
-* pg_stat_progress_vacuum	https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* pg_stat_archiver	https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* pg_stat_bgwriter	https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* 待機イベント(pg_stat_activity.wait_event)	https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS
+* pg_stat_progress_vacuum	https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS
 a|
 a|
 

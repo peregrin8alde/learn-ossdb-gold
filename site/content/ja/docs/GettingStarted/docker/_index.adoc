@@ -81,7 +81,7 @@ local     postgres_getstarted_vl
 ====
 
 
-== インストール
+== 導入
 
 PostgreSQL バージョン : 14 （ OSSDB-Gold Ver.3.0 向け）
 
@@ -149,7 +149,7 @@ e688076c8884   postgres:14   "docker-entrypoint.s…"   48 seconds ago   Created
 
 
 
-== 初期化 / 起動
+== 運用
 
 起動時に初期化シェルが実行される。
 

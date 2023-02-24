@@ -51,7 +51,7 @@ $ psql -U postgres -c "SELECT COUNT(*) FROM tbl_sample_filesize"
  500000
 (1 row)
 
-### https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-DBSIZE
+### https://www.postgresql.jp/document/14/html/functions-admin.html#FUNCTIONS-ADMIN-DBSIZE
 $ psql -U postgres -c "SELECT pg_size_pretty((pg_stat_file(pg_relation_filepath('tbl_sample_filesize'))).size) as filesize"
  filesize 
 ----------

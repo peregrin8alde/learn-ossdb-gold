@@ -51,19 +51,19 @@ a|
 |トランザクションIDの周回エラー
 a|
 a|
-* https://www.postgresql.jp/document/11/html/routine-vacuuming.html#VACUUM-FOR-WRAPAROUND
+* https://www.postgresql.jp/document/14/html/routine-vacuuming.html#VACUUM-FOR-WRAPAROUND
 a|
 
 
 |未分類
 a|
-* PITR	https://www.postgresql.jp/document/11/html/continuous-archiving.html
-* pg_resetwal	https://www.postgresql.jp/document/11/html/app-pgresetwal.html
-* ignore_system_indexes	https://www.postgresql.jp/document/11/html/runtime-config-developer.html
-* ignore_checksum_failure	https://www.postgresql.jp/document/11/html/runtime-config-developer.html
-* コミットログ(pg_xact)	https://www.postgresql.jp/document/11/html/storage-file-layout.html
-* シングルユーザモード	https://www.postgresql.jp/document/11/html/app-postgres.html#id-1.9.5.14.6.5
-* VACUUM FREEZE	https://www.postgresql.jp/document/11/html/sql-vacuum.html
+* PITR	https://www.postgresql.jp/document/14/html/continuous-archiving.html
+* pg_resetwal	https://www.postgresql.jp/document/14/html/app-pgresetwal.html
+* ignore_system_indexes	https://www.postgresql.jp/document/14/html/runtime-config-developer.html
+* ignore_checksum_failure	https://www.postgresql.jp/document/14/html/runtime-config-developer.html
+* コミットログ(pg_xact)	https://www.postgresql.jp/document/14/html/storage-file-layout.html
+* シングルユーザモード	https://www.postgresql.jp/document/14/html/app-postgres.html#id-1.9.5.14.6.5
+* VACUUM FREEZE	https://www.postgresql.jp/document/14/html/sql-vacuum.html
 a|
 a|
 

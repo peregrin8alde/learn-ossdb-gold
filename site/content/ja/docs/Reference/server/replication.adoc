@@ -74,7 +74,7 @@ title: "レプリケーション機能一覧"
 |max_wal_senders
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 複数のスタンバイサーバあるいは、ストリーミングを使ったベースバックアップクライアントからの同時接続を受ける接続最大値を設定します（つまり、同時に稼動するWAL送信プロセスの最大値です）。
 ____
@@ -83,7 +83,7 @@ ____
 |max_replication_slots
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 サーバが使用できるレプリケーションスロット(26.2.6参照)の最大数を指定します。
 ____
@@ -92,7 +92,7 @@ ____
 |wal_keep_segments
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 ストリーミングレプリケーションにおいて、スタンバイサーバが過去のファイルセグメントを取得する必要がある場合に備え、pg_walディレクトリに保持しておくファイルセグメント数の最小値を指定します。
 ____
@@ -101,7 +101,7 @@ ____
 |wal_sender_timeout
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 指定されたミリ秒単位の値より長く非活動のレプリケーション接続を停止します。
 ____
@@ -110,7 +110,7 @@ ____
 |track_commit_timestamp
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 トランザクションのコミットタイムを記録します。
 ____
@@ -119,7 +119,7 @@ ____
 |synchronous_standby_names
 |設定パラメタ
 a|マスターサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 同期レプリケーションをサポート可能なスタンバイサーバのリストを指定します。
 ____
@@ -128,7 +128,7 @@ ____
 |vacuum_defer_cleanup_age
 |設定パラメタ
 a|マスターサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 VACUUM および HOT更新が不要行バージョンの回収を決めるのを延期するトランザクションの数を指定します。 
 ____
@@ -137,7 +137,7 @@ ____
 |hot_standby
 |設定パラメタ
 a|スタンバイサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 リカバリの最中に接続し、そして問い合わせを実行できるか否かを設定します。
 ____
@@ -146,7 +146,7 @@ ____
 |max_standby_archive_delay
 |設定パラメタ
 a|スタンバイサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 ホットスタンバイが稼動している場合、このパラメータは26.5.2で記載されているように、まさに適用されようとしているWALエントリと衝突するスタンバイサーバの問い合わせをキャンセルするにはどれだけ待機しなければならないかを設定します。max_standby_archive_delayはWALデータをWALアーカイブ（すなわち最新ではありません）から読み込んでいる時に適用されます。
 ____
@@ -155,7 +155,7 @@ ____
 |max_standby_streaming_delay
 |設定パラメタ
 a|スタンバイサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 ホットスタンバイが稼動している場合、このパラメータは26.5.2で記載されているように、まさに適用されようとしているWALエントリと衝突するスタンバイサーバの問い合わせをキャンセルするにはどれだけ待機しなければならないかを設定します。 max_standby_streaming_delayはWALデータをストリーミングレプリケーションから受け取っている時に適用されます。
 ____
@@ -164,7 +164,7 @@ ____
 |wal_receiver_status_interval
 |設定パラメタ
 a|スタンバイサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 スタンバイサーバ上のWAL受信プロセスがプライマリー、または上位サーバに対してレプリケーションの進捗情報を送信する最小頻度を指定します。
 ____
@@ -173,7 +173,7 @@ ____
 |hot_standby_feedback
 |設定パラメタ
 a|スタンバイサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 ホットスタンバイがスタンバイサーバ上で現在処理を行っている問い合わせについて、プライマリーまたは上位サーバにフィードバックを送るか否かを指定します。
 ____
@@ -182,7 +182,7 @@ ____
 |wal_receiver_timeout
 |設定パラメタ
 a|スタンバイサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 指定されたミリ秒より長い間、活動していないレプリケーション接続は停止します。
 ____
@@ -191,7 +191,7 @@ ____
 |wal_retrieve_retry_interval
 |設定パラメタ
 a|スタンバイサーバのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 WALデータがソース(ストリーミングレプリケーション、ローカルのpg_wal、またはWALアーカイブ)から取得できない時に、スタンバイサーバがWALデータ受信をリトライするまでにどの位の時間待つべきかを指定します。
 ____
@@ -200,7 +200,7 @@ ____
 |max_logical_replication_workers
 |設定パラメタ
 a|サブスクライバーのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 論理レプリケーションワーカーの最大数を指定します。
 ____
@@ -209,7 +209,7 @@ ____
 |max_sync_workers_per_subscription
 |設定パラメタ
 a|サブスクライバーのみ。
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-replication.html[19.6. レプリケーション]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-replication.html[19.6. レプリケーション]']
 ____
 サブスクリプションごとの同期ワーカーの最大数です。 
 ____

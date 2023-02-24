@@ -11,7 +11,7 @@ title: "パーサ"
 |enable_bitmapscan
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがビットマップスキャン計画型を選択することを有効もしくは無効にします。
 ____
@@ -20,7 +20,7 @@ ____
 |array_nulls
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
 ____
 配列入力パーサが引用符のないNULLをNULL配列要素として認識するかどうかを制御します。 
 ____
@@ -29,7 +29,7 @@ ____
 |backslash_quote
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-compatible.html[19.13. バージョンとプラットフォーム互換性]']
 ____
 文字列リテラルの中で引用符が\'で表現されるかどうかを管理します。 
 ____

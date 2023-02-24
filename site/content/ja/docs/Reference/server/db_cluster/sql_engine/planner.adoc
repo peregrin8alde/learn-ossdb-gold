@@ -11,7 +11,7 @@ title: "プランナ"
 |enable_bitmapscan
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがビットマップスキャン計画型を選択することを有効もしくは無効にします。
 ____
@@ -20,7 +20,7 @@ ____
 |enable_gathermerge
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがギャザーマージ計画型を選択することを有効もしくは無効にします。
 ____
@@ -29,7 +29,7 @@ ____
 |enable_hashagg
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがハッシュ集約計画型を選択することを有効もしくは無効にします。 
 ____
@@ -38,7 +38,7 @@ ____
 |enable_hashjoin
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがハッシュ結合計画型を選択することを有効もしくは無効にします。
 ____
@@ -47,7 +47,7 @@ ____
 |enable_indexscan
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがインデックス走査計画型を選択することを有効もしくは無効にします。
 ____
@@ -56,7 +56,7 @@ ____
 |enable_indexonlyscan
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがインデックスオンリースキャン計画型を選択することを有効もしくは無効にします。
 ____
@@ -65,7 +65,7 @@ ____
 |enable_material
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナの具体化の使用を有効、または無効にします。
 ____
@@ -74,7 +74,7 @@ ____
 |enable_mergejoin
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがマージ結合計画型を選択することを有効もしくは無効にします。
 ____
@@ -83,7 +83,7 @@ ____
 |enable_nestloop
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがネステッドループ結合計画を選択することを有効もしくは無効にします。
 ____
@@ -92,7 +92,7 @@ ____
 |enable_parallel_append
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせププランナによるパラレル認識なアペンド計画型の利用を有効あるいは無効にします。 
 ____
@@ -101,7 +101,7 @@ ____
 |enable_parallel_hash
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 クエリププランナによる、パラレルハッシュを使ったハッシュジョイン計画型の利用を有効あるいは無効にします。
 ____
@@ -110,7 +110,7 @@ ____
 |enable_partition_pruning
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせププランナが、クエリプランからパーティション化テーブルのパーティションを除く機能を有効あるいは無効にします。 
 ____
@@ -119,7 +119,7 @@ ____
 |enable_partitionwise_join
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 パーティション同士の結合(partitionwise join)を問い合わせプランナが使用するのを有効あるいは無効にします。 
 ____
@@ -128,7 +128,7 @@ ____
 |enable_partitionwise_aggregate
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 パーティション同士（partitionwise）のグループ化、あるいは集約を、問い合わせプランナが使用するのを有効あるいは無効にします。
 ____
@@ -137,7 +137,7 @@ ____
 |enable_seqscan
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがシーケンシャル走査計画を選択することを有効もしくは無効にします。 
 ____
@@ -146,7 +146,7 @@ ____
 |enable_sort
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナが明示的並び替え手順を選択することを有効もしくは無効にします。
 ____
@@ -155,7 +155,7 @@ ____
 |enable_tidscan
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナがTID走査計画型を選択することを有効もしくは無効にします。 
 ____
@@ -164,7 +164,7 @@ ____
 |seq_page_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 シーケンシャルな一連の取り出しの一部となる、ディスクページ取り出しに関する、プランナの推定コストを設定します。 
 ____
@@ -173,7 +173,7 @@ ____
 |random_page_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 非シーケンシャル的に取り出されるディスクページのコストに対するプランナの推測を設定します。 
 ____
@@ -182,7 +182,7 @@ ____
 |cpu_tuple_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせ時のそれぞれの行の処理コストに対するプランナの推測を設定します。
 ____
@@ -191,7 +191,7 @@ ____
 |cpu_index_tuple_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 インデックス走査時のそれぞれのインデックス行の処理コストに対するプランナの推測を設定します。 
 ____
@@ -200,7 +200,7 @@ ____
 |cpu_operator_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせ時に実行される各演算子や関数の処理コストに対するプランナの推測を設定します。
 ____
@@ -209,7 +209,7 @@ ____
 |parallel_setup_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 パラレルワーカープロセスを起動するためのコストに対するプランナの推測値を設定します。
 ____
@@ -218,7 +218,7 @@ ____
 |parallel_tuple_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 あるパラレルワーカープロセスから、1行を他のプロセスに転送するためのコストに対するプランナの推測値を設定します。
 ____
@@ -227,7 +227,7 @@ ____
 |min_parallel_table_scan_size
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 パラレルスキャンを考慮する最小のテーブルデータのサイズを指定します。 
 ____
@@ -236,7 +236,7 @@ ____
 |min_parallel_index_scan_size
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 パラレルスキャンが考慮されるために、スキャンされなければならないインデックスデータの最小量を設定します。 
 ____
@@ -245,7 +245,7 @@ ____
 |effective_cache_size
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 単一の問い合わせで利用できるディスクキャッシュの実効容量に関するプランナの条件を設定します。 
 ____
@@ -254,7 +254,7 @@ ____
 |jit_above_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 JITが有効な場合（第32章参照）、それ以上ならJITコンパイルが起動する問い合わせコストを設定します。
 ____
@@ -263,7 +263,7 @@ ____
 |jit_inline_above_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 それ以上ならJITコンパイルが関数と演算子のインライン化を試みる問い合わせコストを設定します。 
 ____
@@ -272,7 +272,7 @@ ____
 |jit_optimize_above_cost
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 それ以上ならJITコンパイルが高価な最適化を実行する問い合わせコストを設定します。 
 ____
@@ -281,7 +281,7 @@ ____
 |geqo
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 遺伝的問い合わせ最適化を有効もしくは無効にします。
 ____
@@ -290,7 +290,7 @@ ____
 |geqo_threshold
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 少なくともこれだけの数のFROM項目数があるときに、問い合わせを計画するのに遺伝的問い合わせ最適化を使用します。
 ____
@@ -299,7 +299,7 @@ ____
 |geqo_effort
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 GEQOにおける計画時間と問い合わせ計画の品質間のトレードオフを制御します。
 ____
@@ -308,7 +308,7 @@ ____
 |geqo_pool_size
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 GEQOで使用されるプール容量を管理します。それは遺伝的個体群内の個体数です。
 ____
@@ -317,7 +317,7 @@ ____
 |geqo_generations
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 GEQOで使用される世代の数を管理します。
 ____
@@ -326,7 +326,7 @@ ____
 |geqo_selection_bias
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 GEQOで使用される淘汰の偏りを管理します。
 ____
@@ -335,7 +335,7 @@ ____
 |geqo_seed
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 結合順序検索空間にわたって、GEQOが無作為のパスを選択するために使用される乱数発生器の初期値を制御します。 
 ____
@@ -344,7 +344,7 @@ ____
 |default_statistics_target
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 ALTER TABLE SET STATISTICSで列特定の目的セットの無いテーブル列に対し、デフォルトの統計対象を設定します。 
 ____
@@ -353,7 +353,7 @@ ____
 |constraint_exclusion
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 問い合わせプランナが問い合わせを最適化する際のテーブル制約の使用を制御します。
 ____
@@ -362,7 +362,7 @@ ____
 |cursor_tuple_fraction
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 検索されるカーソル行の割合のプランナの見積もりを設定します。 
 ____
@@ -371,7 +371,7 @@ ____
 |from_collapse_limit
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 プランナは、FROMリストがこの数の項目より少ない結果の場合、副問い合わせを上位の問い合わせに併合します。
 ____
@@ -380,7 +380,7 @@ ____
 |jit
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 PostgreSQLが、可能ならばJITコンパイルを使うかどうかを決定します。 
 ____
@@ -389,7 +389,7 @@ ____
 |join_collapse_limit
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 最終的にリストがこの項目数以下になる時、プランナは、明示的なJOIN構文（FULL JOINを除く）をFROM項目のリストに直します。 
 ____
@@ -398,7 +398,7 @@ ____
 |parallel_leader_participation
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 ワーカープロセスを待つ代わりに、GatherノードとGather Mergeノード配下の問い合わせプランをリーダープロセスが実行できるようにします。
 ____
@@ -407,7 +407,7 @@ ____
 |force_parallel_mode
 |設定パラメタ
 a|
-[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/11/html/runtime-config-query.html[19.7. 問い合わせ計画]']
+[quote, PostgreSQL 11.5文書, 'https://www.postgresql.jp/document/14/html/runtime-config-query.html[19.7. 問い合わせ計画]']
 ____
 性能改善が期待できなくても、テスト目的のためにパラレルクエリを利用できるようにします。 
 ____

@@ -52,7 +52,7 @@ a|
 a|
 * Index Only Scan
 a|
-* https://www.postgresql.jp/document/11/html/indexes-index-only-scans.html
+* https://www.postgresql.jp/document/14/html/indexes-index-only-scans.html
 a|
 
 |===

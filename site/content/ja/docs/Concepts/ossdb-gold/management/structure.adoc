@@ -17,7 +17,7 @@ weight: 3
 |データベースクラスタの構造
 a|
 a|
-* https://www.postgresql.jp/document/11/html/storage.html
+* https://www.postgresql.jp/document/14/html/storage.html
 a|
 
 |プロセス構造
@@ -28,18 +28,18 @@ a|
 |データの格納方法
 a|
 a|
-* https://www.postgresql.jp/document/11/html/storage-page-layout.html
+* https://www.postgresql.jp/document/14/html/storage-page-layout.html
 a|
 
 |未分類
 a|
 a|
-* autovacuum	https://www.postgresql.jp/document/11/html/routine-vacuuming.html#AUTOVACUUM
-* TOAST	https://www.postgresql.jp/document/11/html/storage-toast.html
-* FILLFACTOR	https://www.postgresql.jp/document/11/html/sql-createtable.html#SQL-CREATETABLE-STORAGE-PARAMETERS
-* アーカイブログ	https://www.postgresql.jp/document/11/html/continuous-archiving.html
-* ページヘッダ	https://www.postgresql.jp/document/11/html/storage-page-layout.html
-* タプルヘッダ	https://www.postgresql.jp/document/11/html/storage-page-layout.html
+* autovacuum	https://www.postgresql.jp/document/14/html/routine-vacuuming.html#AUTOVACUUM
+* TOAST	https://www.postgresql.jp/document/14/html/storage-toast.html
+* FILLFACTOR	https://www.postgresql.jp/document/14/html/sql-createtable.html#SQL-CREATETABLE-STORAGE-PARAMETERS
+* アーカイブログ	https://www.postgresql.jp/document/14/html/continuous-archiving.html
+* ページヘッダ	https://www.postgresql.jp/document/14/html/storage-page-layout.html
+* タプルヘッダ	https://www.postgresql.jp/document/14/html/storage-page-layout.html
 * postmasterプロセス
 * postgresプロセス
 * バックグラウンドプロセス

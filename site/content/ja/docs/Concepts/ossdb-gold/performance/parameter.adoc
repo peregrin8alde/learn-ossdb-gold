@@ -46,18 +46,18 @@ a|
 
 |未分類
 a|
-* shared_buffers	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
-* huge_pages	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
-* effective_cache_size	https://www.postgresql.jp/document/11/html/runtime-config-query.html#RUNTIME-CONFIG-QUERY-CONSTANTS
-* work_mem	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
-* maintenance_work_mem	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
-* autovacuum_work_mem	https://www.postgresql.jp/document/11/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
-* wal_level	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
-* fsync	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
-* synchronous_commit	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
-* checkpoint_timeout	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-CHECKPOINTS
-* checkpoint_completion_target	https://www.postgresql.jp/document/11/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-CHECKPOINTS
-* deadlock_timeout	https://www.postgresql.jp/document/11/html/runtime-config-locks.html
+* shared_buffers	https://www.postgresql.jp/document/14/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* huge_pages	https://www.postgresql.jp/document/14/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* effective_cache_size	https://www.postgresql.jp/document/14/html/runtime-config-query.html#RUNTIME-CONFIG-QUERY-CONSTANTS
+* work_mem	https://www.postgresql.jp/document/14/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* maintenance_work_mem	https://www.postgresql.jp/document/14/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* autovacuum_work_mem	https://www.postgresql.jp/document/14/html/runtime-config-resource.html#RUNTIME-CONFIG-RESOURCE-MEMORY
+* wal_level	https://www.postgresql.jp/document/14/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* fsync	https://www.postgresql.jp/document/14/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* synchronous_commit	https://www.postgresql.jp/document/14/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-SETTINGS
+* checkpoint_timeout	https://www.postgresql.jp/document/14/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-CHECKPOINTS
+* checkpoint_completion_target	https://www.postgresql.jp/document/14/html/runtime-config-wal.html#RUNTIME-CONFIG-WAL-CHECKPOINTS
+* deadlock_timeout	https://www.postgresql.jp/document/14/html/runtime-config-locks.html
 a|
 a|
 

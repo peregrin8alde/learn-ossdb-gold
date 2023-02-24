@@ -27,9 +27,9 @@ a|
 * pg_twophase
 * initdb -data-checksums (-k)
 a|
-* https://www.postgresql.jp/document/11/html/storage-file-layout.html[68.1. データベースファイルのレイアウト]
-* https://www.postgresql.jp/document/11/html/storage-page-layout.html[68.6. データベースページのレイアウト]
-* https://www.postgresql.jp/document/11/html/app-initdb.html[initdb]
+* https://www.postgresql.jp/document/14/html/storage-file-layout.html[68.1. データベースファイルのレイアウト]
+* https://www.postgresql.jp/document/14/html/storage-page-layout.html[68.6. データベースページのレイアウト]
+* https://www.postgresql.jp/document/14/html/app-initdb.html[initdb]
 a|
 * https://oss-db.jp/sample/gold_management_01/01_120210[1.01]
 * https://oss-db.jp/sample/gold_management_01/04_130401[1.04]
@@ -39,22 +39,22 @@ a|
 * ssl	
 * pg_stat_ssl
 a|
-* https://www.postgresql.jp/document/11/html/ssl-tcp.html[18.9. SSLによる安全なTCP/IP接続]
-* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS[28.2.2. 統計情報の表示]
+* https://www.postgresql.jp/document/14/html/ssl-tcp.html[18.9. SSLによる安全なTCP/IP接続]
+* https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS[28.2.2. 統計情報の表示]
 a|
 
 |セキュリティ- データ暗号化
 a|
 * pgcrypto
 a|
-* https://www.postgresql.jp/document/11/html/pgcrypto.html[F.25. pgcrypto]
+* https://www.postgresql.jp/document/14/html/pgcrypto.html[F.25. pgcrypto]
 a|
 * https://oss-db.jp/sample/gold_management_01/22_190731[1.22]
 
 |セキュリティ- クライアント認証
 a|
 a|
-* https://www.postgresql.jp/document/11/html/client-authentication.html[第20章 クライアント認証]
+* https://www.postgresql.jp/document/14/html/client-authentication.html[第20章 クライアント認証]
 a|
 
 |セキュリティ- 監査ログ
@@ -63,15 +63,15 @@ a|
 * track_functions
 * track_activities
 a|
-* https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]
-* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT[19.8.3. 何をログに]
-* https://www.postgresql.jp/document/11/html/runtime-config-statistics.html#RUNTIME-CONFIG-STATISTICS-COLLECTOR[19.9.1. 問い合わせおよびインデックスに関する統計情報コレクタ]
+* https://www.postgresql.jp/document/14/html/runtime-config-logging.html[19.8. エラー報告とログ取得]
+* https://www.postgresql.jp/document/14/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT[19.8.3. 何をログに]
+* https://www.postgresql.jp/document/14/html/runtime-config-statistics.html#RUNTIME-CONFIG-STATISTICS-COLLECTOR[19.9.1. 問い合わせおよびインデックスに関する統計情報コレクタ]
 a|
 
 |データ型のサイズ
 a|
 a|
-* https://www.postgresql.jp/document/11/html/datatype.html[第8章 データ型]
+* https://www.postgresql.jp/document/14/html/datatype.html[第8章 データ型]
 a|
 
 |ユーザ・データベース単位のパラメータ設定
@@ -79,9 +79,9 @@ a|
 * ALTER ROLE
 * ALTER DATABASE
 a|
-* https://www.postgresql.jp/document/11/html/config-setting.html[19.1. パラメータの設定]
-* https://www.postgresql.jp/document/11/html/sql-alterrole.html[ALTER ROLE]
-* https://www.postgresql.jp/document/11/html/sql-alterdatabase.html[ALTER DATABASE]
+* https://www.postgresql.jp/document/14/html/config-setting.html[19.1. パラメータの設定]
+* https://www.postgresql.jp/document/14/html/sql-alterrole.html[ALTER ROLE]
+* https://www.postgresql.jp/document/14/html/sql-alterdatabase.html[ALTER DATABASE]
 a|
 
 |===
@@ -188,7 +188,7 @@ endif::[]
 
 [NOTE]
 ====
-参考マニュアル： https://www.postgresql.jp/document/11/html/storage-file-layout.html[68.1. データベースファイルのレイアウト]
+参考マニュアル： https://www.postgresql.jp/document/14/html/storage-file-layout.html[68.1. データベースファイルのレイアウト]
 
 * `PGDATA/base` 配下のサブディレクトリはデータベースファイルのデフォルトの位置であり、特にシステムカタログがそこに格納されます。
 * `pg_database` 内のデータベース OID （行識別子）は隠し属性であり明示的に選択しなければ表示されない
@@ -235,7 +235,7 @@ endif::[]
 
 [NOTE]
 ====
-参考マニュアル： https://www.postgresql.jp/document/11/html/storage-page-layout.html[68.6. データベースページのレイアウト]
+参考マニュアル： https://www.postgresql.jp/document/14/html/storage-page-layout.html[68.6. データベースページのレイアウト]
 
 * data checksums が有効な場合にI/Oシステムによる破損検知を補助するために、データページにおいてチェックサムを使用します。
 ** これがないと警告もされません
@@ -262,9 +262,9 @@ endif::[]
 ====
 参考マニュアル
 
-* https://www.postgresql.jp/document/11/html/storage-page-layout.html[68.6. データベースページのレイアウト]
-* https://www.postgresql.jp/document/11/html/indexes-types.html[11.2. インデックスの種類]
-* https://www.postgresql.jp/document/11/html/indexam.html[第61章 インデックスアクセスメソッドのインタフェース定義]
+* https://www.postgresql.jp/document/14/html/storage-page-layout.html[68.6. データベースページのレイアウト]
+* https://www.postgresql.jp/document/14/html/indexes-types.html[11.2. インデックスの種類]
+* https://www.postgresql.jp/document/14/html/indexam.html[第61章 インデックスアクセスメソッドのインタフェース定義]
 ====
 
 
@@ -311,13 +311,13 @@ endif::[]
 
 参考
 
-* https://www.postgresql.jp/document/11/html/ssl-tcp.html[18.9. SSLによる安全なTCP/IP接続]
-* https://www.postgresql.jp/document/11/html/monitoring-stats.html#MONITORING-STATS-VIEWS[28.2.2. 統計情報の表示]
-* https://www.postgresql.jp/document/11/html/pgcrypto.html[F.25. pgcrypto]
-* https://www.postgresql.jp/document/11/html/client-authentication.html[第20章 クライアント認証]
-* https://www.postgresql.jp/document/11/html/runtime-config-logging.html[19.8. エラー報告とログ取得]
-* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT[19.8.3. 何をログに]
-* https://www.postgresql.jp/document/11/html/runtime-config-statistics.html#RUNTIME-CONFIG-STATISTICS-COLLECTOR[19.9.1. 問い合わせおよびインデックスに関する統計情報コレクタ]
+* https://www.postgresql.jp/document/14/html/ssl-tcp.html[18.9. SSLによる安全なTCP/IP接続]
+* https://www.postgresql.jp/document/14/html/monitoring-stats.html#MONITORING-STATS-VIEWS[28.2.2. 統計情報の表示]
+* https://www.postgresql.jp/document/14/html/pgcrypto.html[F.25. pgcrypto]
+* https://www.postgresql.jp/document/14/html/client-authentication.html[第20章 クライアント認証]
+* https://www.postgresql.jp/document/14/html/runtime-config-logging.html[19.8. エラー報告とログ取得]
+* https://www.postgresql.jp/document/14/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT[19.8.3. 何をログに]
+* https://www.postgresql.jp/document/14/html/runtime-config-statistics.html#RUNTIME-CONFIG-STATISTICS-COLLECTOR[19.9.1. 問い合わせおよびインデックスに関する統計情報コレクタ]
 
 例題
 
@@ -344,7 +344,7 @@ endif::[]
 ** SSL を使うかどうかは基本クライアント側の選択だが、サーバ側で SSL のみ受け付けるなどの設定も可能
 * クライアント認証設定ファイル `pg_hba.conf` 内で受け付けるプロトコルと DB 、ユーザ、 IP アドレス、認証方法を設定 
 
-https://www.postgresql.jp/document/11/html/auth-pg-hba-conf.html[20.1. pg_hba.confファイル]
+https://www.postgresql.jp/document/14/html/auth-pg-hba-conf.html[20.1. pg_hba.confファイル]
 
 .pg_hba.conf
 [source,conf]
@@ -389,7 +389,7 @@ endif::[]
 * 可変長のデータ型は型の指定だけではサイズが決まらず、データ次第でオーバーヘッドも変化する。
 ====
 
-* https://www.postgresql.jp/document/11/html/datatype.html[第8章 データ型]
+* https://www.postgresql.jp/document/14/html/datatype.html[第8章 データ型]
 
 
 
@@ -432,9 +432,9 @@ ALTER DATABASE name RESET ALL
 ====
 
 
-* https://www.postgresql.jp/document/11/html/config-setting.html[19.1. パラメータの設定]
-* https://www.postgresql.jp/document/11/html/sql-alterrole.html[ALTER ROLE]
-* https://www.postgresql.jp/document/11/html/sql-alterdatabase.html[ALTER DATABASE]
+* https://www.postgresql.jp/document/14/html/config-setting.html[19.1. パラメータの設定]
+* https://www.postgresql.jp/document/14/html/sql-alterrole.html[ALTER ROLE]
+* https://www.postgresql.jp/document/14/html/sql-alterdatabase.html[ALTER DATABASE]
 
 
 

@@ -24,13 +24,13 @@ a|
 * pg_cancel_backend()
 * pg_terminate_backend()
 a|
-* https://www.postgresql.jp/document/11/html/backup.html
-* https://www.postgresql.jp/document/11/html/continuous-archiving.html
-* https://www.postgresql.jp/document/11/html/app-pgdump.html
-* https://www.postgresql.jp/document/11/html/app-pg-dumpall.html
-* https://www.postgresql.jp/document/11/html/app-pgbasebackup.html
-* https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
-* https://www.postgresql.jp/document/11/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
+* https://www.postgresql.jp/document/14/html/backup.html
+* https://www.postgresql.jp/document/14/html/continuous-archiving.html
+* https://www.postgresql.jp/document/14/html/app-pgdump.html
+* https://www.postgresql.jp/document/14/html/app-pg-dumpall.html
+* https://www.postgresql.jp/document/14/html/app-pgbasebackup.html
+* https://www.postgresql.jp/document/14/html/functions-admin.html#FUNCTIONS-ADMIN-BACKUP
+* https://www.postgresql.jp/document/14/html/functions-admin.html#FUNCTIONS-ADMIN-SIGNAL
 a|
 
 |VACUUM、ANALYZE、REINDEX
@@ -41,27 +41,27 @@ a|
 * vacuumdb
 * pgstattuple
 a|
-* https://www.postgresql.jp/document/11/html/routine-vacuuming.html
-* https://www.postgresql.jp/document/11/html/sql-analyze.html
-* https://www.postgresql.jp/document/11/html/sql-vacuum.html
-* https://www.postgresql.jp/document/11/html/sql-reindex.html
-* https://www.postgresql.jp/document/11/html/app-vacuumdb.html
-* https://www.postgresql.jp/document/11/html/pgstattuple.html
+* https://www.postgresql.jp/document/14/html/routine-vacuuming.html
+* https://www.postgresql.jp/document/14/html/sql-analyze.html
+* https://www.postgresql.jp/document/14/html/sql-vacuum.html
+* https://www.postgresql.jp/document/14/html/sql-reindex.html
+* https://www.postgresql.jp/document/14/html/app-vacuumdb.html
+* https://www.postgresql.jp/document/14/html/pgstattuple.html
 a|
 
 |自動バキューム
 a|
 * 
 a|
-* https://www.postgresql.jp/document/11/html/routine-vacuuming.html#AUTOVACUUM
+* https://www.postgresql.jp/document/14/html/routine-vacuuming.html#AUTOVACUUM
 a|
 
 |チェックポイント
 a|
 * CHECKPOINT
 a|
-* https://www.postgresql.jp/document/11/html/wal-configuration.html
-* https://www.postgresql.jp/document/11/html/sql-checkpoint.html
+* https://www.postgresql.jp/document/14/html/wal-configuration.html
+* https://www.postgresql.jp/document/14/html/sql-checkpoint.html
 a|
 
 |サーバログ管理
@@ -70,32 +70,32 @@ a|
 * log_disconnections
 * log_duration
 a|
-* https://www.postgresql.jp/document/11/html/runtime-config-logging.html
-* https://www.postgresql.jp/document/11/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
+* https://www.postgresql.jp/document/14/html/runtime-config-logging.html
+* https://www.postgresql.jp/document/14/html/runtime-config-logging.html#RUNTIME-CONFIG-LOGGING-WHAT
 a|
 
 |ディスク容量監視
 a|
 * 
 a|
-* https://www.postgresql.jp/document/11/html/diskusage.html
+* https://www.postgresql.jp/document/14/html/diskusage.html
 a|
 
 |自動VACUUMと手動VACUUM/ANALYZEの違い
 a|
 * 
 a|
-* https://www.postgresql.jp/document/11/html/routine-vacuuming.html
+* https://www.postgresql.jp/document/14/html/routine-vacuuming.html
 a|
 
 |未分類
 a|
-* ALTER SYSTEM	https://www.postgresql.jp/document/11/html/sql-altersystem.html
-* CLUSTER	https://www.postgresql.jp/document/11/html/sql-cluster.html
-* WAL	https://www.postgresql.jp/document/11/html/wal-intro.html
-* postgresql.conf	https://www.postgresql.jp/document/11/html/config-setting.html#CONFIG-SETTING-CONFIGURATION-FILE
-* recovery.conf	https://www.postgresql.jp/document/11/html/recovery-config.html
-* pg_isready	https://www.postgresql.jp/document/11/html/app-pg-isready.html
+* ALTER SYSTEM	https://www.postgresql.jp/document/14/html/sql-altersystem.html
+* CLUSTER	https://www.postgresql.jp/document/14/html/sql-cluster.html
+* WAL	https://www.postgresql.jp/document/14/html/wal-intro.html
+* postgresql.conf	https://www.postgresql.jp/document/14/html/config-setting.html#CONFIG-SETTING-CONFIGURATION-FILE
+* recovery.conf	https://www.postgresql.jp/document/14/html/recovery-config.html
+* pg_isready	https://www.postgresql.jp/document/14/html/app-pg-isready.html
 a|
 a|
 
