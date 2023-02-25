@@ -153,6 +153,8 @@ e688076c8884   postgres:14   "docker-entrypoint.s…"   48 seconds ago   Created
 
 === サーバ管理者の作業
 
+起動
+
 起動時に初期化シェルが実行される。
 
 .実行コマンド
@@ -171,13 +173,35 @@ postgres_getstarted_sv
 ====
 
 
+停止
+
+.実行コマンド
+[source,shell]
+----
+docker stop postgres_getstarted_sv
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+
+------
+====
+
+
+状態確認
+
+Docker コンテナ
+
 .実行コマンド
 [source,shell]
 ----
 docker ps -a -f name=postgres_getstarted_sv
 ----
 
-.実行結果
+.実行結果（起動中）
 [%collapsible]
 ====
 [source,shell]
@@ -187,8 +211,38 @@ e688076c8884   postgres:14   "docker-entrypoint.s…"   About a minute ago   Up 
 ------
 ====
 
+.実行結果（停止中）
+[%collapsible]
+====
+[source,shell]
+------
+CONTAINER ID   IMAGE         COMMAND                  CREATED        STATUS                     PORTS      NAMES
+e688076c8884   postgres:14   "docker-entrypoint.s…"   46 hours ago   Exited (255) 8 hours ago   5432/tcp   postgres_getstarted_sv
+------
+====
 
-状態確認
+PostgreSQL サーバ（コンテナ起動済み）
+
+.実行コマンド
+[source,shell]
+----
+docker exec \
+  -it \
+  -u postgres \
+  postgres_getstarted_sv \
+    pg_ctl status
+----
+
+.実行結果（起動中）
+[%collapsible]
+====
+[source,shell]
+------
+pg_ctl: server is running (PID: 1)
+/usr/lib/postgresql/14/bin/postgres
+------
+====
+
 
 == サービス利用者の作業
 
