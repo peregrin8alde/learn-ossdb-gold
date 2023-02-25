@@ -151,6 +151,8 @@ e688076c8884   postgres:14   "docker-entrypoint.s…"   48 seconds ago   Created
 
 == 運用
 
+=== サーバ管理者の作業
+
 起動時に初期化シェルが実行される。
 
 .実行コマンド
@@ -186,9 +188,11 @@ e688076c8884   postgres:14   "docker-entrypoint.s…"   About a minute ago   Up 
 ====
 
 
-== 状態確認
+状態確認
 
-== クライアントからの接続
+== サービス利用者の作業
+
+=== クライアントからの接続
 
 .実行コマンド
 [source,shell]
@@ -218,7 +222,7 @@ postgres=#
 ------
 ====
 
-== サンプル SQL 実行
+=== サンプル SQL 実行
 
 DB 作成
 
