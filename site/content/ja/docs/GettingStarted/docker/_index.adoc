@@ -107,8 +107,12 @@ docker.io/library/postgres:14
 
 Docker コンテナの作成
 
+[TIP]
+====
 * `docker create` を使うことで、停止状態で作成
 * 作成と同時に起動する場合は、 `docker create` の部分を `docker run -d` に置き換え
+====
+
 
 .実行コマンド
 [source,shell]
@@ -173,23 +177,6 @@ postgres_getstarted_sv
 ====
 
 
-停止
-
-.実行コマンド
-[source,shell]
-----
-docker stop postgres_getstarted_sv
-----
-
-.実行結果
-[%collapsible]
-====
-[source,shell]
-------
-
-------
-====
-
 
 状態確認
 
@@ -244,12 +231,14 @@ pg_ctl: server is running (PID: 1)
 ====
 
 
-== サービス利用者の作業
+=== サービス利用者の作業
 
 [TIP]
+====
 サーバ起動時に `-e POSTGRES_PASSWORD=` で指定した値 `mysecretpassword` をパスワードとして利用
+====
 
-=== DB 作成
+==== DB 作成
 
 .実行コマンド
 [source,shell]
@@ -272,7 +261,7 @@ Password:
 ------
 ====
 
-=== SQL 実行用対話的ターミナル
+==== SQL 実行用対話的ターミナル
 
 .実行コマンド
 [source,shell]
@@ -304,7 +293,7 @@ getstarted_db=#
 * 終了時は入力待ち表示  ```postgres=# ``` に対して `\q`
 ====
 
-=== SQL 実行
+==== SQL 実行
 
 テーブル作成
 
@@ -352,12 +341,31 @@ INSERT 0 1
 データ更新
 データ削除
 
-== 廃止
-
 テーブル削除
 DB 削除
 
+
+== 廃止
+
+
 停止
+
+.実行コマンド
+[source,shell]
+----
+docker stop postgres_getstarted_sv
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+
+------
+====
+
+
 
 資源削除
 
