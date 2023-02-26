@@ -1,4 +1,40 @@
 <style>
+    /*
+      Google Fonts(https://fonts.google.com/) を直接利用する場合
+      Google Fonts  で使いたいフォントを選択し、右上にある View Selected family ボタンで import 用情報を表示してコピペ
+      なお、デフォルトスタイルシート以外ではビルド時に -a webfonts! を指定しても意味がない場合がある（各 css で独自に指定されている）
+    */
+    @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
+
+    :root {
+        --base-font-family: 'BIZ UDPMincho', 'Yuji Mai', serif;
+    }
+
+    body {
+        font-family: var(--base-font-family) !important;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--base-font-family) !important;
+    }
+
+    h4,
+    h5,
+    h6 {
+        font-family: var(--base-font-family) !important;
+    }
+
+    .title {
+        font-family: var(--base-font-family) !important;
+    }
+
+    p {
+        font-family: var(--base-font-family) !important;
+    }
+
     #content {
         max-width: none;
     }

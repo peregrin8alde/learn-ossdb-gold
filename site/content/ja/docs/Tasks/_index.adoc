@@ -8,10 +8,6 @@ description: >
 ---
 = Core Tasks
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
-
 想定シナリオにおける、
 
 * 作業シーン
@@ -37,6 +33,28 @@ This is a placeholder page that shows you how to use this template site.
 |×
 
 |===
+
+導入
+インストール前
+インストール
+インストール後
+セットアップ
+セットアップ後
+
+運用
+起動
+停止
+状態確認
+
+廃止
+アンセットアップ
+アンセットアップ後
+アンインストール
+アンインストール後
+
+
+
+
 
 ifdef::env-asciidoctor[]
 
