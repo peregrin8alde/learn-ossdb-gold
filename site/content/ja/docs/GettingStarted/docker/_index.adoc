@@ -208,7 +208,7 @@ e688076c8884   postgres:14   "docker-entrypoint.s…"   46 hours ago   Exited (2
 ------
 ====
 
-PostgreSQL サーバ（コンテナ起動済み）
+PostgreSQL サーバ（コンテナ起動済みで起動済みのはずなので、 Docker としては使う機会ないかも？）
 
 .実行コマンド
 [source,shell]
@@ -290,7 +290,7 @@ getstarted_db=#
 
 [TIP]
 ====
-* 終了時は入力待ち表示  ```postgres=# ``` に対して `\q`
+* 終了時は入力待ち表示  ```「DB 名」=# ``` に対して `\q`
 ====
 
 ==== SQL 実行
