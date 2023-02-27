@@ -231,6 +231,102 @@ pg_ctl: server is running (PID: 1)
 ====
 
 
+ログ
+
+.実行コマンド（起動後）
+[source,shell]
+----
+docker logs postgres_getstarted_sv
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data/pgdata ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data/pgdata -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2023-02-23 08:59:37.990 UTC [50] LOG:  starting PostgreSQL 14.7 (Debian 14.7-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2023-02-23 08:59:37.993 UTC [50] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-02-23 08:59:38.000 UTC [51] LOG:  database system was shut down at 2023-02-23 08:59:37 UTC
+2023-02-23 08:59:38.004 UTC [50] LOG:  database system is ready to accept connections
+ done
+server started
+
+/usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+
+waiting for server to shut down...2023-02-23 08:59:38.149 UTC [50] LOG:  received fast shutdown request
+.2023-02-23 08:59:38.151 UTC [50] LOG:  aborting any active transactions
+2023-02-23 08:59:38.152 UTC [50] LOG:  background worker "logical replication launcher" (PID 57) exited with exit code 1
+2023-02-23 08:59:38.152 UTC [52] LOG:  shutting down
+2023-02-23 08:59:38.170 UTC [50] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2023-02-23 08:59:38.267 UTC [1] LOG:  starting PostgreSQL 14.7 (Debian 14.7-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2023-02-23 08:59:38.267 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2023-02-23 08:59:38.267 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2023-02-23 08:59:38.271 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-02-23 08:59:38.277 UTC [63] LOG:  database system was shut down at 2023-02-23 08:59:38 UTC
+2023-02-23 08:59:38.280 UTC [1] LOG:  database system is ready to accept connections
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+2023-02-24 08:46:19.506 UTC [1] LOG:  starting PostgreSQL 14.7 (Debian 14.7-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2023-02-24 08:46:19.506 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2023-02-24 08:46:19.506 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2023-02-24 08:46:19.512 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-02-24 08:46:19.519 UTC [28] LOG:  database system was interrupted; last known up at 2023-02-23 08:59:38 UTC
+2023-02-24 08:46:19.716 UTC [28] LOG:  database system was not properly shut down; automatic recovery in progress
+2023-02-24 08:46:19.718 UTC [28] LOG:  redo starts at 0/16FAF08
+2023-02-24 08:46:19.718 UTC [28] LOG:  invalid record length at 0/16FAF40: wanted 24, got 0
+2023-02-24 08:46:19.718 UTC [28] LOG:  redo done at 0/16FAF08 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2023-02-24 08:46:19.731 UTC [1] LOG:  database system is ready to accept connections
+
+PostgreSQL Database directory appears to contain a database; Skipping initialization
+
+2023-02-25 07:23:34.931 UTC [1] LOG:  starting PostgreSQL 14.7 (Debian 14.7-1.pgdg110+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2023-02-25 07:23:34.932 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2023-02-25 07:23:34.932 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2023-02-25 07:23:34.935 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-02-25 07:23:34.940 UTC [27] LOG:  database system was interrupted; last known up at 2023-02-24 08:51:40 UTC
+2023-02-25 07:23:35.185 UTC [27] LOG:  database system was not properly shut down; automatic recovery in progress
+2023-02-25 07:23:35.188 UTC [27] LOG:  redo starts at 0/1714CA8
+2023-02-25 07:23:35.188 UTC [27] LOG:  invalid record length at 0/1714D90: wanted 24, got 0
+2023-02-25 07:23:35.188 UTC [27] LOG:  redo done at 0/1714D58 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2023-02-25 07:23:35.200 UTC [1] LOG:  database system is ready to accept connections
+------
+====
+
+
 === サービス利用者の作業
 
 [TIP]
