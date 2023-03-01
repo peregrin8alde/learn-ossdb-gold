@@ -86,6 +86,8 @@ local     postgres_getstarted_vl
 
 PostgreSQL バージョン : 14 （ OSSDB-Gold Ver.3.0 向け）
 
+=== インストール
+
 Docker イメージの取得
 
 .実行コマンド
@@ -152,6 +154,9 @@ e688076c8884   postgres:14   "docker-entrypoint.s…"   48 seconds ago   Created
 ------
 ====
 
+=== セットアップ
+
+初回起動時に自動で実施されるため省略
 
 
 == 運用
@@ -240,7 +245,7 @@ pg_ctl: server is running (PID: 1)
 docker logs postgres_getstarted_sv
 ----
 
-.実行結果（起動後）
+.実行結果（初回起動後）
 [%collapsible]
 ====
 [source,shell]
