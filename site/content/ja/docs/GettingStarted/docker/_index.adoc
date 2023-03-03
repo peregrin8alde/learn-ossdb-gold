@@ -414,6 +414,26 @@ INSERT 0 1
 
 
 データ参照
+
+.実行 SQL
+[source, sql]
+----
+SELECT * FROM weather;
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+     city      | temp_lo | temp_hi | prcp |    date    
+---------------+---------+---------+------+------------
+ San Francisco |      46 |      50 | 0.25 | 1994-11-27
+(1 row)
+------
+====
+
+
 データ更新
 データ削除
 
