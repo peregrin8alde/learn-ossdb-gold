@@ -316,6 +316,8 @@ PostgreSQL init process complete; ready for start up.
 
 ==== DB 作成
 
+https://www.postgresql.org/docs/14/app-createdb.html
+
 .実行コマンド
 [source,shell]
 ----
@@ -338,6 +340,8 @@ Password:
 ====
 
 ==== SQL 実行用対話的ターミナル
+
+https://www.postgresql.org/docs/14/app-psql.html
 
 .実行コマンド
 [source,shell]
@@ -373,6 +377,8 @@ getstarted_db=#
 
 テーブル作成
 
+https://www.postgresql.org/docs/14/tutorial-table.html
+
 .実行 SQL
 [source, sql]
 ----
@@ -397,6 +403,8 @@ CREATE TABLE
 
 データ挿入
 
+https://www.postgresql.org/docs/14/tutorial-populate.html
+
 .実行 SQL
 [source, sql]
 ----
@@ -414,6 +422,8 @@ INSERT 0 1
 
 
 データ参照
+
+https://www.postgresql.org/docs/14/tutorial-select.html
 
 .実行 SQL
 [source, sql]
@@ -435,6 +445,8 @@ SELECT * FROM weather;
 
 
 データ更新
+
+https://www.postgresql.org/docs/14/tutorial-update.html
 
 .実行 SQL
 [source, sql]
