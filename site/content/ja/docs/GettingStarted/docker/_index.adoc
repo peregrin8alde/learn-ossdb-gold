@@ -435,6 +435,46 @@ SELECT * FROM weather;
 
 
 データ更新
+
+.実行 SQL
+[source, sql]
+----
+UPDATE weather
+    SET temp_hi = temp_hi - 2,  temp_lo = temp_lo - 2
+    WHERE date > '1994-11-26';
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+UPDATE 1
+------
+====
+
+結果確認
+
+.実行 SQL
+[source, sql]
+----
+SELECT * FROM weather;
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+     city      | temp_lo | temp_hi | prcp |    date    
+---------------+---------+---------+------+------------
+ San Francisco |      44 |      48 | 0.25 | 1994-11-27
+(1 row)
+------
+====
+
+
+
 データ削除
 
 テーブル削除
