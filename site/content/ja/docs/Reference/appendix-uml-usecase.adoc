@@ -24,6 +24,9 @@ title: "ユースケース図"
 Overview / Concepts : ユーザは何ができるか（どんな目的を達成できるか）
 GettingStarted / Tasks / Tutorials / Reference : ユーザは何をすべきか（どんな手順が必要となるのか）
 
+
+tasks の章立てや各章／節の書き出し文章は usecase ベースとなるはず
+
 ////
 
 
