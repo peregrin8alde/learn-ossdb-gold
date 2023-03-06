@@ -489,6 +489,43 @@ SELECT * FROM weather;
 
 データ削除
 
+https://www.postgresql.org/docs/14/tutorial-delete.html
+
+.実行 SQL
+[source, sql]
+----
+DELETE FROM weather WHERE city = 'San Francisco';
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+DELETE 1
+------
+====
+
+結果確認
+
+.実行 SQL
+[source, sql]
+----
+SELECT * FROM weather;
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+ city | temp_lo | temp_hi | prcp | date 
+------+---------+---------+------+------
+(0 rows)
+------
+====
+
+
 テーブル削除
 DB 削除
 
