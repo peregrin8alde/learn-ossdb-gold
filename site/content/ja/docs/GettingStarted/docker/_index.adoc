@@ -527,6 +527,23 @@ SELECT * FROM weather;
 
 
 テーブル削除
+
+.実行 SQL
+[source, sql]
+----
+DROP TABLE weather;
+----
+
+.実行結果
+[%collapsible]
+====
+[source, sql]
+------
+DROP TABLE
+------
+====
+
+
 DB 削除
 
 
