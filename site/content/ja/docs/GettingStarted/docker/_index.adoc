@@ -528,6 +528,8 @@ SELECT * FROM weather;
 
 テーブル削除
 
+https://www.postgresql.org/docs/14/sql-droptable.html
+
 .実行 SQL
 [source, sql]
 ----
@@ -544,7 +546,31 @@ DROP TABLE
 ====
 
 
-DB 削除
+==== DB 削除
+
+https://www.postgresql.org/docs/14/app-dropdb.html
+
+.実行コマンド
+[source,shell]
+----
+docker run \
+  -it \
+  --rm \
+  --name postgres_getstarted_cl \
+  --network postgres_getstarted_nw \
+  postgres:14 \
+    dropdb -h postgres_getstarted_sv -U postgres getstarted_db
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+Password: 
+------
+====
+
 
 
 == 廃止
