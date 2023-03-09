@@ -597,5 +597,19 @@ docker stop postgres_getstarted_sv
 
 資源削除
 
+.実行コマンド
+[source,shell]
+----
+docker rm -v postgres_getstarted_sv
+----
+
+.実行結果
+[%collapsible]
+====
+[source,shell]
+------
+postgres_getstarted_sv
+------
+====
 
 
