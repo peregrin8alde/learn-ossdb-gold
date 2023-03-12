@@ -1,0 +1,9 @@
+---
+title: "Install"
+linkTitle: "インストール"
+weight: 1
+description: >
+  インストール .
+---
+= インストール
+
