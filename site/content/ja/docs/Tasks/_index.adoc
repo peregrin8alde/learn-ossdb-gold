@@ -77,6 +77,9 @@ Docker の場合は起動時にセットアップシェルが実行されるた�
 停止
 状態確認
 
+監視 monitoring
+
+
 保守 maintenance
 管理者の設定変更など
 
