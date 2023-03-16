@@ -66,16 +66,16 @@ include::Reference/_index.adoc[]
 include::Examples/_index.adoc[]
 
 [appendix]
-include::Reference/appendix-manual.adoc[]
+include::Appendix/appendix-manual.adoc[]
 
 [appendix]
-include::Reference/appendix-uml-class.adoc[]
+include::Appendix/appendix-uml-class.adoc[]
 
 [appendix]
-include::Reference/appendix-uml-usecase.adoc[]
+include::Appendix/appendix-uml-usecase.adoc[]
 
 [appendix]
-include::Reference/appendix-uml-sequence.adoc[]
+include::Appendix/appendix-uml-sequence.adoc[]
 
 :leveloffset: -1
 
