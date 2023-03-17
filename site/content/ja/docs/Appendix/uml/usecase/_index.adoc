@@ -1,0 +1,17 @@
+---
+title: "Appendix"
+linkTitle: "Appendix"
+weight: 7
+description: >
+  desc.
+---
+= Appendix
+
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+include::server/_index.adoc[]
+
+:leveloffset: -1
+endif::[]
