@@ -69,13 +69,8 @@ include::Examples/_index.adoc[]
 include::Appendix/appendix-manual.adoc[]
 
 [appendix]
-include::Appendix/appendix-uml-class.adoc[]
+include::Appendix/uml/_index.adoc[]
 
-[appendix]
-include::Appendix/appendix-uml-usecase.adoc[]
-
-[appendix]
-include::Appendix/appendix-uml-sequence.adoc[]
 
 :leveloffset: -1
 
