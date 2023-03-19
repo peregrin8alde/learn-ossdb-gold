@@ -1,11 +1,11 @@
 ---
-title: "Appendix"
-linkTitle: "Appendix"
+title: "usecase"
+linkTitle: "usecase"
 weight: 7
 description: >
   desc.
 ---
-= Appendix
+= usecase
 
 
 ifdef::env-asciidoctor[]

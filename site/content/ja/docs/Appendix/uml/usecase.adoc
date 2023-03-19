@@ -37,26 +37,7 @@ svg にしておけば図内の文章をコピペ可能
 ////
 [plantuml, target=diagram-usecases, format=svg]
 ....
-left to right direction
-
-actor "サーバ管理者" as admin
-actor "サービス利用者" as user
-
-rectangle "導入" {
-  usecase "インストール" as UC1
-  usecase "アンインストール" as UC2
-}
-admin --> (UC1) : コマンドラインで\n実施
-admin --> (UC2) : コマンドラインで\n実施
-
-rectangle "運用" {
-  usecase "起動" as UC3
-  usecase "データ格納" as UC4
-  usecase "停止" as UC5
-}
-admin --> (UC3) : コマンドラインで\n実施
-user --> (UC4) : SQLで\n実施
-admin --> (UC5) : コマンドラインで\n実施
+include::usecase/usecases.puml[]
 ....
 
 
