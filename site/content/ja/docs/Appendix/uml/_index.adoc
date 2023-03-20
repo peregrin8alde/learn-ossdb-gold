@@ -6,7 +6,7 @@ title: "UML"
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
-include::usecase.adoc[]
+include::usecase/_index.adoc[]
 include::class.adoc[]
 include::sequence.adoc[]
 
