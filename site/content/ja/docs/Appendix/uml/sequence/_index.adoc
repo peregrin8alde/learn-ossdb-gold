@@ -1,5 +1,9 @@
 ---
-title: "シーケンス図"
+title: "sequence"
+linkTitle: "シーケンス図"
+weight: 3
+description: >
+  シーケンス図.
 ---
 = シーケンス図
 
@@ -12,3 +16,18 @@ title: "シーケンス図"
 |===
 |いつ |どこで |誰が |何故 |何を |どれだけ |どうした
 |===
+
+
+[plantuml, target=diagram-sequences, format=svg]
+....
+include::sequences.puml[]
+....
+
+
+ifdef::env-asciidoctor[]
+:leveloffset: +1
+
+
+
+:leveloffset: -1
+endif::[]

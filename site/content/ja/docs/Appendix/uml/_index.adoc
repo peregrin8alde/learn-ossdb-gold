@@ -7,8 +7,8 @@ ifdef::env-asciidoctor[]
 :leveloffset: +1
 
 include::usecase/_index.adoc[]
-include::class.adoc[]
-include::sequence.adoc[]
+include::class/_index.adoc[]
+include::sequence/_index.adoc[]
 
 :leveloffset: -1
 

@@ -1,11 +1,246 @@
 ---
-title: "Appendix"
-linkTitle: "Appendix"
-weight: 7
+title: "クラス図"
+linkTitle: "クラス図"
+weight: 2
 description: >
-  desc.
+  クラス図.
 ---
-= Appendix
+= クラス図
+
+クラス図を使ったオブジェクト整理
+
+
+* オブジェクトの階層関係を表す概要クラス図で包含関係を整理
+* 各オブジェクトの詳細クラス図では各クラスの中にあるオブジェクトに対する操作をメソッド、その設定パラメタをメンバとして書いてみる？
+** クラス内の各オブジェクトに閉じた操作はそのオブジェクトのクラス内に、複数のオブジェクトに関する操作はそれらを含むクラスのメソッドに書く
+
+オブジェクトの作成／削除を意識すると整理しやすいかもしれない。
+
+* PostgreSQL サーバー／クライアントのインストール／アンインストール
+* DB クラスターの作成／削除
+* PostgreSQL サービスの起動／停止
+
+など
+
+* インストール／アンインストール
+** PostgreSQL サーバー
+** PostgreSQL クライアント
+** プラグイン？
+* 起動／停止
+** PostgreSQL サービス
+*** 主プロセス（クライアント接続受付け）
+*** バックグラウンドプロセス（自動保守系）
+**** 自動バキュームランチャー
+**** 統計情報コレクター
+**** WAL ライター
+**** チェックポインター
+**** バックグラウンドライター
+*** クライアント接続ごとの子プロセス
+** サーバーコマンド
+*** initdb
+*** pg_archivecleanup
+*** pg_controldata
+*** pg_ctl
+*** pg_resetwal
+*** pg_rewind
+*** pg_test_fsync
+*** pg_test_timing
+*** pg_upgrade
+*** pg_verify_checksums
+*** pg_waldump
+*** postgres
+*** postmaster
+** クライアントコマンド
+*** clusterdb
+*** createdb
+*** createuser
+*** dropdb
+*** dropuser
+*** ecpg
+*** pg_basebackup
+*** pgbench
+*** pg_config
+*** pg_dump
+*** pg_dumpall
+*** pg_isready
+*** pg_receivewal
+*** pg_recvlogical
+*** pg_restore
+*** psql
+*** reindexdb
+*** vacuumdb
+* 作成／削除
+** DB クラスター
+** SQL の DDL で定義される各オブジェクト
+** WAL？
+** 各種ログ？
+
+意識して作成などはしないが内部で自動操作されるかつ利用者も存在を確認できるものに注意
+
+SQL や設定ファイルなど、インターフェースとなるものも一旦はオブジェクトとして一覧にし、 OOUI で整理？
+
+プロセスやファイル、メモリなどの種別を表すために、それらの継承もしておく？
+
+公式ドキュメントに出てくる名詞／形容詞／動詞とその関係性は意識しておくこと
+
+OSI 参照モデルやクリーンアーキテクチャのような階層を意識した分類もしたい。
+
+* OSI 参照モデルは通信に関する話なので、データの流れや障害回りの整理に使える？
+  そのまま適用するのではなく、 DB のデータの流れに合わせた概念で整理
+* 階層アーキテクチャは https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/[オニオンアーキテクチャ] から試してみる。
+
+
+OSI 参照モデル
+
+. アプリケーション層
+. プレゼンテーション層
+. セッション層
+. トランスポート層
+. ネットワーク層
+. データリンク層
+. 物理層
+
+
+
+オニオンアーキテクチャ
+
+. User Interface / Infrastructure / Tests
+. Application Core
+.. Application Services
+.. Domain Services
+.. Domain Model
+
+
+以下に分けて図を作成する。
+
+* グループ関係を整理するための継承関係だけ書いたクラス図
+* 相互関係や構造を整理するための関連を書いたクラス図
+* 所有するパラメタや機能を整理するための単体クラス詳細を書いたクラス図
+
+各パラメタは内部での設定者と利用者といった受け渡し関係と最終的な所有者を整理する。
+
+
+++++
+<div class="mermaid">
+classDiagram
+  DBMS <|-- RDBMS
+  RDBMS <|-- ORDBMS
+  ORDBMS <|-- PostgreSQL
+
+  PostgreSQL *-- PostgreSQL サーバー
+  PostgreSQL *-- PostgreSQL クライアント
+  PostgreSQL *-- PostgreSQL ユーザー
+
+  PostgreSQL サーバー <.. PostgreSQL クライアント
+</div>
+
+<div class="mermaid">
+classDiagram
+  PostgreSQL サーバー *-- DB クラスター
+  PostgreSQL サーバー *-- ログ
+  PostgreSQL サーバー *-- レプリケーションサーバー
+
+  DB クラスター <.. PostgreSQL クライアント
+  DB クラスター <.. レプリケーションサーバー
+
+  レプリケーションサーバー <.. PostgreSQL クライアント
+</div>
+
+
+<div class="mermaid">
+classDiagram
+  PostgreSQL サービス <|-- 主プロセス クライアント接続受付け
+  PostgreSQL サービス <|-- バックグラウンドプロセス 自動保守系
+  PostgreSQL サービス <|-- クライアント接続ごとの子プロセス
+
+  バックグラウンドプロセス 自動保守系 <|-- 自動バキュームランチャー
+  バックグラウンドプロセス 自動保守系 <|-- 統計情報コレクター
+  バックグラウンドプロセス 自動保守系 <|-- WAL ライター
+  バックグラウンドプロセス 自動保守系 <|-- チェックポインター
+  バックグラウンドプロセス 自動保守系 <|-- バックグラウンドライター
+</div>
+
+<div class="mermaid">
+classDiagram
+  PostgreSQL サービス "n" .. "1" 共用メモリ
+
+  class PostgreSQL サービス {
+    + 共用メモリ
+    
+    + メモリ書き込み()
+    + メモリ読み込み()
+  }
+</div>
+
+<div class="mermaid">
+classDiagram
+  SQL の DDL で定義される各オブジェクト <|-- データの利用者
+  SQL の DDL で定義される各オブジェクト <|-- データの入れ物
+  SQL の DDL で定義される各オブジェクト <|-- データの操作手段
+  SQL の DDL で定義される各オブジェクト <|-- データの参照手段
+  SQL の DDL で定義される各オブジェクト <|-- データの管理用情報
+  SQL の DDL で定義される各オブジェクト <|-- ACCESS METHOD
+  SQL の DDL で定義される各オブジェクト <|-- CONVERSION
+  SQL の DDL で定義される各オブジェクト <|-- EVENT TRIGGER
+  SQL の DDL で定義される各オブジェクト <|-- EXTENSION
+  SQL の DDL で定義される各オブジェクト <|-- 外部データ系
+  SQL の DDL で定義される各オブジェクト <|-- RULE
+  SQL の DDL で定義される各オブジェクト <|-- レプリケーション系
+  SQL の DDL で定義される各オブジェクト <|-- TRANSFORM
+  SQL の DDL で定義される各オブジェクト <|-- TYPE
+
+  データの利用者 <|-- USER
+  データの利用者 <|-- ROLE _ GROUP
+
+  データの入れ物 <|-- DATABASE
+  データの入れ物 <|-- SCHEMA
+  データの入れ物 <|-- TABLE
+  データの入れ物 <|-- TABLESPACE
+  データの入れ物 <|-- レコード
+
+  データの操作手段 <|-- OPERATOR
+  データの操作手段 <|-- OPERATOR CLASS
+  データの操作手段 <|-- OPERATOR FAMILY
+  データの操作手段 <|-- PROCEDURE
+  データの操作手段 <|-- FUNCTION
+  データの操作手段 <|-- LANGUAGE
+  データの操作手段 <|-- AGGREGATE
+  データの操作手段 <|-- CAST
+  データの操作手段 <|-- TRIGGER
+
+  データの参照手段 <|-- VIEW
+  データの参照手段 <|-- MATERIALIZED VIEW
+
+  データの管理用情報 <|-- INDEX
+  データの管理用情報 <|-- TEXT SEARCH 系
+  データの管理用情報 <|-- SEQUENCE
+  データの管理用情報 <|-- POLICY
+  データの管理用情報 <|-- STATISTICS
+  データの管理用情報 <|-- COLLATION
+  データの管理用情報 <|-- DOMAIN
+
+  レプリケーション系 <|-- PUBLICATION
+  レプリケーション系 <|-- SUBSCRIPTION
+
+
+  TEXT SEARCH 系 <|-- TEXT SEARCH CONFIGURATION
+  TEXT SEARCH 系 <|-- TEXT SEARCH DICTIONARY
+  TEXT SEARCH 系 <|-- TEXT SEARCH PARSER
+  TEXT SEARCH 系 <|-- TEXT SEARCH TEMPLATE
+
+  外部データ系 <|-- FOREIGN DATA WRAPPER
+  外部データ系 <|-- FOREIGN TABLE
+  外部データ系 <|-- SERVER
+  外部データ系 <|-- USER MAPPING
+
+</div>
+
+++++
+
+[plantuml, target=diagram-classes, format=svg]
+....
+include::classes.puml[]
+....
 
 
 ifdef::env-asciidoctor[]
