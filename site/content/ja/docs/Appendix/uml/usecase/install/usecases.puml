@@ -1,0 +1,10 @@
+left to right direction
+
+actor "サーバ管理者" as admin
+
+rectangle "導入" {
+  usecase "インストール" as UC1
+  usecase "アンインストール" as UC2
+}
+admin --> (UC1) : コマンドラインで\n実施
+admin --> (UC2) : コマンドラインで\n実施

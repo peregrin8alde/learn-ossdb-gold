@@ -7,3 +7,7 @@ description: >
 ---
 = 導入
 
+[plantuml, target=diagram-usecases-install, format=svg]
+....
+include::usecases.puml[]
+....

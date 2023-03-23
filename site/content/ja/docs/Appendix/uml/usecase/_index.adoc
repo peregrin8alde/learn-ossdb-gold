@@ -289,6 +289,12 @@ DB 作成や管理は誰がする？
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
+include::install/_index.adoc[]
+include::operation/_index.adoc[]
+include::maintenance/_index.adoc[]
+include::troubleshoot/_index.adoc[]
+include::uninstall/_index.adoc[]
+
 
 :leveloffset: -1
 endif::[]
