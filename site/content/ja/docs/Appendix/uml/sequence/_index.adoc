@@ -9,12 +9,18 @@ description: >
 
 各ユースケースに対して、サービス内で何が行われるかを記載する。
 
+////
 5W2H で説明する？
+
+why = どんな状態にするために
+what = 状態を変化させる対象？操作で利用するもの？
+how = 操作方法
+////
 
 .シーケンス一覧
 [options="header,autowidth",stripes=hover]
 |===
-|いつ |どこで |誰が |何故 |何を |どれだけ |どうした
+|When いつ|Who 誰が  |Where どこで、どこに |Why 何故 |What 何を |How much/many どれだけ |How どうした
 |===
 
 
