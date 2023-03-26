@@ -1,5 +1,15 @@
 left to right direction
 
+/'
+rectangle "いつ" {
+  :誰が: --> (何をしたい) : 何故
+}
+'/
+
+rectangle "いつ" {
+  :誰が: --> (何をしたい) : 何故
+}
+
 actor "サーバ管理者" as admin
 
 rectangle "導入" {
