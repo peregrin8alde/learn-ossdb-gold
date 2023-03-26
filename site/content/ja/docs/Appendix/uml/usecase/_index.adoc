@@ -55,6 +55,13 @@ include::usecases.puml[]
 [options="header,autowidth",stripes=hover]
 |===
 |いつ |誰が |何のために |何をしたい
+
+|サービス設計時
+|サービス提供者
+|利益を確保するために
+|予算決定
+
+
 |===
 
 
