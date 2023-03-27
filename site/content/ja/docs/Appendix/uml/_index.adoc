@@ -9,6 +9,7 @@ ifdef::env-asciidoctor[]
 include::usecase/_index.adoc[]
 include::class/_index.adoc[]
 include::sequence/_index.adoc[]
+include::activity/_index.adoc[]
 
 :leveloffset: -1
 

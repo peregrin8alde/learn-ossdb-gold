@@ -1,3 +1,4 @@
+@startuml
 left to right direction
 
 /'
@@ -18,3 +19,4 @@ rectangle "導入" {
 }
 admin --> (UC1) : コマンドラインで\n実施
 admin --> (UC2) : コマンドラインで\n実施
+@enduml

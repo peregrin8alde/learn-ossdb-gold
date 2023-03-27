@@ -1,3 +1,4 @@
+@startuml
 left to right direction
 
 actor "サーバ管理者" as admin
@@ -18,3 +19,4 @@ rectangle "運用" {
 admin --> (UC3) : コマンドラインで\n実施
 user --> (UC4) : SQLで\n実施
 admin --> (UC5) : コマンドラインで\n実施
+@enduml
