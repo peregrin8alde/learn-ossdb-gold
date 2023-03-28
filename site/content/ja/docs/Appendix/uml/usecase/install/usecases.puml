@@ -2,15 +2,24 @@
 left to right direction
 
 /'
+actor "誰が" as who
+
 rectangle "いつ" {
-  :誰が: --> (何をしたい) : 何故
+  usecase "何をしたい" as UC1
 }
+who --> (UC1) : 何故
 '/
 
-rectangle "いつ" {
-  :誰が: --> (何をしたい) : 何故
-}
+actor "誰が" as who
 
+rectangle "いつ" {
+  usecase "何をしたい" as UC1
+}
+who --> (UC1) : 何故
+
+
+
+/'
 actor "サーバ管理者" as admin
 
 rectangle "導入" {
@@ -19,4 +28,6 @@ rectangle "導入" {
 }
 admin --> (UC1) : コマンドラインで\n実施
 admin --> (UC2) : コマンドラインで\n実施
+'/
+
 @enduml
