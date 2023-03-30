@@ -1,4 +1,15 @@
 @startuml
 left to right direction
 
+/'
+actor "誰が" as who
+
+rectangle "いつ" {
+  usecase "何をしたい" as UC1
+}
+who --> (UC1) : 何故
+'/
+
+
+
 @enduml
