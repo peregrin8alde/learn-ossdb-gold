@@ -237,6 +237,19 @@ classDiagram
 
 ++++
 
+////
+plantuml のページ分割や asciidoctor としての画像サイズ調整が対応していないため、適宜ファイル分割
+////
+[plantuml, target=diagram-classe-legend-01, format=svg]
+....
+include::classe-legend-01.puml[]
+....
+
+[plantuml, target=diagram-classe-legend-02, format=svg]
+....
+include::classe-legend-02.puml[]
+....
+
 [plantuml, target=diagram-classes, format=svg]
 ....
 include::classes.puml[]
