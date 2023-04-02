@@ -1,0 +1,26 @@
+@startuml
+/'
+"segment" "0..1" *--> "*" "compositions" : "コンポジション\n composition"
+'/
+legend
+凡例
+コンポジション
+composition
+endlegend
+
+"segment" "0..1" *--> "*" "compositions" : "コンポジション\n composition"
+note right on link
+part-of
+集約の一種
+部分側は他と共有不可（ composite associationEnd ）
+部分側は全体と同じ寿命なのが普通
+全体の削除前に部分側を分離して他に移管すれば寿命を別にすることも可能
+古い UML では寿命が必ず一致で全体側の多重度が 1 固定？
+end note
+
+"Window" "1" *--> "2" "Slider" : "+scrollbar"
+"Window" "1" *--> "1" "Header" : "+title"
+"Window" "1" *--> "1" "Panel" : "+body"
+
+
+@enduml

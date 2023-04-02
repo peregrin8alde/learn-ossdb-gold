@@ -12,12 +12,13 @@ endlegend
 
 "Class01" "*" -- "*" "Class02" : "関連\n association"
 note right on link
+has-a
 どちらかが参照を保持
 end note
 
 "Class01-2" "1" <-- "1" "Class02-2" : "関連"
 note right on link
-保持の方向を示した版
+関係の方向を示した版
 end note
 
 "Class03" "0..1" o-- "*" "Class04" : "集約\n aggregation"
@@ -27,19 +28,37 @@ part-of
 部分側は他と共有可能（ shared associationEnd ）
 end note
 
-"Class05" "0..1" *-- "*" "Class06" : "コンポジション\n composition"
-note right on link
-part-of
-集約の一種
-部分側は他と共有不可（ composite associationEnd ）
-部分側は全体と同じ寿命なのが普通
-古い UML では寿命が必ず一致で全体側の多重度が 1 固定？
-end note
-
 "Class07" .. "Class08" : "依存"
 "Class07-2" <.. "Class08-2" : "依存"
 "Class01a" <|-- "Class02a" : "汎化\n 継承"
 "Class01b" <|.. "Class02b" : "実現\n 実装"
+
+/'
+関連クラス
+'/
+class Student {
+  Name
+}
+Student "0..*" - "1..*" Course
+  (Student, Course) .. Enrollment
+  class Enrollment {
+  drop()
+  cancel()
+}
+
+/'
+複数関連
+'/
+class Station {
+  +name: string
+}
+class StationCrossing {
+  +cost: TimeInterval
+}
+<> diamond
+StationCrossing . diamond
+diamond - "from 0..*" Station
+diamond - "to 0..* " Station
 
 
 

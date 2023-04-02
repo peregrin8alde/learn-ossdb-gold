@@ -242,17 +242,23 @@ plantuml のページ分割や asciidoctor としての画像サイズ調整が�
 ////
 [plantuml, target=diagram-classe-legend-01, format=svg]
 ....
-include::classe-legend-01.puml[]
+include::puml/legend/classe-legend-01.puml[]
 ....
 
-[plantuml, target=diagram-classe-legend-02, format=svg]
+[plantuml, target=diagram-classe-legends, format=svg]
 ....
-include::classe-legend-02.puml[]
+include::puml/legend/classe-legends.puml[]
+....
+
+
+[plantuml, target=diagram-classe-legend-composition, format=svg]
+....
+include::puml/legend/classe-legend-composition.puml[]
 ....
 
 [plantuml, target=diagram-classes, format=svg]
 ....
-include::classes.puml[]
+include::puml/classes.puml[]
 ....
 
 
