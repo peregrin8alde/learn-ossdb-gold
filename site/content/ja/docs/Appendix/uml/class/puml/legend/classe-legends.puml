@@ -21,12 +21,6 @@ note right on link
 関係の方向を示した版
 end note
 
-"Class03" "0..1" o-- "*" "Class04" : "集約\n aggregation"
-note right on link
-part-of
-関連の一種
-部分側は他と共有可能（ shared associationEnd ）
-end note
 
 "Class07" .. "Class08" : "依存"
 "Class07-2" <.. "Class08-2" : "依存"

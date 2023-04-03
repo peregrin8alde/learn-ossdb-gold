@@ -1,6 +1,6 @@
 @startuml
 /'
-"segment" "0..1" *--> "*" "compositions" : "コンポジション\n composition"
+"全体" "0..1" *--> "*" "部分" : "コンポジション\n composition"
 '/
 legend
 凡例
@@ -8,7 +8,7 @@ legend
 composition
 endlegend
 
-"segment" "0..1" *--> "*" "compositions" : "コンポジション\n composition"
+"全体" "0..1" *--> "*" "部分" : "コンポジション\n composition"
 note right on link
 part-of
 集約の一種

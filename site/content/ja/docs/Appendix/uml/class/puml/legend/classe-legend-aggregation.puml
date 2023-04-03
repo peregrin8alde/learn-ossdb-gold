@@ -1,0 +1,23 @@
+@startuml
+/'
+"全体" "0..1" o--> "*" "部分" : "集約\n aggregation"
+'/
+legend
+凡例
+集約
+aggregation
+endlegend
+
+
+"全体" "0..1" o--> "*" "部分" : "集約\n aggregation"
+note right on link
+part-of
+関連の一種
+部分側は他と共有可能（ shared associationEnd ）
+
+三角形とその辺？
+図書館と本？
+end note
+
+
+@enduml
