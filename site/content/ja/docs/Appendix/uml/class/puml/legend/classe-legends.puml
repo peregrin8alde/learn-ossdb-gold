@@ -10,16 +10,6 @@ legend
 凡例
 endlegend
 
-"Class01" "*" -- "*" "Class02" : "関連\n association"
-note right on link
-has-a
-どちらかが参照を保持
-end note
-
-"Class01-2" "1" <-- "1" "Class02-2" : "関連"
-note right on link
-関係の方向を示した版
-end note
 
 
 "Class07" .. "Class08" : "依存"

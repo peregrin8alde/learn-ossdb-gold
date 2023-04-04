@@ -4,8 +4,7 @@
 '/
 legend
 凡例
-コンポジション
-composition
+コンポジション composition
 endlegend
 
 "全体" "0..1" *--> "*" "部分" : "コンポジション\n composition"
