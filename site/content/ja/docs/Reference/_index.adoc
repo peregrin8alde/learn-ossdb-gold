@@ -13,5 +13,11 @@ ifdef::env-asciidoctor[]
 
 include::function-list.adoc[]
 
+include::command/_index.adoc[]
+include::api/_index.adoc[]
+include::settingfile/_index.adoc[]
+
+
+
 :leveloffset: -1
 endif::[]

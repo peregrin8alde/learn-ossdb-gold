@@ -1,11 +1,11 @@
 ---
-title: "Command Reference"
-linkTitle: "Command Reference"
+title: "Api Reference"
+linkTitle: "Api Reference"
 weight: 1
 description: >
-  Command Reference.
+  Api Reference.
 ---
-= Command Reference
+= Api Reference
 
 
 ifdef::env-asciidoctor[]

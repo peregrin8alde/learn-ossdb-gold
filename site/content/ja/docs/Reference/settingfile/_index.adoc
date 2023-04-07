@@ -1,11 +1,11 @@
 ---
-title: "Command Reference"
-linkTitle: "Command Reference"
+title: "Setting File Reference"
+linkTitle: "Setting File Reference"
 weight: 1
 description: >
-  Command Reference.
+  Setting File Reference.
 ---
-= Command Reference
+= Setting File Reference
 
 
 ifdef::env-asciidoctor[]
