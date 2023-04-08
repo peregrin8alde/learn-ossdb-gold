@@ -1,0 +1,18 @@
+@startuml
+/'
+"Class01" "*" -- "*" "Class02" : "依存\n dependency"
+'/
+legend
+凡例
+依存 dependency
+endlegend
+
+"Class01" <.. "Class02" : "依存"
+note right on link
+依存
+end note
+
+"Car" <.. "Car Factory" : "Instantiate"
+
+
+@enduml

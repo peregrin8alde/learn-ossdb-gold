@@ -19,8 +19,6 @@ enum "enum"
 interface "interface"
 
 
-"Class07" .. "Class08" : "依存"
-"Class07-2" <.. "Class08-2" : "依存"
 "Class01a" <|-- "Class02a" : "汎化\n 継承"
 "Class01b" <|.. "Class02b" : "実現\n 実装"
 
