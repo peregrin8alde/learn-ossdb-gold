@@ -7,12 +7,44 @@ legend
 依存 dependency
 endlegend
 
-"Class01" <.. "Class02" : "依存"
+/'
+A Dependency implies that the semantics of the clients are not complete without the suppliers. 
+The presence of Dependency relationships in a model does not have any runtime semantic implications. 
+The semantics are all given in terms of the NamedElements that participate in the relationship, not in terms of their instances.
+'/
+
+"Supplier" <.. "Client" : "依存"
 note right on link
 依存
+破線矢印で表現
+色々なタイプがあり、 <<keyword>> で表現
 end note
 
-"Car" <.. "Car Factory" : "Instantiate"
+"Car" <.. "Car Factory" : "<<Instantiate>>"
+
+
+"Class01c" <.. "Class02c" : "<<use>>\n使用\n Usage"
+note right on link
+使用
+依存の一種
+<<use>> キーワードで表現
+end note
+
+"Class01a" <.. "Class02a" : "<<abstraction>>\n抽象化\n Abstraction"
+note right on link
+抽象化
+依存の一種
+<<abstraction>> キーワードで表現
+実体を持たない点で汎化と異なる？
+end note
+
+
+"Class01b" <|.. "Class02b" : "実現\n Realization"
+note right on link
+実現
+抽象化の一種
+中抜き三角の破線矢印で表現
+end note
 
 
 @enduml
