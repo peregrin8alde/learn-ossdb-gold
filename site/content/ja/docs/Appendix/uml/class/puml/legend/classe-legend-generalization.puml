@@ -1,0 +1,23 @@
+@startuml
+/'
+"Class01a" <|-- "Class02a" : "汎化\n Generalization"
+'/
+legend
+凡例
+汎化 Generalization
+endlegend
+
+"Class01a" <|-- "Class02a" : "汎化\n Generalization"
+note right on link
+汎化
+Generalization Set
+end note
+
+"Person" <|-- "Woman" : "gender"
+"Person" <|-- "Man" : "gender"
+"Person" <|-- "Employee" : "employment status"
+
+
+
+
+@enduml

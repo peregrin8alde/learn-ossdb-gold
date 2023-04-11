@@ -18,16 +18,6 @@ entity "entity"
 enum "enum"
 interface "interface"
 
-"Class01a" <|-- "Class02a" : "汎化\n Generalization"
-note right on link
-汎化
-Generalization Set
-end note
-
-"Person" <|-- "Woman" : "gender"
-"Person" <|-- "Man" : "gender"
-"Person" <|-- "Employee" : "employment status"
-
 
 /'
 関連クラス
