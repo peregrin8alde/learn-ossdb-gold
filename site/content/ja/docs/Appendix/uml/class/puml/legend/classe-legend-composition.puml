@@ -1,13 +1,21 @@
 @startuml
 /'
-"全体" "0..1" *--> "*" "部分" : "コンポジション\n composition"
+"全体" "0..1" *--> "*" "部分" : "合成集約\n composition"
 '/
 legend
 凡例
-コンポジション composition
+合成集約 composition
 endlegend
 
-"全体" "0..1" *--> "*" "部分" : "コンポジション\n composition"
+/'
+Composite aggregation is a strong form of aggregation that requires a part object be included in at most one composite 
+object at a time. If a composite object is deleted, all of its part instances that are objects are deleted with it.
+
+A part object may (where otherwise allowed) be removed from a composite object 
+before the composite object is deleted, and thus not be deleted as part of the composite object.
+'/
+
+"全体" "0..1" *--> "*" "部分" : "合成集約\n composition"
 note right on link
 part-of
 集約の一種
