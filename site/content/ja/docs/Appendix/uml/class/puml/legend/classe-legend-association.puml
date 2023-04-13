@@ -1,29 +1,33 @@
 @startuml
 /'
-"Class01" "*" -- "*" "Class02" : "関連\n association"
+"Class01" "*\n Role1" -- "*\n Role2" "Class02" : "関連\n association"
 '/
 legend
 凡例
 関連 association
 endlegend
 
-"Class01" "*" -- "*" "Class02" : "関連\n association"
-note right on link
-has-a
-どちらかが参照を保持
-end note
-
-"Class01-2" "1" <--x "1" "Class02-2" : "関連"
-note right on link
-誘導可能性を示した版
-（どちらからどちらを操作できるか）
-end note
-
 /'
 plantuml では多重度とロールを分ける記法がないため、うまいこと書くしかない
 * は書く場所によってはエスケープが必要
 '/
-"Class01-3" "*\n所有物" <--x "1\n所有者" "Class02-3" : < "所有"
+"Class01" "*\n Role1" -- "*\n Role2" "Class02" : "関連\n association"
+note right on link
+has-a
+一方（または両方）がもう一方の参照を保持
+線の終端には多重度やロールもかける
+線に書かれた関連名は関係性を説明するためのものであり、
+UML 操作（ java メソッド）とは別もの
+end note
+
+"Class01-2" "1\n Role1" <--x "1\n Role2" "Class02-2" : "関連"
+note right on link
+参照の方向（誘導可能性）を示した版
+（どちらからどちらを操作できるか）
+矢印終端側のロール名が UML 属性（ java フィールド）名相当
+end note
+
+"犬" "*\n ペット" -- "1\n 飼い主" "人" : < "飼う"
 note right on link
 関連の方向を示した版
 end note

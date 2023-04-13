@@ -19,15 +19,16 @@ before the composite object is deleted, and thus not be deleted as part of the c
 note right on link
 part-of
 集約の一種
-部分側は他と共有不可（ composite associationEnd ）
+Composite aggregation
+部分側は他と共有不可
 部分側は全体と同じ寿命なのが普通
 全体の削除前に部分側を分離して他に移管すれば寿命を別にすることも可能
 古い UML では寿命が必ず一致で全体側の多重度が 1 固定？
 end note
 
-"Window" "1" *--> "2" "Slider" : "+scrollbar"
-"Window" "1" *--> "1" "Header" : "+title"
-"Window" "1" *--> "1" "Panel" : "+body"
+"Window" "1" *--> "2\n +scrollbar" "Slider" : ""
+"Window" "1" *--> "1\n +title" "Header" : ""
+"Window" "1" *--> "1\n +body" "Panel" : ""
 
 
 @enduml

@@ -3,10 +3,11 @@ title: "UML"
 ---
 = UML
 
-
-
 https://www.omg.org/spec/UML[UML 規格]
 
+UML 内のテキストを操作（検索、コピーなど）する場合は、画像（ svg ）だけを別タブなどで
+開いたりファイルとして保存すること。（ html ソース上は base64 変換されており、
+ブラウザによっては直接操作できないため）
 
 ifdef::env-asciidoctor[]
 :leveloffset: +1
