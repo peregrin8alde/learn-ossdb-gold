@@ -19,22 +19,19 @@ enum "enum"
 interface "interface"
 
 
-/'
-関連クラス
-'/
 class Student {
   Name
 }
 Student "0..*" - "1..*" Course
-  (Student, Course) .. Enrollment
-  class Enrollment {
+(Student, Course) .. Enrollment
+class Enrollment {
   drop()
   cancel()
 }
+note right
+関連クラス
+end note
 
-/'
-複数関連
-'/
 class Station {
   +name: string
 }
@@ -42,6 +39,9 @@ class StationCrossing {
   +cost: TimeInterval
 }
 <> diamond1
+note top
+複数関連
+end note
 StationCrossing . diamond1
 diamond1 - "from 0..*" Station
 diamond1 - "to 0..* " Station
