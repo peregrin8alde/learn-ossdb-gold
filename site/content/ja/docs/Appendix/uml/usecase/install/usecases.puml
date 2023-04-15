@@ -10,24 +10,15 @@ rectangle "いつ" {
 who --> (UC1) : 何故
 '/
 
-actor "誰が" as who
-
-rectangle "いつ" {
-  usecase "何をしたい" as UC1
-}
-who --> (UC1) : 何故
-
-
-
-/'
 actor "サーバ管理者" as admin
 
 rectangle "導入" {
   usecase "インストール" as UC1
   usecase "アンインストール" as UC2
 }
-admin --> (UC1) : コマンドラインで\n実施
-admin --> (UC2) : コマンドラインで\n実施
-'/
+admin --> (UC1) : サービスを開始したいため
+admin --> (UC2) : サービスを終了したいため
+
+
 
 @enduml
