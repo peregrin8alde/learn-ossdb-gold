@@ -16,8 +16,8 @@ rectangle "導入" {
   usecase "インストール" as UC1
   usecase "アンインストール" as UC2
 }
-admin --> (UC1) : サービスを開始したいため
-admin --> (UC2) : サービスを終了したいため
+admin --> (UC1) : サービス提供を開始したいため
+admin --> (UC2) : サービス提供を終了したいため
 
 
 
