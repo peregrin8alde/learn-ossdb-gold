@@ -14,9 +14,12 @@ actor "サーバ管理者" as admin
 
 rectangle "導入" {
   usecase "インストール" as UC1
-  usecase "アンインストール" as UC2
 }
 admin --> (UC1) : サービス提供を開始したいため
+
+rectangle "廃止" {
+  usecase "アンインストール" as UC2
+}
 admin --> (UC2) : サービス提供を終了したいため
 
 
