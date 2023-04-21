@@ -13,9 +13,11 @@ who --> (UC1) : 何故
 actor "サーバ管理者" as admin
 
 rectangle "導入" {
-  usecase "インストール" as UC1
+  usecase "インストール" as UC_inst1
+  usecase "PostgreSQL クラスタ初期化" as UC_inst2
 }
-admin --> (UC1) : サービス提供を開始したいため
+admin --> (UC_inst1) : サービス提供を開始したいため
+admin --> (UC_inst2) : PostgreSQL サーバに必要な資材を生成するため
 
 rectangle "廃止" {
   usecase "アンインストール" as UC2
