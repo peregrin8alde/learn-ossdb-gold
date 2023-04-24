@@ -11,3 +11,16 @@ description: >
 ....
 include::usecases.puml[]
 ....
+
+.ユースケース一覧
+[options="header,autowidth",stripes=hover]
+|===
+|いつ |誰が |何のために |何をしたい
+
+|サービス運用中
+|サーバ管理者
+|運用を開始するため
+|PostgreSQL サーバ起動
+
+|===
+|サービス運用中
