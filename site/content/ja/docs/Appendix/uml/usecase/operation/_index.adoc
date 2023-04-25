@@ -22,5 +22,9 @@ include::usecases.puml[]
 |運用を開始するため
 |PostgreSQL サーバ起動
 
-|===
 |サービス運用中
+|サーバ管理者
+|運用を中断するため
+|PostgreSQL サーバ停止
+
+|===
