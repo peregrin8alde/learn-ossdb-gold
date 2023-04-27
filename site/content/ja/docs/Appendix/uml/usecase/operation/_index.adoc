@@ -24,6 +24,13 @@ include::usecases.puml[]
 
 |サービス運用中
 |サーバ管理者
+|PostgreSQL サーバをインストールしたマシン
+|起動状態を確認するため
+|PostgreSQL サーバ状態表示
+
+
+|サービス運用中
+|サーバ管理者
 |運用を中断するため
 |PostgreSQL サーバ停止
 

@@ -70,13 +70,7 @@ include::usecases.puml[]
 |===
 |When いつ|Who 誰が  |Where どこで、どこに |Why 何故 |What 何を |How much/many どれだけ |How どうした
 
-|サービス運用中
-|サーバ管理者
-|PostgreSQL サーバをインストールしたマシン
-|
-|PostgreSQL サーバ
-|1 つだけ
-|コマンドラインで起動状態を確認する
+
 
 |サービス運用中
 |サーバ管理者
