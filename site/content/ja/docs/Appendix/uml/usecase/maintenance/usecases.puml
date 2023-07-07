@@ -10,6 +10,12 @@ rectangle "いつ" {
 who --> (UC1) : 何故
 '/
 
+actor "サーバ管理者" as admin
+
+rectangle "定期的" {
+  usecase "データ退避" as UC_backup
+}
+admin --> (UC_backup) : 何故
 
 
 @enduml
