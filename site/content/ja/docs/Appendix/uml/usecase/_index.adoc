@@ -185,6 +185,9 @@ DB 作成や管理は誰がする？
 バックアップ、リストア
 スケールアップ、ダウン
 スケールアウト、イン
+その他構成変更
+  セットアップ時の設定から変更、 DB 構成変更、ディスク最適化、インデックス再構築、など
+
 
 通信異常でネットワークが遮断される
 ディスク異常で書き込みに失敗する
@@ -215,7 +218,6 @@ ifdef::env-asciidoctor[]
 include::install/_index.adoc[]
 include::operation/_index.adoc[]
 include::maintenance/_index.adoc[]
-include::troubleshoot/_index.adoc[]
 
 
 :leveloffset: -1

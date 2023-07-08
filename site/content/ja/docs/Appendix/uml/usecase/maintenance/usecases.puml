@@ -17,5 +17,10 @@ rectangle "定期的" {
 }
 admin --> (UC_backup) : 何故
 
+rectangle "障害発生後" {
+  usecase "データ復旧" as UC_restore
+}
+admin --> (UC_restore) : 何故
+
 
 @enduml

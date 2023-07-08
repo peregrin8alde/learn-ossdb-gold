@@ -1,9 +1,9 @@
 ---
 title: "Maintenance"
-linkTitle: "保守"
+linkTitle: "保守／障害対応"
 weight: 3
 description: >
-  保守 .
+  保守／障害対応 .
 ---
-= 保守
+= 保守／障害対応
 
