@@ -80,3 +80,10 @@ include::usecases.puml[]
 |アンインストール
 
 |===
+
+
+
+廃止
+
+サーバ管理者が PostgreSQL サーバをアンインストールする
+
