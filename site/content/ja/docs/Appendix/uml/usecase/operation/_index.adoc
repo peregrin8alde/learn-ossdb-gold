@@ -36,6 +36,9 @@ include::usecases.puml[]
 
 |===
 
+PostgreSQL サーバが必要なプロセスを起動する
+
+
 データ準備
 データ提供
 データ利用
