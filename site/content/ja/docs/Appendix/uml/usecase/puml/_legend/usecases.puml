@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+
+
+actor "誰が" as who
+
+rectangle "いつ？作業分類？" {
+  usecase "何をしたい" as UC1
+}
+who --> (UC1) : 何故
+
+
+
+@enduml
