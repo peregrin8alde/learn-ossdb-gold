@@ -67,14 +67,6 @@ include::usecases.puml[]
 
 
 
-
-
-
-
-
-
-
-
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
