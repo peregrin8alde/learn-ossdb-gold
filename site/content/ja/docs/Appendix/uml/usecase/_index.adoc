@@ -70,6 +70,11 @@ include::usecases.puml[]
 ifdef::env-asciidoctor[]
 :leveloffset: +1
 
+[plantuml, target=diagram-usecases-legend, format=svg]
+....
+include::_puml/legend.puml[]
+....
+
 include::install/_index.adoc[]
 include::operation/_index.adoc[]
 include::maintenance/_index.adoc[]
