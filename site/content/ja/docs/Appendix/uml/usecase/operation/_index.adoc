@@ -9,7 +9,7 @@ description: >
 
 [plantuml, target=diagram-usecases-operation, format=svg]
 ....
-include::usecases.puml[]
+include::_puml/usecases.puml[]
 ....
 
 .ユースケース一覧

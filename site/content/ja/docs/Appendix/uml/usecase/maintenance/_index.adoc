@@ -7,6 +7,11 @@ description: >
 ---
 = 保守／障害対応
 
+[plantuml, target=diagram-usecases-maintenance, format=svg]
+....
+include::_puml/usecases.puml[]
+....
+
 
 .ユースケース一覧
 [options="header,autowidth",stripes=hover]

@@ -16,7 +16,7 @@ UML 上は導入／廃止のようにセットになってるユースケース�
 
 [plantuml, target=diagram-usecases-install, format=svg]
 ....
-include::usecases.puml[]
+include::_puml/usecases.puml[]
 ....
 
 .ユースケース一覧

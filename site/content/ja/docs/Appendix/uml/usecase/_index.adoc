@@ -45,6 +45,12 @@ include::usecases.puml[]
 ....
 
 
+[plantuml, target=diagram-usecases-legend, format=svg]
+....
+include::_puml/legend.puml[]
+....
+
+
 ////
 5W2H で説明する？
 => ユースケースでそこまで書くのは細かすぎる
@@ -69,11 +75,6 @@ include::usecases.puml[]
 
 ifdef::env-asciidoctor[]
 :leveloffset: +1
-
-[plantuml, target=diagram-usecases-legend, format=svg]
-....
-include::_puml/legend.puml[]
-....
 
 include::install/_index.adoc[]
 include::operation/_index.adoc[]
