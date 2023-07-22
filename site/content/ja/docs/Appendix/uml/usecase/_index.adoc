@@ -44,7 +44,7 @@ svg にしておけば図内の文章をコピペ可能
 include::usecases.puml[]
 ....
 
-
+.ユースケース図（凡例）
 [plantuml, target=diagram-usecases-legend, format=svg]
 ....
 include::_puml/legend.puml[]
@@ -57,15 +57,15 @@ include::_puml/legend.puml[]
 いつ、誰が、何のために、何をしたい？、くらいが良さそう
 ////
 
-.ユースケース一覧
+.ユースケース一覧（凡例）
 [options="header,autowidth",stripes=hover]
 |===
 |いつ |誰が |何のために |何をしたい
 
-|
-|
-|
-|
+|例文
+|例文
+|例文
+|例文
 
 
 |===
