@@ -31,6 +31,8 @@ GettingStarted / Tasks / Tutorials / Reference : ユーザは何をすべきか�
 
 tasks の章立てや各章／節の書き出し文章は usecase ベースとなるはず
 
+いきなりユースケース一覧を完成させるのではなく、シーケンス一覧で具体的な操作を洗い出しながら
+ユースケースで整理していくのが良さそう
 ////
 
 
@@ -39,11 +41,6 @@ tasks の章立てや各章／節の書き出し文章は usecase ベースと�
 svg にしておけば図内の文章をコピペ可能
 ただし、生成された html 内では base64 変換された状態のため、図だけ別に開くなどが必要？
 ////
-[plantuml, target=diagram-usecases, format=svg]
-....
-include::usecases.puml[]
-....
-
 .ユースケース図（凡例）
 [plantuml, target=diagram-usecases-legend, format=svg]
 ....
