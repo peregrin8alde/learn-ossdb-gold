@@ -27,7 +27,7 @@ how = 操作方法
 
 [plantuml, target=diagram-activities, format=svg]
 ....
-include::activities.puml[]
+include::_puml/legend.puml[]
 ....
 
 

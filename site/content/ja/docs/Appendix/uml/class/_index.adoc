@@ -242,41 +242,41 @@ plantuml のページ分割や asciidoctor としての画像サイズ調整が�
 ////
 [plantuml, target=diagram-classe-legends, format=svg]
 ....
-include::puml/legend/classe-legends.puml[]
+include::_puml/legend/classe-legends.puml[]
 ....
 
 [plantuml, target=diagram-classe-legend-association, format=svg]
 ....
-include::puml/legend/classe-legend-association.puml[]
+include::_puml/legend/classe-legend-association.puml[]
 ....
 
 
 [plantuml, target=diagram-classe-legend-aggregation, format=svg]
 ....
-include::puml/legend/classe-legend-aggregation.puml[]
+include::_puml/legend/classe-legend-aggregation.puml[]
 ....
 
 
 [plantuml, target=diagram-classe-legend-composition, format=svg]
 ....
-include::puml/legend/classe-legend-composition.puml[]
+include::_puml/legend/classe-legend-composition.puml[]
 ....
 
 
 [plantuml, target=diagram-classe-legend-dependency, format=svg]
 ....
-include::puml/legend/classe-legend-dependency.puml[]
+include::_puml/legend/classe-legend-dependency.puml[]
 ....
 
 [plantuml, target=diagram-classe-legend-generalization, format=svg]
 ....
-include::puml/legend/classe-legend-generalization.puml[]
+include::_puml/legend/classe-legend-generalization.puml[]
 ....
 
 
 [plantuml, target=diagram-classes, format=svg]
 ....
-include::puml/classes.puml[]
+include::_puml/classes.puml[]
 ....
 
 

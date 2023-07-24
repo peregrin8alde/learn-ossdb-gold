@@ -10,6 +10,14 @@ description: >
 各ユースケースに対して、サービス内で何が行われるかを記載する。
 アクティビティ図とも連携
 
+操作実行者
+操作環境
+操作順序
+操作条件
+操作対象
+操作結果
+
+
 ////
 5W2H で説明する？
 
@@ -27,7 +35,7 @@ how = 操作方法
 
 [plantuml, target=diagram-sequences, format=svg]
 ....
-include::sequences.puml[]
+include::_puml/legend.puml[]
 ....
 
 
