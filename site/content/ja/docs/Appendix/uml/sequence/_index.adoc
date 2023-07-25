@@ -17,6 +17,11 @@ description: >
 操作対象
 操作結果
 
+.シーケンス図（凡例）
+[plantuml, target=diagram-sequences, format=svg]
+....
+include::_puml/legend.puml[]
+....
 
 ////
 5W2H で説明する？
@@ -26,17 +31,22 @@ what = 状態を変化させる対象？操作で利用するもの？
 how = 操作方法
 ////
 
-.シーケンス一覧
+.シーケンス一覧（凡例）
 [options="header,autowidth",stripes=hover]
 |===
 |When いつ|Who 誰が  |Where どこで、どこに |Why 何故 |What 何を |How much/many どれだけ |How どうした
+
+|例文
+|
+|
+|
+|
+|
+|
+
 |===
 
 
-[plantuml, target=diagram-sequences, format=svg]
-....
-include::_puml/legend.puml[]
-....
 
 
 ifdef::env-asciidoctor[]
